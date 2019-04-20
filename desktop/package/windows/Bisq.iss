@@ -9,10 +9,10 @@
 
 [Setup]
 AppId={{bisq}}
-AppName=Bisq
+AppName=BisqCash
 AppVersion={#AppVersion}
 AppVerName=Bisq v{#AppVersion}
-AppPublisher=Bisq
+AppPublisher=Emilio Wong
 AppComments={cm:AppComments}
 AppCopyright=Copyright (C) {#AppCopyrightYear}
 AppPublisherURL=https://bisq.network
