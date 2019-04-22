@@ -143,6 +143,9 @@ configure(project(':assets')) {
         compile "commons-codec:commons-codec:$codecVersion"
         compile "org.apache.commons:commons-lang3:$langVersion"
         compile "org.bouncycastle:bcpg-jdk15on:$bcVersion"
+        // https://mvnrepository.com/artifact/cash.bitcoinj/bitcoinj-tools
+        compile group: 'cash.bitcoinj', name: 'bitcoinj-tools', version: '0.14.5.2'
+
     }
 }
 
@@ -187,6 +190,9 @@ configure(project(':common')) {
         compile 'commons-io:commons-io:2.4'
         compile "org.apache.commons:commons-lang3:$langVersion"
         compileOnly "org.projectlombok:lombok:$lombokVersion"
+        // https://mvnrepository.com/artifact/cash.bitcoinj/bitcoinj-tools
+        compile group: 'cash.bitcoinj', name: 'bitcoinj-tools', version: '0.14.5.2'
+
         annotationProcessor "org.projectlombok:lombok:$lombokVersion"
     }
 }
@@ -207,6 +213,9 @@ configure(project(':p2p')) {
         compile "net.sf.jopt-simple:jopt-simple:$joptVersion"
         compile 'org.fxmisc.easybind:easybind:1.0.3'
         compileOnly "org.projectlombok:lombok:$lombokVersion"
+        // https://mvnrepository.com/artifact/cash.bitcoinj/bitcoinj-tools
+        compile group: 'cash.bitcoinj', name: 'bitcoinj-tools', version: '0.14.5.2'
+
         annotationProcessor "org.projectlombok:lombok:$lombokVersion"
         testCompile 'org.jmockit:jmockit:1.30' // must not use current $jmockitVersion
         testCompileOnly "org.projectlombok:lombok:$lombokVersion"
@@ -241,6 +250,9 @@ configure(project(':core')) {
         compile('com.fasterxml.jackson.core:jackson-databind:2.8.10') {
             exclude(module: 'jackson-annotations')
         }
+        // https://mvnrepository.com/artifact/cash.bitcoinj/bitcoinj-tools
+        compile group: 'cash.bitcoinj', name: 'bitcoinj-tools', version: '0.14.5.2'
+
 
         compileOnly "org.projectlombok:lombok:$lombokVersion"
         annotationProcessor "org.projectlombok:lombok:$lombokVersion"
@@ -299,6 +311,8 @@ configure(project(':desktop')) {
         compile "org.openjfx:javafx-fxml:11:$os"
         compile "org.openjfx:javafx-swing:11:$os"
         compile 'com.jfoenix:jfoenix:9.0.6'
+// https://mvnrepository.com/artifact/cash.bitcoinj/bitcoinj-tools
+        compile group: 'cash.bitcoinj', name: 'bitcoinj-tools', version: '0.14.5.2'
 
         compileOnly "org.projectlombok:lombok:$lombokVersion"
         annotationProcessor "org.projectlombok:lombok:$lombokVersion"
@@ -340,6 +354,8 @@ configure(project(':monitor')) {
         compile "ch.qos.logback:logback-core:$logbackVersion"
         compile "ch.qos.logback:logback-classic:$logbackVersion"
         compile 'com.google.guava:guava:20.0'
+// https://mvnrepository.com/artifact/cash.bitcoinj/bitcoinj-tools
+        compile group: 'cash.bitcoinj', name: 'bitcoinj-tools', version: '0.14.5.2'
 
         compileOnly "org.projectlombok:lombok:$lombokVersion"
         annotationProcessor "org.projectlombok:lombok:$lombokVersion"
@@ -369,6 +385,9 @@ configure(project(':pricenode')) {
         compile("org.knowm.xchange:xchange-poloniex:4.3.3")
         compile("org.springframework.boot:spring-boot-starter-web:1.5.10.RELEASE")
         compile("org.springframework.boot:spring-boot-starter-actuator")
+        // https://mvnrepository.com/artifact/cash.bitcoinj/bitcoinj-tools
+        compile group: 'cash.bitcoinj', name: 'bitcoinj-tools', version: '0.14.5.2'
+
     }
 
     task stage {
@@ -386,6 +405,9 @@ configure(project(':relay')) {
         compile 'com.turo:pushy:0.13.2'
         compile 'com.google.firebase:firebase-admin:6.2.0'
         compile "commons-codec:commons-codec:$codecVersion"
+        // https://mvnrepository.com/artifact/cash.bitcoinj/bitcoinj-tools
+        compile group: 'cash.bitcoinj', name: 'bitcoinj-tools', version: '0.14.5.2'
+
     }
 }
 
@@ -400,6 +422,9 @@ configure(project(':seednode')) {
         runtime "org.bouncycastle:bcprov-jdk15on:$bcVersion"
         compileOnly "org.projectlombok:lombok:$lombokVersion"
         annotationProcessor "org.projectlombok:lombok:$lombokVersion"
+        // https://mvnrepository.com/artifact/cash.bitcoinj/bitcoinj-tools
+        compile group: 'cash.bitcoinj', name: 'bitcoinj-tools', version: '0.14.5.2'
+
     }
 }
 
@@ -411,5 +436,8 @@ configure(project(':statsnode')) {
         compile project(':core')
         compileOnly "org.projectlombok:lombok:$lombokVersion"
         annotationProcessor "org.projectlombok:lombok:$lombokVersion"
+        // https://mvnrepository.com/artifact/cash.bitcoinj/bitcoinj-tools
+        compile group: 'cash.bitcoinj', name: 'bitcoinj-tools', version: '0.14.5.2'
+
     }
 }
