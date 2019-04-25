@@ -7,6 +7,7 @@ buildscript {
         classpath 'com.google.gradle:osdetector-gradle-plugin:1.6.0'
         classpath 'com.github.jengelman.gradle.plugins:shadow:4.0.2'
         classpath files('gradle/witness/gradle-witness.jar')
+        classpath files('lib/bitcoincashj.jar')
         classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.5.10.RELEASE'
     }
 }
