@@ -17,7 +17,6 @@
 
 package bisq.core.btc;
 
-import
 import org.bitcoinj.core.NetworkParameters;
 import org.bitcoinj.params.MainNetParams;
 import org.bitcoinj.params.RegTestParams;
