@@ -20,6 +20,7 @@ package bisq.asset.coins;
 import bisq.asset.Base58BitcoinAddressValidator;
 import bisq.asset.Coin;
 
+
 import org.bitcoinj.core.NetworkParameters;
 import org.bitcoinj.params.MainNetParams;
 import org.bitcoinj.params.RegTestParams;
