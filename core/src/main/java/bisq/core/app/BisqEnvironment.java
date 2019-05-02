@@ -84,7 +84,7 @@ public class BisqEnvironment extends StandardEnvironment {
         DEFAULT_APP_NAME = defaultAppName;
     }
 
-    public static String DEFAULT_APP_NAME = "Bisq";
+    public static String DEFAULT_APP_NAME = "Cashex";
 
     public static final String DEFAULT_USER_DATA_DIR = defaultUserDataDir();
     public static final String DEFAULT_APP_DATA_DIR = appDataDir(DEFAULT_USER_DATA_DIR, DEFAULT_APP_NAME);
@@ -129,9 +129,9 @@ public class BisqEnvironment extends StandardEnvironment {
 
     private static String appDataDir(String userDataDir, String appName) {
         //TODO fix for changing app name form bisq to Bisq (add dir renamed as well)
-        final String newAppName = "Bisq";
+        final String newAppName = "Cashex";
         if (appName.equals(newAppName)) {
-            final String oldAppName = "bisq";
+            final String oldAppName = "cashex";
             Path oldPath = Paths.get(Paths.get(userDataDir, oldAppName).toString());// bisq
             Path newPath = Paths.get(Paths.get(userDataDir, appName).toString());//Bisq
             File oldDir = new File(oldPath.toString()); // bisq

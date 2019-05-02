@@ -37,7 +37,7 @@ class BisqKeyChainGroup extends KeyChainGroup {
     }
 
     public BisqKeyChainGroup(NetworkParameters params, DeterministicKeyChain chain, boolean useBitcoinDeterministicKeyChain) {
-        super(params, chain.getKey(KeyChain.KeyPurpose.AUTHENTICATION));
+        super(params, chain.getWatchingKey());
 
         this.useBitcoinDeterministicKeyChain = useBitcoinDeterministicKeyChain;
     }
