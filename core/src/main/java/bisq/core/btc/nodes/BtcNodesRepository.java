@@ -71,7 +71,7 @@ public class BtcNodesRepository {
     private List<PeerAddress> getOnionHosts() {
         return nodes.stream()
                 .filter(BtcNodes.BtcNode::hasOnionAddress)
-                .flatMap(node -> nullableAsStream(converter.convertOnionHost(node)))
+                .flatMap(node -> nullableAsStream(converter.convertClearNode(node)))
                 .collect(Collectors.toList());
     }
 
