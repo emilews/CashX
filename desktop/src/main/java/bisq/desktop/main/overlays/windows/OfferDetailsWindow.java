@@ -39,7 +39,7 @@ import bisq.common.crypto.KeyRing;
 import bisq.common.util.Tuple2;
 import bisq.common.util.Tuple4;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import javax.inject.Inject;
 

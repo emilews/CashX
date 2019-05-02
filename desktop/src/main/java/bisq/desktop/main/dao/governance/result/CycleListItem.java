@@ -23,7 +23,7 @@ import bisq.core.dao.state.model.governance.EvaluatedProposal;
 import bisq.core.locale.Res;
 import bisq.core.util.BsqFormatter;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import java.util.Date;
 import java.util.HashMap;

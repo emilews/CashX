@@ -41,7 +41,7 @@ import bisq.network.p2p.storage.persistence.AppendOnlyDataStoreListener;
 import bisq.network.p2p.storage.persistence.AppendOnlyDataStoreService;
 import bisq.network.p2p.storage.persistence.ProtectedDataStoreService;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import com.google.inject.Inject;
 

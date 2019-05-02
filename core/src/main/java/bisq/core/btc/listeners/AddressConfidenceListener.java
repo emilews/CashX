@@ -17,8 +17,8 @@
 
 package bisq.core.btc.listeners;
 
-import org.bitcoinj.core.Address;
-import org.bitcoinj.core.TransactionConfidence;
+import org.bitcoincashj.core.Address;
+import org.bitcoincashj.core.TransactionConfidence;
 
 public class AddressConfidenceListener {
     private final Address address;

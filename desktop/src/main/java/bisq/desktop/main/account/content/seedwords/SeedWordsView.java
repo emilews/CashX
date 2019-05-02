@@ -31,9 +31,9 @@ import bisq.core.user.DontShowAgainLookup;
 
 import bisq.common.storage.Storage;
 
-import org.bitcoinj.crypto.MnemonicCode;
-import org.bitcoinj.crypto.MnemonicException;
-import org.bitcoinj.wallet.DeterministicSeed;
+import org.bitcoincashj.crypto.MnemonicCode;
+import org.bitcoincashj.crypto.MnemonicException;
+import org.bitcoincashj.wallet.DeterministicSeed;
 
 import javax.inject.Inject;
 import javax.inject.Named;

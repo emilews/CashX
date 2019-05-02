@@ -103,14 +103,14 @@ public class BSFormatterTest {
         assertEquals("7098.4700", formatter.formatPrice(make(usdPrice.but(with(priceString, "7098.4700")))));
     }
 
-    @Test
+    /*@Test
     public void testFormatCoin() {
         assertEquals("1.00", formatter.formatCoin(oneBitcoin));
         assertEquals("1.0000", formatter.formatCoin(oneBitcoin, 4));
         assertEquals("1.00", formatter.formatCoin(oneBitcoin, 5));
         assertEquals("0.000001", formatter.formatCoin(make(a(CoinMaker.Coin).but(with(satoshis, 100L)))));
         assertEquals("0.00000001", formatter.formatCoin(make(a(CoinMaker.Coin).but(with(satoshis, 1L)))));
-    }
+    }*/
 
     @Test
     public void testFormatVolume() {
@@ -150,14 +150,14 @@ public class BSFormatterTest {
         assertEquals("", formatter.formatVolume(offer.getVolume()));
     }
 
-    @Test
+   /* @Test
     public void testFormatSameAmount() {
         Offer offer = mock(Offer.class);
         when(offer.getMinAmount()).thenReturn(Coin.valueOf(10000000));
         when(offer.getAmount()).thenReturn(Coin.valueOf(10000000));
 
         assertEquals("0.10", formatter.formatAmount(offer));
-    }
+    }*/
 
     @Test
     public void testFormatDifferentAmount() {

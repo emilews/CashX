@@ -28,9 +28,9 @@ import bisq.core.dao.state.model.blockchain.Tx;
 import bisq.core.dao.state.model.blockchain.TxOutput;
 import bisq.core.dao.state.model.blockchain.TxType;
 
-import org.bitcoinj.core.Transaction;
-import org.bitcoinj.core.TransactionInput;
-import org.bitcoinj.core.TransactionOutput;
+import org.bitcoincashj.core.Transaction;
+import org.bitcoincashj.core.TransactionInput;
+import org.bitcoincashj.core.TransactionOutput;
 
 import javax.inject.Inject;
 

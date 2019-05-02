@@ -23,7 +23,7 @@ import bisq.core.dao.state.model.governance.Proposal;
 
 import bisq.common.crypto.Hash;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

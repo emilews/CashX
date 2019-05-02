@@ -33,7 +33,7 @@ import bisq.common.crypto.KeyStorage;
 import bisq.common.storage.Storage;
 import bisq.common.util.Utilities;
 
-import org.bitcoinj.core.NetworkParameters;
+import org.bitcoincashj.core.NetworkParameters;
 
 import org.springframework.core.env.Environment;
 import org.springframework.core.env.JOptCommandLinePropertySource;

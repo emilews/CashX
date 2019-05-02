@@ -60,9 +60,9 @@ import bisq.common.proto.persistable.PersistenceProtoResolver;
 import bisq.common.storage.Storage;
 import bisq.common.util.Tuple2;
 
-import org.bitcoinj.core.AddressFormatException;
-import org.bitcoinj.core.Transaction;
-import org.bitcoinj.crypto.DeterministicKey;
+import org.bitcoincashj.core.AddressFormatException;
+import org.bitcoincashj.core.Transaction;
+import org.bitcoincashj.crypto.DeterministicKey;
 
 import com.google.inject.Inject;
 

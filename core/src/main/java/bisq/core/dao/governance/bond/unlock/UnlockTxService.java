@@ -31,9 +31,9 @@ import bisq.core.dao.state.model.blockchain.TxType;
 import bisq.common.handlers.ExceptionHandler;
 import bisq.common.util.Tuple2;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.InsufficientMoneyException;
-import org.bitcoinj.core.Transaction;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.InsufficientMoneyException;
+import org.bitcoincashj.core.Transaction;
 
 import javax.inject.Inject;
 

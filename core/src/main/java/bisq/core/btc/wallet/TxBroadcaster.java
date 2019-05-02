@@ -23,9 +23,9 @@ import bisq.core.btc.exceptions.TxBroadcastTimeoutException;
 import bisq.common.Timer;
 import bisq.common.UserThread;
 
-import org.bitcoinj.core.PeerGroup;
-import org.bitcoinj.core.Transaction;
-import org.bitcoinj.wallet.Wallet;
+import org.bitcoincashj.core.PeerGroup;
+import org.bitcoincashj.core.Transaction;
+import org.bitcoincashj.wallet.Wallet;
 
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;

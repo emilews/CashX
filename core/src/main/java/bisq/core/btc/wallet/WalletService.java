@@ -30,37 +30,37 @@ import bisq.core.user.Preferences;
 import bisq.common.handlers.ErrorMessageHandler;
 import bisq.common.handlers.ResultHandler;
 
-import org.bitcoinj.core.Address;
-import org.bitcoinj.core.AddressFormatException;
-import org.bitcoinj.core.BlockChain;
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.ECKey;
-import org.bitcoinj.core.InsufficientMoneyException;
-import org.bitcoinj.core.NetworkParameters;
-import org.bitcoinj.core.ScriptException;
-import org.bitcoinj.core.Sha256Hash;
-import org.bitcoinj.core.Transaction;
-import org.bitcoinj.core.TransactionConfidence;
-import org.bitcoinj.core.TransactionInput;
-import org.bitcoinj.core.TransactionOutput;
-import org.bitcoinj.core.listeners.NewBestBlockListener;
-import org.bitcoinj.crypto.DeterministicKey;
-import org.bitcoinj.crypto.KeyCrypter;
-import org.bitcoinj.crypto.KeyCrypterScrypt;
-import org.bitcoinj.crypto.TransactionSignature;
-import org.bitcoinj.script.Script;
-import org.bitcoinj.script.ScriptChunk;
-import org.bitcoinj.signers.TransactionSigner;
-import org.bitcoinj.utils.Threading;
-import org.bitcoinj.wallet.DecryptingKeyBag;
-import org.bitcoinj.wallet.DeterministicSeed;
-import org.bitcoinj.wallet.KeyBag;
-import org.bitcoinj.wallet.KeyChain;
-import org.bitcoinj.wallet.RedeemData;
-import org.bitcoinj.wallet.SendRequest;
-import org.bitcoinj.wallet.Wallet;
-import org.bitcoinj.wallet.listeners.AbstractWalletEventListener;
-import org.bitcoinj.wallet.listeners.WalletEventListener;
+import org.bitcoincashj.core.Address;
+import org.bitcoincashj.core.AddressFormatException;
+import org.bitcoincashj.core.BlockChain;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.ECKey;
+import org.bitcoincashj.core.InsufficientMoneyException;
+import org.bitcoincashj.core.NetworkParameters;
+import org.bitcoincashj.core.ScriptException;
+import org.bitcoincashj.core.Sha256Hash;
+import org.bitcoincashj.core.Transaction;
+import org.bitcoincashj.core.TransactionConfidence;
+import org.bitcoincashj.core.TransactionInput;
+import org.bitcoincashj.core.TransactionOutput;
+import org.bitcoincashj.core.listeners.NewBestBlockListener;
+import org.bitcoincashj.crypto.DeterministicKey;
+import org.bitcoincashj.crypto.KeyCrypter;
+import org.bitcoincashj.crypto.KeyCrypterScrypt;
+import org.bitcoincashj.crypto.TransactionSignature;
+import org.bitcoincashj.script.Script;
+import org.bitcoincashj.script.ScriptChunk;
+import org.bitcoincashj.signers.TransactionSigner;
+import org.bitcoincashj.utils.Threading;
+import org.bitcoincashj.wallet.DecryptingKeyBag;
+import org.bitcoincashj.wallet.DeterministicSeed;
+import org.bitcoincashj.wallet.KeyBag;
+import org.bitcoincashj.wallet.KeyChain;
+import org.bitcoincashj.wallet.RedeemData;
+import org.bitcoincashj.wallet.SendRequest;
+import org.bitcoincashj.wallet.Wallet;
+import org.bitcoincashj.wallet.listeners.AbstractWalletEventListener;
+import org.bitcoincashj.wallet.listeners.WalletEventListener;
 
 import javax.inject.Inject;
 
@@ -476,8 +476,7 @@ public abstract class WalletService {
 
     public void emptyWallet(String toAddress, KeyParameter aesKey, ResultHandler resultHandler, ErrorMessageHandler errorMessageHandler)
             throws InsufficientMoneyException, AddressFormatException {
-        SendRequest sendRequest = SendRequest.emptyWallet(Address.fromBase58(params, toAddress));
-        sendRequest.fee = Coin.ZERO;
+        SendRequest sendRequest = SendRequest.emptyWallet(params, toAddress);
         sendRequest.feePerKb = getTxFeeForWithdrawalPerByte().multiply(1000);
         sendRequest.aesKey = aesKey;
         Wallet.SendResult sendResult = wallet.sendCoins(sendRequest);

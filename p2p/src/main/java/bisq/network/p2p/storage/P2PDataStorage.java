@@ -741,7 +741,7 @@ public class P2PDataStorage implements MessageListener, ConnectionListener, Pers
             sb.append("Data set ").append(info).append(" operation");
             // We print the items sorted by hash with the payload class name and id
             List<Tuple2<String, ProtectedStorageEntry>> tempList = map.values().stream()
-                    .map(e -> new Tuple2<>(org.bitcoinj.core.Utils.HEX.encode(get32ByteHashAsByteArray(e.getProtectedStoragePayload()).bytes), e))
+                    .map(e -> new Tuple2<>(org.bitcoincashj.core.Utils.HEX.encode(get32ByteHashAsByteArray(e.getProtectedStoragePayload()).bytes), e))
                     .collect(Collectors.toList());
             tempList.sort((o1, o2) -> o1.first.compareTo(o2.first));
             tempList.stream().forEach(e -> {

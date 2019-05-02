@@ -22,7 +22,7 @@ import bisq.desktop.util.FormBuilder;
 
 import bisq.core.locale.Res;
 
-import org.bitcoinj.core.Transaction;
+import org.bitcoincashj.core.Transaction;
 
 import javax.inject.Inject;
 

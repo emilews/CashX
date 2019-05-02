@@ -22,9 +22,9 @@ import bisq.core.btc.setup.WalletConfig;
 
 import bisq.network.Socks5MultiDiscovery;
 
-import org.bitcoinj.core.NetworkParameters;
-import org.bitcoinj.core.PeerAddress;
-import org.bitcoinj.params.MainNetParams;
+import org.bitcoincashj.core.NetworkParameters;
+import org.bitcoincashj.core.PeerAddress;
+import org.bitcoincashj.params.MainNetParams;
 
 import com.runjva.sourceforge.jsocks.protocol.Socks5Proxy;
 

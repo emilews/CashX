@@ -32,10 +32,10 @@ import bisq.network.p2p.NodeAddress;
 
 import bisq.common.util.MathUtils;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.Monetary;
-import org.bitcoinj.utils.Fiat;
-import org.bitcoinj.utils.MonetaryFormat;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.Monetary;
+import org.bitcoincashj.utils.Fiat;
+import org.bitcoincashj.utils.MonetaryFormat;
 
 import javax.inject.Inject;
 

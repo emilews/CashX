@@ -28,8 +28,8 @@ import bisq.core.user.User;
 
 import bisq.common.taskrunner.Model;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.Transaction;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.Transaction;
 
 import lombok.Getter;
 import lombok.Setter;

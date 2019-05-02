@@ -26,7 +26,7 @@ import bisq.core.dao.state.DaoStateListener;
 import bisq.core.dao.state.DaoStateService;
 import bisq.core.dao.state.model.blockchain.Block;
 
-import org.bitcoinj.core.Transaction;
+import org.bitcoincashj.core.Transaction;
 
 import javax.inject.Inject;
 

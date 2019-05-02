@@ -64,7 +64,7 @@ import bisq.asset.Asset;
 
 import bisq.common.util.Tuple3;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;

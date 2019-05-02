@@ -35,7 +35,7 @@ import bisq.core.util.BsqFormatter;
 
 import bisq.common.util.Tuple3;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import javax.inject.Inject;
 

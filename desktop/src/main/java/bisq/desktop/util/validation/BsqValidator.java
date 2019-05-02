@@ -22,7 +22,7 @@ import bisq.core.locale.Res;
 import bisq.core.util.BsqFormatter;
 import bisq.core.util.CoinUtil;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import javax.inject.Inject;
 

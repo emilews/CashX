@@ -37,10 +37,10 @@ import bisq.common.handlers.ErrorMessageHandler;
 import bisq.common.handlers.ResultHandler;
 import bisq.common.util.Utilities;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.ECKey;
-import org.bitcoinj.core.InsufficientMoneyException;
-import org.bitcoinj.core.Transaction;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.ECKey;
+import org.bitcoincashj.core.InsufficientMoneyException;
+import org.bitcoincashj.core.Transaction;
 
 import javax.inject.Inject;
 
@@ -62,7 +62,7 @@ import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 
 import static com.google.common.base.Preconditions.checkNotNull;
-import static org.bitcoinj.core.Utils.HEX;
+import static org.bitcoincashj.core.Utils.HEX;
 
 @Slf4j
 public class ProofOfBurnService implements DaoSetupService, DaoStateListener {

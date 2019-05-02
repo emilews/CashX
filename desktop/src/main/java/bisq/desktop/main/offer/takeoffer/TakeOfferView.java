@@ -64,7 +64,7 @@ import bisq.common.util.Tuple3;
 import bisq.common.util.Tuple4;
 import bisq.common.util.Utilities;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import net.glxn.qrgen.QRCode;
 import net.glxn.qrgen.image.ImageType;

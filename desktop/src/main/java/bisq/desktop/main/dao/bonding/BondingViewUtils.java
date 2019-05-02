@@ -43,8 +43,8 @@ import bisq.network.p2p.P2PService;
 import bisq.common.app.DevEnv;
 import bisq.common.util.Tuple2;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.InsufficientMoneyException;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.InsufficientMoneyException;
 
 import javax.inject.Inject;
 

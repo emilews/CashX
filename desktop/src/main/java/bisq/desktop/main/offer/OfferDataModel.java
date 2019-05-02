@@ -22,7 +22,7 @@ import bisq.desktop.common.model.ActivatableDataModel;
 import bisq.core.btc.model.AddressEntry;
 import bisq.core.btc.wallet.BtcWalletService;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.ObjectProperty;

@@ -26,7 +26,7 @@ import bisq.common.UserThread;
 import bisq.common.handlers.FaultHandler;
 import bisq.common.util.Tuple2;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import com.google.inject.Inject;
 

@@ -24,8 +24,8 @@ import bisq.common.proto.persistable.PersistablePayload;
 
 import io.bisq.generated.protobuffer.PB;
 
-import org.bitcoinj.core.Transaction;
-import org.bitcoinj.core.TransactionOutput;
+import org.bitcoincashj.core.Transaction;
+import org.bitcoincashj.core.TransactionOutput;
 
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;

@@ -25,7 +25,7 @@ import bisq.core.offer.OfferPayload;
 
 import bisq.common.util.MathUtils;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import lombok.EqualsAndHashCode;
 import lombok.ToString;

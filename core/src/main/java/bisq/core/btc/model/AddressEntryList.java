@@ -25,9 +25,9 @@ import io.bisq.generated.protobuffer.PB;
 
 import com.google.protobuf.Message;
 
-import org.bitcoinj.core.Transaction;
-import org.bitcoinj.crypto.DeterministicKey;
-import org.bitcoinj.wallet.Wallet;
+import org.bitcoincashj.core.Transaction;
+import org.bitcoincashj.crypto.DeterministicKey;
+import org.bitcoincashj.wallet.Wallet;
 
 import com.google.inject.Inject;
 

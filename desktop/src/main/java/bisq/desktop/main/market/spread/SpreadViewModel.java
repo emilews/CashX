@@ -32,8 +32,8 @@ import bisq.core.provider.price.MarketPrice;
 import bisq.core.provider.price.PriceFeedService;
 import bisq.core.util.BSFormatter;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.utils.Fiat;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.utils.Fiat;
 
 import com.google.inject.Inject;
 

@@ -24,7 +24,7 @@ import bisq.core.locale.CurrencyUtil;
 
 import bisq.common.util.Tuple2;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import javax.inject.Inject;
 

@@ -17,11 +17,11 @@
 
 package bisq.network;
 
-import org.bitcoinj.core.NetworkParameters;
-import org.bitcoinj.net.discovery.PeerDiscovery;
-import org.bitcoinj.net.discovery.PeerDiscoveryException;
-import org.bitcoinj.net.discovery.SeedPeers;
-import org.bitcoinj.params.MainNetParams;
+import org.bitcoincashj.core.NetworkParameters;
+import org.bitcoincashj.net.discovery.PeerDiscovery;
+import org.bitcoincashj.net.discovery.PeerDiscoveryException;
+import org.bitcoincashj.net.discovery.SeedPeers;
+import org.bitcoincashj.params.MainNetParams;
 
 import com.runjva.sourceforge.jsocks.protocol.Socks5Proxy;
 

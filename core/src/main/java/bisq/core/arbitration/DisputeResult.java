@@ -27,7 +27,7 @@ import io.bisq.generated.protobuffer.PB;
 
 import com.google.protobuf.ByteString;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.SimpleBooleanProperty;

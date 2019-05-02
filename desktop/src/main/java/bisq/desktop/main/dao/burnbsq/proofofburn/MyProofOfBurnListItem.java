@@ -25,7 +25,7 @@ import bisq.core.util.BsqFormatter;
 
 import bisq.common.util.Utilities;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import java.util.Date;
 import java.util.Optional;

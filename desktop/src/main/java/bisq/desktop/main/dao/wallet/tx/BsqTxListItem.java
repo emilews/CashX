@@ -27,9 +27,9 @@ import bisq.core.dao.state.model.blockchain.TxType;
 import bisq.core.locale.Res;
 import bisq.core.util.BsqFormatter;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.Transaction;
-import org.bitcoinj.core.TransactionOutput;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.Transaction;
+import org.bitcoincashj.core.TransactionOutput;
 
 import java.util.Date;
 

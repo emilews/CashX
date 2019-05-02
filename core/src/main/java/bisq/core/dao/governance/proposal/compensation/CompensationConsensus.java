@@ -20,7 +20,7 @@ package bisq.core.dao.governance.proposal.compensation;
 import bisq.core.dao.governance.param.Param;
 import bisq.core.dao.state.DaoStateService;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import lombok.extern.slf4j.Slf4j;
 

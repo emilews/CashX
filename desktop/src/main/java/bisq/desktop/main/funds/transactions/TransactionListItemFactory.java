@@ -24,7 +24,7 @@ import bisq.core.trade.Tradable;
 import bisq.core.user.Preferences;
 import bisq.core.util.BSFormatter;
 
-import org.bitcoinj.core.Transaction;
+import org.bitcoincashj.core.Transaction;
 
 import javax.inject.Inject;
 

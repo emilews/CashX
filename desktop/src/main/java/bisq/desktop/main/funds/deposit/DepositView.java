@@ -40,8 +40,8 @@ import bisq.core.util.BSFormatter;
 import bisq.common.UserThread;
 import bisq.common.app.DevEnv;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.Transaction;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.Transaction;
 
 import net.glxn.qrgen.QRCode;
 import net.glxn.qrgen.image.ImageType;

@@ -44,7 +44,7 @@ import bisq.core.util.validation.IntegerValidator;
 import bisq.common.crypto.Hash;
 import bisq.common.util.Utilities;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import javax.inject.Inject;
 

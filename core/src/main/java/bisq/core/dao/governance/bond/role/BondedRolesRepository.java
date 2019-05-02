@@ -27,7 +27,7 @@ import bisq.core.dao.state.model.governance.Proposal;
 import bisq.core.dao.state.model.governance.Role;
 import bisq.core.dao.state.model.governance.RoleProposal;
 
-import org.bitcoinj.core.Transaction;
+import org.bitcoincashj.core.Transaction;
 
 import javax.inject.Inject;
 

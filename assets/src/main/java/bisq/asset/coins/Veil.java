@@ -18,8 +18,8 @@
 package bisq.asset.coins;
 
 import bisq.asset.*;
-import org.bitcoinj.core.Address;
-import org.bitcoinj.core.AddressFormatException;
+import org.bitcoincashj.core.Address;
+import org.bitcoincashj.core.AddressFormatException;
 
 public class Veil extends Coin {
 

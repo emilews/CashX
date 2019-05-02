@@ -37,7 +37,7 @@ import bisq.core.locale.Res;
 
 import bisq.common.util.Tuple4;
 
-import org.bitcoinj.crypto.KeyCrypterScrypt;
+import org.bitcoincashj.crypto.KeyCrypterScrypt;
 
 import javax.inject.Inject;
 

@@ -23,12 +23,12 @@ import bisq.common.app.DevEnv;
 import bisq.common.proto.persistable.PersistedDataHost;
 import bisq.common.storage.Storage;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.Transaction;
-import org.bitcoinj.core.TransactionConfidence;
-import org.bitcoinj.core.TransactionInput;
-import org.bitcoinj.core.TransactionOutput;
-import org.bitcoinj.wallet.Wallet;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.Transaction;
+import org.bitcoincashj.core.TransactionConfidence;
+import org.bitcoincashj.core.TransactionInput;
+import org.bitcoincashj.core.TransactionOutput;
+import org.bitcoincashj.wallet.Wallet;
 
 import javax.inject.Inject;
 

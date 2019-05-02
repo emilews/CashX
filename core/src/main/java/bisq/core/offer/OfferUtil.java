@@ -40,8 +40,8 @@ import bisq.network.p2p.P2PService;
 
 import bisq.common.util.MathUtils;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.utils.Fiat;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.utils.Fiat;
 
 import com.google.common.annotations.VisibleForTesting;
 

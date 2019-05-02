@@ -27,7 +27,7 @@ import bisq.core.dao.state.DaoStateService;
 import bisq.core.dao.state.model.governance.Role;
 import bisq.core.dao.state.model.governance.RoleProposal;
 
-import org.bitcoinj.core.InsufficientMoneyException;
+import org.bitcoincashj.core.InsufficientMoneyException;
 
 import javax.inject.Inject;
 

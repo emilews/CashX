@@ -24,7 +24,7 @@ import bisq.core.dao.state.model.blockchain.OpReturnType;
 import bisq.common.app.Version;
 import bisq.common.crypto.Hash;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import com.google.common.base.Charsets;
 

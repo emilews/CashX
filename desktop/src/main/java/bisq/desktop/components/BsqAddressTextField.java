@@ -24,7 +24,7 @@ import bisq.core.locale.Res;
 
 import bisq.common.util.Utilities;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import de.jensd.fx.fontawesome.AwesomeDude;
 import de.jensd.fx.fontawesome.AwesomeIcon;

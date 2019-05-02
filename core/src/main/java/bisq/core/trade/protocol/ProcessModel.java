@@ -54,8 +54,8 @@ import io.bisq.generated.protobuffer.PB;
 
 import com.google.protobuf.ByteString;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.Transaction;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.Transaction;
 
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;

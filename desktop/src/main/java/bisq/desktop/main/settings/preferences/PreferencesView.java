@@ -53,7 +53,7 @@ import bisq.common.UserThread;
 import bisq.common.app.DevEnv;
 import bisq.common.util.Tuple3;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import javax.inject.Inject;
 

@@ -54,11 +54,11 @@ import bisq.common.util.Tuple2;
 import bisq.common.util.Tuple3;
 import bisq.common.util.Utilities;
 
-import org.bitcoinj.core.Address;
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.TransactionConfidence;
-import org.bitcoinj.uri.BitcoinURI;
-import org.bitcoinj.wallet.DeterministicSeed;
+import org.bitcoincashj.core.Address;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.TransactionConfidence;
+import org.bitcoincashj.uri.BitcoinURI;
+import org.bitcoincashj.wallet.DeterministicSeed;
 
 import com.googlecode.jcsv.CSVStrategy;
 import com.googlecode.jcsv.writer.CSVEntryConverter;

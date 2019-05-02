@@ -21,7 +21,7 @@ import bisq.common.UserThread;
 import bisq.common.crypto.LimitedKeyStrengthException;
 import bisq.common.util.Utilities;
 
-import org.bitcoinj.store.BlockStoreException;
+import org.bitcoincashj.store.BlockStoreException;
 
 import org.apache.commons.lang3.exception.ExceptionUtils;
 

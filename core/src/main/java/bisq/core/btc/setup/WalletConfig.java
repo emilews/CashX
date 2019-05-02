@@ -23,31 +23,31 @@ import bisq.core.btc.wallet.BisqRiskAnalysis;
 
 import bisq.common.app.Version;
 
-import org.bitcoinj.core.BlockChain;
-import org.bitcoinj.core.CheckpointManager;
-import org.bitcoinj.core.Context;
-import org.bitcoinj.core.NetworkParameters;
-import org.bitcoinj.core.PeerAddress;
-import org.bitcoinj.core.PeerGroup;
-import org.bitcoinj.core.Utils;
-import org.bitcoinj.core.listeners.DownloadProgressTracker;
-import org.bitcoinj.core.listeners.PeerDataEventListener;
-import org.bitcoinj.net.BlockingClientManager;
-import org.bitcoinj.net.discovery.DnsDiscovery;
-import org.bitcoinj.net.discovery.PeerDiscovery;
-import org.bitcoinj.params.MainNetParams;
-import org.bitcoinj.params.RegTestParams;
-import org.bitcoinj.params.TestNet3Params;
-import org.bitcoinj.store.BlockStore;
-import org.bitcoinj.store.BlockStoreException;
-import org.bitcoinj.store.SPVBlockStore;
-import org.bitcoinj.wallet.DeterministicKeyChain;
-import org.bitcoinj.wallet.DeterministicSeed;
-import org.bitcoinj.wallet.KeyChainGroup;
-import org.bitcoinj.wallet.Protos;
-import org.bitcoinj.wallet.Wallet;
-import org.bitcoinj.wallet.WalletExtension;
-import org.bitcoinj.wallet.WalletProtobufSerializer;
+import org.bitcoincashj.core.BlockChain;
+import org.bitcoincashj.core.CheckpointManager;
+import org.bitcoincashj.core.Context;
+import org.bitcoincashj.core.NetworkParameters;
+import org.bitcoincashj.core.PeerAddress;
+import org.bitcoincashj.core.PeerGroup;
+import org.bitcoincashj.core.Utils;
+import org.bitcoincashj.core.listeners.DownloadProgressTracker;
+import org.bitcoincashj.core.listeners.PeerDataEventListener;
+import org.bitcoincashj.net.BlockingClientManager;
+import org.bitcoincashj.net.discovery.DnsDiscovery;
+import org.bitcoincashj.net.discovery.PeerDiscovery;
+import org.bitcoincashj.params.MainNetParams;
+import org.bitcoincashj.params.RegTestParams;
+import org.bitcoincashj.params.TestNet3Params;
+import org.bitcoincashj.store.BlockStore;
+import org.bitcoincashj.store.BlockStoreException;
+import org.bitcoincashj.store.SPVBlockStore;
+import org.bitcoincashj.wallet.DeterministicKeyChain;
+import org.bitcoincashj.wallet.DeterministicSeed;
+import org.bitcoincashj.wallet.KeyChainGroup;
+import org.bitcoincashj.wallet.Protos;
+import org.bitcoincashj.wallet.Wallet;
+import org.bitcoincashj.wallet.WalletExtension;
+import org.bitcoincashj.wallet.WalletProtobufSerializer;
 
 import com.runjva.sourceforge.jsocks.protocol.Socks5Proxy;
 
@@ -406,7 +406,7 @@ public class WalletConfig extends AbstractIdleService {
                         time = seed.getCreationTimeSeconds();
                         if (chainFileExists) {
                             log.info("Clearing the chain file in preparation from restore.");
-                            vStore.clear();
+                            vStore.close();
                         }
                     } else {
                         time = vBtcWallet.getEarliestKeyCreationTime();
@@ -419,7 +419,7 @@ public class WalletConfig extends AbstractIdleService {
                         log.warn("Creating a new uncheckpointed block store due to a wallet with a creation time of zero: this will result in a very slow chain sync");
                 } else if (chainFileExists) {
                     log.info("Clearing the chain file in preparation from restore.");
-                    vStore.clear();
+                    vStore.close();
                 }
             }
             vChain = new BlockChain(params, vStore);
@@ -437,7 +437,6 @@ public class WalletConfig extends AbstractIdleService {
                 int maxConnections = Math.min(numConnectionForBtc, peerAddresses.length);
                 log.info("We try to connect to {} btc nodes", maxConnections);
                 vPeerGroup.setMaxConnections(maxConnections);
-                vPeerGroup.setAddPeersFromAddressMessage(false);
                 peerAddresses = null;
             } else if (!params.equals(RegTestParams.get())) {
                 vPeerGroup.addPeerDiscovery(discovery != null ? discovery : new DnsDiscovery(params));

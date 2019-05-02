@@ -26,10 +26,10 @@ import bisq.core.trade.protocol.tasks.TradeTask;
 import bisq.common.UserThread;
 import bisq.common.taskrunner.TaskRunner;
 
-import org.bitcoinj.core.Address;
-import org.bitcoinj.core.NetworkParameters;
-import org.bitcoinj.core.Transaction;
-import org.bitcoinj.core.TransactionConfidence;
+import org.bitcoincashj.core.Address;
+import org.bitcoincashj.core.NetworkParameters;
+import org.bitcoincashj.core.Transaction;
+import org.bitcoincashj.core.TransactionConfidence;
 
 import org.fxmisc.easybind.EasyBind;
 import org.fxmisc.easybind.Subscription;

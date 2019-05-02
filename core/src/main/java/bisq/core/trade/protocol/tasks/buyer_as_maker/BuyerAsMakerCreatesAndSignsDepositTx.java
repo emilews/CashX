@@ -29,8 +29,8 @@ import bisq.core.trade.protocol.tasks.TradeTask;
 import bisq.common.crypto.Hash;
 import bisq.common.taskrunner.TaskRunner;
 
-import org.bitcoinj.core.Address;
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Address;
+import org.bitcoincashj.core.Coin;
 
 import java.util.Arrays;
 import java.util.List;

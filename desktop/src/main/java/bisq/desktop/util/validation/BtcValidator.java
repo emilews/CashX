@@ -21,7 +21,7 @@ import bisq.core.btc.wallet.Restrictions;
 import bisq.core.locale.Res;
 import bisq.core.util.BSFormatter;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import javax.inject.Inject;
 

@@ -24,7 +24,7 @@ import bisq.core.dao.state.DaoStateService;
 import bisq.core.dao.state.model.blockchain.Block;
 import bisq.core.dao.state.model.governance.Proposal;
 
-import org.bitcoinj.core.TransactionConfidence;
+import org.bitcoincashj.core.TransactionConfidence;
 
 import com.google.inject.Inject;
 

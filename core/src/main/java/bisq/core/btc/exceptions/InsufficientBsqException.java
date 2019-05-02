@@ -17,8 +17,8 @@
 
 package bisq.core.btc.exceptions;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.InsufficientMoneyException;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.InsufficientMoneyException;
 
 public class InsufficientBsqException extends InsufficientMoneyException {
 

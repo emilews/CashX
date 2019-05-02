@@ -21,7 +21,7 @@ import bisq.core.app.BisqEnvironment;
 import bisq.core.btc.BaseCurrencyNetwork;
 import bisq.core.dao.DaoOptionKeys;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import javax.inject.Inject;
 import javax.inject.Named;

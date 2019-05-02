@@ -32,7 +32,7 @@ import bisq.common.storage.JsonFileManager;
 import bisq.common.storage.Storage;
 import bisq.common.util.Utilities;
 
-import org.bitcoinj.core.Utils;
+import org.bitcoincashj.core.Utils;
 
 import com.google.inject.Inject;
 
