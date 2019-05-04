@@ -41,7 +41,7 @@ public class BisqAppMain extends BisqExecutable {
     private BisqApp application;
 
     public BisqAppMain() {
-        super("Bisq Desktop", "bisq-desktop", Version.VERSION);
+        super("CashX Desktop", "cashx-desktop", Version.VERSION);
     }
 
     /* @Nullable

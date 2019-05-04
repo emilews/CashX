@@ -24,7 +24,7 @@ import bisq.core.dao.state.model.blockchain.TxInput;
 import bisq.core.dao.state.model.blockchain.TxOutputType;
 import bisq.core.dao.state.model.blockchain.TxType;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import com.google.common.collect.ImmutableList;
 

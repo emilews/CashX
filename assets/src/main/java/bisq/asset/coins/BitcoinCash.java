@@ -20,9 +20,39 @@ package bisq.asset.coins;
 import bisq.asset.Base58BitcoinAddressValidator;
 import bisq.asset.Coin;
 
+
+
+import org.bitcoincashj.params.MainNetParams;
+import org.bitcoincashj.params.RegTestParams;
+import org.bitcoincashj.params.TestNet3Params;
+
 public class BitcoinCash extends Coin {
 
     public BitcoinCash() {
         super("Bitcoin Cash", "BCH", new Base58BitcoinAddressValidator());
+    }
+
+
+    public static class Mainnet extends Bitcoin {
+
+        public Mainnet() {
+            super(Network.MAINNET, MainNetParams.get());
+        }
+    }
+
+
+    public static class Testnet extends Bitcoin {
+
+        public Testnet() {
+            super(Network.TESTNET, TestNet3Params.get());
+        }
+    }
+
+
+    public static class Regtest extends Bitcoin {
+
+        public Regtest() {
+            super(Network.REGTEST, RegTestParams.get());
+        }
     }
 }

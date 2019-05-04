@@ -25,7 +25,7 @@ import bisq.core.dao.state.model.blockchain.TxOutputKey;
 
 import bisq.common.proto.persistable.PersistenceProtoResolver;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import com.neemre.btcdcli4j.core.domain.RawBlock;
 import com.neemre.btcdcli4j.core.domain.RawTransaction;
