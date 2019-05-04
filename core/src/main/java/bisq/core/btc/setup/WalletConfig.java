@@ -114,10 +114,10 @@ public class WalletConfig extends AbstractIdleService {
     private final String userAgent;
     private int numConnectionForBtc;
 
-    private volatile Wallet vBtcWallet;
+    private volatile Wallet vBchWallet;
     @Nullable
     private volatile Wallet vBsqWallet;
-    private volatile File vBtcWalletFile;
+    private volatile File vBchWalletFile;
     @Nullable
     private volatile File vBsqWalletFile;
     @Nullable
@@ -372,22 +372,22 @@ public class WalletConfig extends AbstractIdleService {
             boolean chainFileExists = chainFile.exists();
 
             // BTC wallet
-            vBtcWalletFile = new File(directory, btcWalletFileName);
-            boolean shouldReplayWallet = (vBtcWalletFile.exists() && !chainFileExists) || seed != null;
+            vBchWalletFile = new File(directory, btcWalletFileName);
+            boolean shouldReplayWallet = (vBchWalletFile.exists() && !chainFileExists) || seed != null;
             BisqKeyChainGroup keyChainGroup;
             if (seed != null)
                 keyChainGroup = new BisqKeyChainGroup(params, new BtcDeterministicKeyChain(seed), true);
             else
                 keyChainGroup = new BisqKeyChainGroup(params, true);
-            vBtcWallet = createOrLoadWallet(vBtcWalletFile, shouldReplayWallet, keyChainGroup, false, seed);
+            vBchWallet = createOrLoadWallet(vBchWalletFile, shouldReplayWallet, keyChainGroup, false, seed);
 
-            vBtcWallet.allowSpendingUnconfirmedTransactions();
-            vBtcWallet.setRiskAnalyzer(new BisqRiskAnalysis.Analyzer());
+            vBchWallet.allowSpendingUnconfirmedTransactions();
+            vBchWallet.setRiskAnalyzer(new BisqRiskAnalysis.Analyzer());
 
             if (seed != null)
                 keyChainGroup = new BisqKeyChainGroup(params, new BisqDeterministicKeyChain(seed), false);
             else
-                keyChainGroup = new BisqKeyChainGroup(params, new BisqDeterministicKeyChain(vBtcWallet.getKeyChainSeed()), false);
+                keyChainGroup = new BisqKeyChainGroup(params, new BisqDeterministicKeyChain(vBchWallet.getKeyChainSeed()), false);
 
             // BSQ wallet
             vBsqWalletFile = new File(directory, bsqWalletFileName);
@@ -409,7 +409,7 @@ public class WalletConfig extends AbstractIdleService {
                             vStore.close();
                         }
                     } else {
-                        time = vBtcWallet.getEarliestKeyCreationTime();
+                        time = vBchWallet.getEarliestKeyCreationTime();
                     }
 
 
@@ -441,8 +441,8 @@ public class WalletConfig extends AbstractIdleService {
             } else if (!params.equals(RegTestParams.get())) {
                 vPeerGroup.addPeerDiscovery(discovery != null ? discovery : new DnsDiscovery(params));
             }
-            vChain.addWallet(vBtcWallet);
-            vPeerGroup.addWallet(vBtcWallet);
+            vChain.addWallet(vBchWallet);
+            vPeerGroup.addWallet(vBchWallet);
 
             if (vBsqWallet != null) {
                 //noinspection ConstantConditions
@@ -573,14 +573,14 @@ public class WalletConfig extends AbstractIdleService {
         try {
             Context.propagate(context);
             vPeerGroup.stop();
-            vBtcWallet.saveToFile(vBtcWalletFile);
+            vBchWallet.saveToFile(vBchWalletFile);
             if (vBsqWallet != null && vBsqWalletFile != null)
                 //noinspection ConstantConditions,ConstantConditions
                 vBsqWallet.saveToFile(vBsqWalletFile);
             vStore.close();
 
             vPeerGroup = null;
-            vBtcWallet = null;
+            vBchWallet = null;
             vBsqWallet = null;
             vStore = null;
             vChain = null;
@@ -606,7 +606,7 @@ public class WalletConfig extends AbstractIdleService {
 
     public Wallet getBtcWallet() {
         checkState(state() == State.STARTING || state() == State.RUNNING, "Cannot call until startup is complete");
-        return vBtcWallet;
+        return vBchWallet;
     }
 
     @Nullable

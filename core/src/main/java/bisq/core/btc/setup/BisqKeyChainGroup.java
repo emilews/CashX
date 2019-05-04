@@ -18,6 +18,7 @@
 package bisq.core.btc.setup;
 
 import org.bitcoincashj.core.NetworkParameters;
+import org.bitcoincashj.crypto.DeterministicKey;
 import org.bitcoincashj.wallet.DeterministicKeyChain;
 import org.bitcoincashj.wallet.KeyChain;
 import org.bitcoincashj.wallet.KeyChainGroup;
@@ -37,7 +38,7 @@ class BisqKeyChainGroup extends KeyChainGroup {
     }
 
     public BisqKeyChainGroup(NetworkParameters params, DeterministicKeyChain chain, boolean useBitcoinDeterministicKeyChain) {
-        super(params, chain.getWatchingKey().dropPrivateBytes().dropParent());
+        super(params, chain.getKey(KeyChain.KeyPurpose.RECEIVE_FUNDS));
 
         this.useBitcoinDeterministicKeyChain = useBitcoinDeterministicKeyChain;
     }
