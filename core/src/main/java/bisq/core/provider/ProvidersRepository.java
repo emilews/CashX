@@ -41,7 +41,6 @@ import javax.annotation.Nullable;
 @Slf4j
 public class ProvidersRepository {
     private static final List<String> DEFAULT_NODES = Arrays.asList(
-
     );
 
     private final String providersFromProgramArgs;
