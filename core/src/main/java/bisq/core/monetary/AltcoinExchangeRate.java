@@ -17,7 +17,7 @@
 
 package bisq.core.monetary;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import java.math.BigInteger;
 

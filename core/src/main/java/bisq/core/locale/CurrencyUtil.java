@@ -54,7 +54,7 @@ public class CurrencyUtil {
 
     private static final AssetRegistry assetRegistry = new AssetRegistry();
 
-    private static String baseCurrencyCode = "BTC";
+    private static String baseCurrencyCode = "BCH";
     private static List<FiatCurrency> allSortedFiatCurrencies;
     private static List<CryptoCurrency> allSortedCryptoCurrencies;
 

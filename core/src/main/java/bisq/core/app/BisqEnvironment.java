@@ -17,9 +17,9 @@
 
 package bisq.core.app;
 
-import bisq.core.btc.BaseCurrencyNetwork;
-import bisq.core.btc.BtcOptionKeys;
-import bisq.core.btc.UserAgent;
+import bisq.core.bch.BaseCurrencyNetwork;
+import bisq.core.bch.BtcOptionKeys;
+import bisq.core.bch.UserAgent;
 import bisq.core.dao.DaoOptionKeys;
 import bisq.core.exceptions.BisqException;
 import bisq.core.filter.FilterManager;
@@ -33,7 +33,7 @@ import bisq.common.crypto.KeyStorage;
 import bisq.common.storage.Storage;
 import bisq.common.util.Utilities;
 
-import org.bitcoinj.core.NetworkParameters;
+import org.bitcoincashj.core.NetworkParameters;
 
 import org.springframework.core.env.Environment;
 import org.springframework.core.env.JOptCommandLinePropertySource;
@@ -84,7 +84,7 @@ public class BisqEnvironment extends StandardEnvironment {
         DEFAULT_APP_NAME = defaultAppName;
     }
 
-    public static String DEFAULT_APP_NAME = "Bisq";
+    public static String DEFAULT_APP_NAME = "CashX";
 
     public static final String DEFAULT_USER_DATA_DIR = defaultUserDataDir();
     public static final String DEFAULT_APP_DATA_DIR = appDataDir(DEFAULT_USER_DATA_DIR, DEFAULT_APP_NAME);
@@ -105,7 +105,7 @@ public class BisqEnvironment extends StandardEnvironment {
 
     @SuppressWarnings("SameReturnValue")
     public static BaseCurrencyNetwork getDefaultBaseCurrencyNetwork() {
-        return BaseCurrencyNetwork.BTC_MAINNET;
+        return BaseCurrencyNetwork.BCH_MAINNET;
     }
 
     protected static BaseCurrencyNetwork baseCurrencyNetwork = getDefaultBaseCurrencyNetwork();
@@ -129,9 +129,9 @@ public class BisqEnvironment extends StandardEnvironment {
 
     private static String appDataDir(String userDataDir, String appName) {
         //TODO fix for changing app name form bisq to Bisq (add dir renamed as well)
-        final String newAppName = "Bisq";
+        final String newAppName = "CashX";
         if (appName.equals(newAppName)) {
-            final String oldAppName = "bisq";
+            final String oldAppName = "cashx";
             Path oldPath = Paths.get(Paths.get(userDataDir, oldAppName).toString());// bisq
             Path newPath = Paths.get(Paths.get(userDataDir, appName).toString());//Bisq
             File oldDir = new File(oldPath.toString()); // bisq
@@ -330,12 +330,12 @@ public class BisqEnvironment extends StandardEnvironment {
                 (String) commandLineProperties.getProperty(DaoOptionKeys.DAO_ACTIVATED) :
                 "true";
 
-        btcNodes = commandLineProperties.containsProperty(BtcOptionKeys.BTC_NODES) ?
-                (String) commandLineProperties.getProperty(BtcOptionKeys.BTC_NODES) :
+        btcNodes = commandLineProperties.containsProperty(BtcOptionKeys.BCH_NODES) ?
+                (String) commandLineProperties.getProperty(BtcOptionKeys.BCH_NODES) :
                 "";
 
-        useTorForBtc = commandLineProperties.containsProperty(BtcOptionKeys.USE_TOR_FOR_BTC) ?
-                (String) commandLineProperties.getProperty(BtcOptionKeys.USE_TOR_FOR_BTC) :
+        useTorForBtc = commandLineProperties.containsProperty(BtcOptionKeys.USE_TOR_FOR_BCH) ?
+                (String) commandLineProperties.getProperty(BtcOptionKeys.USE_TOR_FOR_BCH) :
                 "";
         userAgent = commandLineProperties.containsProperty(BtcOptionKeys.USER_AGENT) ?
                 (String) commandLineProperties.getProperty(BtcOptionKeys.USER_AGENT) :
@@ -505,8 +505,8 @@ public class BisqEnvironment extends StandardEnvironment {
                 setProperty(DaoOptionKeys.GENESIS_TOTAL_SUPPLY, genesisTotalSupply);
                 setProperty(DaoOptionKeys.DAO_ACTIVATED, daoActivated);
 
-                setProperty(BtcOptionKeys.BTC_NODES, btcNodes);
-                setProperty(BtcOptionKeys.USE_TOR_FOR_BTC, useTorForBtc);
+                setProperty(BtcOptionKeys.BCH_NODES, btcNodes);
+                setProperty(BtcOptionKeys.USE_TOR_FOR_BCH, useTorForBtc);
                 setProperty(BtcOptionKeys.WALLET_DIR, btcNetworkDir);
                 setProperty(BtcOptionKeys.USER_AGENT, userAgent);
                 setProperty(BtcOptionKeys.USE_ALL_PROVIDED_NODES, useAllProvidedNodes);

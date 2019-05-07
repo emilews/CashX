@@ -20,9 +20,9 @@ package bisq.core.trade;
 import bisq.core.arbitration.Arbitrator;
 import bisq.core.arbitration.ArbitratorManager;
 import bisq.core.arbitration.Mediator;
-import bisq.core.btc.wallet.BsqWalletService;
-import bisq.core.btc.wallet.BtcWalletService;
-import bisq.core.btc.wallet.TradeWalletService;
+import bisq.core.bch.wallet.BsqWalletService;
+import bisq.core.bch.wallet.BtcWalletService;
+import bisq.core.bch.wallet.TradeWalletService;
 import bisq.core.filter.FilterManager;
 import bisq.core.locale.CurrencyUtil;
 import bisq.core.monetary.Price;
@@ -56,9 +56,9 @@ import io.bisq.generated.protobuffer.PB;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.Message;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.Transaction;
-import org.bitcoinj.core.TransactionConfidence;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.Transaction;
+import org.bitcoincashj.core.TransactionConfidence;
 
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
@@ -750,7 +750,7 @@ public abstract class Trade implements Tradable, Model {
             if (depositTx.getConfidence().getDepthInBlocks() > 0) {
                 final long tradeTime = getTakeOfferDate().getTime();
                 // Use tx.getIncludedInBestChainAt() when available, otherwise use tx.getUpdateTime()
-                long blockTime = depositTx.getIncludedInBestChainAt() != null ? depositTx.getIncludedInBestChainAt().getTime() : depositTx.getUpdateTime().getTime();
+                long blockTime = depositTx.getUpdateTime().getTime();
                 // If block date is in future (Date in Bitcoin blocks can be off by +/- 2 hours) we use our current date.
                 // If block date is earlier than our trade date we use our trade date.
                 if (blockTime > now)

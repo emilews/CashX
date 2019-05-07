@@ -18,11 +18,11 @@
 package bisq.core.trade;
 
 import bisq.core.arbitration.ArbitratorManager;
-import bisq.core.btc.exceptions.AddressEntryException;
-import bisq.core.btc.model.AddressEntry;
-import bisq.core.btc.wallet.BsqWalletService;
-import bisq.core.btc.wallet.BtcWalletService;
-import bisq.core.btc.wallet.TradeWalletService;
+import bisq.core.bch.exceptions.AddressEntryException;
+import bisq.core.bch.model.AddressEntry;
+import bisq.core.bch.wallet.BsqWalletService;
+import bisq.core.bch.wallet.BtcWalletService;
+import bisq.core.bch.wallet.TradeWalletService;
 import bisq.core.filter.FilterManager;
 import bisq.core.offer.Offer;
 import bisq.core.offer.OfferPayload;
@@ -58,10 +58,10 @@ import bisq.common.proto.persistable.PersistedDataHost;
 import bisq.common.proto.persistable.PersistenceProtoResolver;
 import bisq.common.storage.Storage;
 
-import org.bitcoinj.core.AddressFormatException;
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.InsufficientMoneyException;
-import org.bitcoinj.core.Transaction;
+import org.bitcoincashj.core.AddressFormatException;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.InsufficientMoneyException;
+import org.bitcoincashj.core.Transaction;
 
 import javax.inject.Inject;
 import javax.inject.Named;

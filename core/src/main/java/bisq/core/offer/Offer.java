@@ -42,8 +42,8 @@ import bisq.common.util.Utilities;
 
 import io.bisq.generated.protobuffer.PB;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.utils.Fiat;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.utils.Fiat;
 
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.ReadOnlyStringProperty;

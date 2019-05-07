@@ -20,10 +20,10 @@ package bisq.core.monetary;
 import bisq.core.locale.CurrencyUtil;
 import bisq.core.util.BSFormatter;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.Monetary;
-import org.bitcoinj.utils.ExchangeRate;
-import org.bitcoinj.utils.Fiat;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.Monetary;
+import org.bitcoincashj.utils.ExchangeRate;
+import org.bitcoincashj.utils.Fiat;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

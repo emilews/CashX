@@ -17,7 +17,7 @@
 
 package bisq.core.trade;
 
-import bisq.core.btc.wallet.BtcWalletService;
+import bisq.core.bch.wallet.BtcWalletService;
 import bisq.core.offer.Offer;
 import bisq.core.trade.protocol.SellerProtocol;
 
@@ -27,7 +27,7 @@ import bisq.common.handlers.ErrorMessageHandler;
 import bisq.common.handlers.ResultHandler;
 import bisq.common.storage.Storage;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import lombok.extern.slf4j.Slf4j;
 

@@ -18,10 +18,10 @@
 package bisq.core.trade.protocol;
 
 import bisq.core.arbitration.ArbitratorManager;
-import bisq.core.btc.model.RawTransactionInput;
-import bisq.core.btc.wallet.BsqWalletService;
-import bisq.core.btc.wallet.BtcWalletService;
-import bisq.core.btc.wallet.TradeWalletService;
+import bisq.core.bch.model.RawTransactionInput;
+import bisq.core.bch.wallet.BsqWalletService;
+import bisq.core.bch.wallet.BtcWalletService;
+import bisq.core.bch.wallet.TradeWalletService;
 import bisq.core.filter.FilterManager;
 import bisq.core.network.MessageState;
 import bisq.core.offer.Offer;
@@ -54,8 +54,8 @@ import io.bisq.generated.protobuffer.PB;
 
 import com.google.protobuf.ByteString;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.Transaction;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.Transaction;
 
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;

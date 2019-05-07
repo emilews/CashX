@@ -23,9 +23,9 @@ import bisq.core.locale.Res;
 import bisq.core.user.Preferences;
 import bisq.core.util.BSFormatter;
 
-import org.bitcoinj.core.VersionMessage;
-import org.bitcoinj.store.BlockStoreException;
-import org.bitcoinj.store.ChainFileLockedException;
+import org.bitcoincashj.core.VersionMessage;
+import org.bitcoincashj.store.BlockStoreException;
+import org.bitcoincashj.store.ChainFileLockedException;
 
 import javax.inject.Inject;
 
@@ -93,8 +93,8 @@ public class WalletAppSetup {
               Runnable walletPasswordHandler,
               Runnable downloadCompleteHandler,
               Runnable walletInitializedHandler) {
-        log.info("Initialize WalletAppSetup with BitcoinJ version {} and hash of BitcoinJ commit {}",
-                VersionMessage.BITCOINJ_VERSION, "cd30ad5b");
+        log.info("Initialize WalletAppSetup with BitcoinCashJ version {} and hash of BitcoinCashJ commit {}",
+                VersionMessage.BITCOINJ_VERSION, "b2a08f76f270d132954802e7b322d90cd6d92c2b");
 
         ObjectProperty<Throwable> walletServiceException = new SimpleObjectProperty<>();
         btcInfoBinding = EasyBind.combine(walletsSetup.downloadPercentageProperty(),
