@@ -31,11 +31,11 @@ import bisq.desktop.main.portfolio.pendingtrades.PendingTradesViewModel;
 import bisq.desktop.main.portfolio.pendingtrades.steps.TradeStepView;
 import bisq.desktop.util.Layout;
 
-import bisq.core.btc.exceptions.AddressEntryException;
-import bisq.core.btc.exceptions.InsufficientFundsException;
-import bisq.core.btc.model.AddressEntry;
-import bisq.core.btc.wallet.BtcWalletService;
-import bisq.core.btc.wallet.Restrictions;
+import bisq.core.bch.exceptions.AddressEntryException;
+import bisq.core.bch.exceptions.InsufficientFundsException;
+import bisq.core.bch.model.AddressEntry;
+import bisq.core.bch.wallet.BtcWalletService;
+import bisq.core.bch.wallet.Restrictions;
 import bisq.core.locale.Res;
 import bisq.core.user.DontShowAgainLookup;
 import bisq.core.util.BSFormatter;
@@ -47,9 +47,9 @@ import bisq.common.app.DevEnv;
 import bisq.common.handlers.FaultHandler;
 import bisq.common.handlers.ResultHandler;
 
-import org.bitcoinj.core.AddressFormatException;
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.Transaction;
+import org.bitcoincashj.core.AddressFormatException;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.Transaction;
 
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -250,7 +250,7 @@ public class BuyerStep4View extends TradeStepView {
                 new Popup<>().warning(e.getMessage()).show();
             }
         } else {
-            new Popup<>().warning(Res.get("validation.btc.invalidAddress")).show();
+            new Popup<>().warning(Res.get("validation.bch.invalidAddress")).show();
         }
     }
 

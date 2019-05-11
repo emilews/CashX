@@ -34,10 +34,10 @@ import bisq.desktop.util.GUIUtil;
 import bisq.desktop.util.Layout;
 import bisq.desktop.util.validation.BsqValidator;
 
-import bisq.core.btc.exceptions.TransactionVerificationException;
-import bisq.core.btc.exceptions.WalletException;
-import bisq.core.btc.listeners.BsqBalanceListener;
-import bisq.core.btc.wallet.BsqWalletService;
+import bisq.core.bch.exceptions.TransactionVerificationException;
+import bisq.core.bch.exceptions.WalletException;
+import bisq.core.bch.listeners.BsqBalanceListener;
+import bisq.core.bch.wallet.BsqWalletService;
 import bisq.core.dao.DaoFacade;
 import bisq.core.dao.governance.blindvote.BlindVoteConsensus;
 import bisq.core.dao.governance.blindvote.MyBlindVoteListService;
@@ -61,8 +61,8 @@ import bisq.common.util.Tuple2;
 import bisq.common.util.Tuple3;
 import bisq.common.util.Tuple4;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.InsufficientMoneyException;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.InsufficientMoneyException;
 
 import javax.inject.Inject;
 

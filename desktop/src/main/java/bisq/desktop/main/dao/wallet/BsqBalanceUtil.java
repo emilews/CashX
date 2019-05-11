@@ -21,8 +21,8 @@ import bisq.desktop.components.TitledGroupBg;
 import bisq.desktop.util.FormBuilder;
 import bisq.desktop.util.Layout;
 
-import bisq.core.btc.listeners.BsqBalanceListener;
-import bisq.core.btc.wallet.BsqWalletService;
+import bisq.core.bch.listeners.BsqBalanceListener;
+import bisq.core.bch.wallet.BsqWalletService;
 import bisq.core.dao.state.DaoStateListener;
 import bisq.core.dao.state.DaoStateService;
 import bisq.core.dao.state.model.blockchain.Block;
@@ -31,7 +31,7 @@ import bisq.core.util.BsqFormatter;
 
 import bisq.common.util.Tuple3;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import javax.inject.Inject;
 

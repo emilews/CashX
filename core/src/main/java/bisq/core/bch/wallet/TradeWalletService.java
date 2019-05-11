@@ -209,9 +209,7 @@ public class TradeWalletService {
             }
             // We use a fixed fee
 
-            sendRequest.fee = txFee;
-            sendRequest.feePerKb = Coin.ZERO;
-            sendRequest.ensureMinRequiredFee = false;
+            sendRequest.ensureMinRequiredFee = true;
 
             // Change is optional in case of overpay or use of funds from savings wallet
             sendRequest.changeAddress = changeAddress;
@@ -290,9 +288,7 @@ public class TradeWalletService {
             sendRequest.coinSelector = new BtcCoinSelector(fundingAddress, preferences.getIgnoreDustThreshold());
         }
         // We use a fixed fee
-        sendRequest.fee = txFee;
-        sendRequest.feePerKb = Coin.ZERO;
-        sendRequest.ensureMinRequiredFee = false;
+        sendRequest.ensureMinRequiredFee = true;
 
         sendRequest.signInputs = false;
 
@@ -1199,9 +1195,7 @@ public class TradeWalletService {
             sendRequest.shuffleOutputs = false;
             sendRequest.aesKey = aesKey;
             // We use a fixed fee
-            sendRequest.fee = txFee;
-            sendRequest.feePerKb = Coin.ZERO;
-            sendRequest.ensureMinRequiredFee = false;
+            sendRequest.ensureMinRequiredFee = true;
             // we allow spending of unconfirmed tx (double spend risk is low and usability would suffer if we need to wait for 1 confirmation)
             sendRequest.coinSelector = new BtcCoinSelector(address, preferences.getIgnoreDustThreshold());
             // We use always the same address in a trade for all transactions

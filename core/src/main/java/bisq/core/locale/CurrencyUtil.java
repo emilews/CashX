@@ -18,7 +18,7 @@
 package bisq.core.locale;
 
 import bisq.core.app.BisqEnvironment;
-import bisq.core.btc.BaseCurrencyNetwork;
+import bisq.core.bch.BaseCurrencyNetwork;
 import bisq.core.dao.governance.asset.AssetService;
 import bisq.core.filter.FilterManager;
 

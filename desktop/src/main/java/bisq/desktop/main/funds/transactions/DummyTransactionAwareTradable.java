@@ -19,7 +19,7 @@ package bisq.desktop.main.funds.transactions;
 
 import bisq.core.trade.Tradable;
 
-import org.bitcoinj.core.Transaction;
+import org.bitcoincashj.core.Transaction;
 
 class DummyTransactionAwareTradable implements TransactionAwareTradable {
     private final Tradable delegate;

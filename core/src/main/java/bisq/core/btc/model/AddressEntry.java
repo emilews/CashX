@@ -27,9 +27,9 @@ import io.bisq.generated.protobuffer.PB;
 
 import com.google.protobuf.ByteString;
 
-import org.bitcoinj.core.Address;
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.crypto.DeterministicKey;
+import org.bitcoincashj.core.Address;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.crypto.DeterministicKey;
 
 import java.util.Optional;
 

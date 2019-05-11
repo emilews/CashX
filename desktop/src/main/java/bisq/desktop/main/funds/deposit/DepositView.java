@@ -29,9 +29,9 @@ import bisq.desktop.main.overlays.windows.QRCodeWindow;
 import bisq.desktop.util.GUIUtil;
 import bisq.desktop.util.Layout;
 
-import bisq.core.btc.listeners.BalanceListener;
-import bisq.core.btc.model.AddressEntry;
-import bisq.core.btc.wallet.BtcWalletService;
+import bisq.core.bch.listeners.BalanceListener;
+import bisq.core.bch.model.AddressEntry;
+import bisq.core.bch.wallet.BtcWalletService;
 import bisq.core.locale.Res;
 import bisq.core.provider.fee.FeeService;
 import bisq.core.user.Preferences;
@@ -40,8 +40,8 @@ import bisq.core.util.BSFormatter;
 import bisq.common.UserThread;
 import bisq.common.app.DevEnv;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.Transaction;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.Transaction;
 
 import net.glxn.qrgen.QRCode;
 import net.glxn.qrgen.image.ImageType;

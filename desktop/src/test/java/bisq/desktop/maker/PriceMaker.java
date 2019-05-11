@@ -20,7 +20,7 @@ package bisq.desktop.maker;
 import bisq.core.monetary.Altcoin;
 import bisq.core.monetary.Price;
 
-import org.bitcoinj.utils.Fiat;
+import org.bitcoincashj.utils.Fiat;
 
 import com.natpryce.makeiteasy.Instantiator;
 import com.natpryce.makeiteasy.Maker;

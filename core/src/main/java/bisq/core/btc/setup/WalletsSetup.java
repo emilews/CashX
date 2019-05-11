@@ -37,18 +37,18 @@ import bisq.common.handlers.ExceptionHandler;
 import bisq.common.handlers.ResultHandler;
 import bisq.common.storage.FileUtil;
 
-import org.bitcoinj.core.Address;
-import org.bitcoinj.core.BlockChain;
-import org.bitcoinj.core.Context;
-import org.bitcoinj.core.NetworkParameters;
-import org.bitcoinj.core.Peer;
-import org.bitcoinj.core.PeerAddress;
-import org.bitcoinj.core.PeerGroup;
-import org.bitcoinj.core.listeners.DownloadProgressTracker;
-import org.bitcoinj.params.RegTestParams;
-import org.bitcoinj.utils.Threading;
-import org.bitcoinj.wallet.DeterministicSeed;
-import org.bitcoinj.wallet.Wallet;
+import org.bitcoincashj.core.Address;
+import org.bitcoincashj.core.BlockChain;
+import org.bitcoincashj.core.Context;
+import org.bitcoincashj.core.NetworkParameters;
+import org.bitcoincashj.core.Peer;
+import org.bitcoincashj.core.PeerAddress;
+import org.bitcoincashj.core.PeerGroup;
+import org.bitcoincashj.core.listeners.DownloadProgressTracker;
+import org.bitcoincashj.params.RegTestParams;
+import org.bitcoincashj.utils.Threading;
+import org.bitcoincashj.wallet.DeterministicSeed;
+import org.bitcoincashj.wallet.Wallet;
 
 import com.runjva.sourceforge.jsocks.protocol.Socks5Proxy;
 
@@ -160,7 +160,6 @@ public class WalletsSetup {
         btcWalletFileName = "bisq_" + BisqEnvironment.getBaseCurrencyNetwork().getCurrencyCode() + ".wallet";
         params = BisqEnvironment.getParameters();
         walletDir = new File(appDir, "wallet");
-        PeerGroup.setIgnoreHttpSeeds(true);
     }
 
 
@@ -203,7 +202,6 @@ public class WalletsSetup {
 
                 // We don't want to get our node white list polluted with nodes from AddressMessage calls.
                 if (preferences.getBitcoinNodes() != null && !preferences.getBitcoinNodes().isEmpty())
-                    peerGroup.setAddPeersFromAddressMessage(false);
 
                 peerGroup.addConnectedEventListener((peer, peerCount) -> {
                     // We get called here on our user thread

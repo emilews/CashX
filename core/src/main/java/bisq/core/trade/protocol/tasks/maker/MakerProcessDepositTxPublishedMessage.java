@@ -17,8 +17,8 @@
 
 package bisq.core.trade.protocol.tasks.maker;
 
-import bisq.core.btc.model.AddressEntry;
-import bisq.core.btc.wallet.BtcWalletService;
+import bisq.core.bch.model.AddressEntry;
+import bisq.core.bch.wallet.BtcWalletService;
 import bisq.core.trade.Trade;
 import bisq.core.trade.messages.DepositTxPublishedMessage;
 import bisq.core.trade.protocol.tasks.TradeTask;
@@ -26,7 +26,7 @@ import bisq.core.util.Validator;
 
 import bisq.common.taskrunner.TaskRunner;
 
-import org.bitcoinj.core.Transaction;
+import org.bitcoincashj.core.Transaction;
 
 import lombok.extern.slf4j.Slf4j;
 

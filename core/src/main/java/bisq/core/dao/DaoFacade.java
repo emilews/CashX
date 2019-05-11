@@ -17,8 +17,8 @@
 
 package bisq.core.dao;
 
-import bisq.core.btc.exceptions.TransactionVerificationException;
-import bisq.core.btc.exceptions.WalletException;
+import bisq.core.bch.exceptions.TransactionVerificationException;
+import bisq.core.bch.exceptions.WalletException;
 import bisq.core.dao.governance.ballot.BallotListPresentation;
 import bisq.core.dao.governance.ballot.BallotListService;
 import bisq.core.dao.governance.blindvote.BlindVoteConsensus;
@@ -78,9 +78,9 @@ import bisq.common.handlers.ExceptionHandler;
 import bisq.common.handlers.ResultHandler;
 import bisq.common.util.Tuple2;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.InsufficientMoneyException;
-import org.bitcoinj.core.Transaction;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.InsufficientMoneyException;
+import org.bitcoincashj.core.Transaction;
 
 import javax.inject.Inject;
 

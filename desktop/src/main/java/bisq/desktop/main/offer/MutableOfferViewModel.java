@@ -34,8 +34,8 @@ import bisq.desktop.util.validation.FiatVolumeValidator;
 import bisq.desktop.util.validation.MonetaryValidator;
 import bisq.desktop.util.validation.SecurityDepositValidator;
 
-import bisq.core.btc.setup.WalletsSetup;
-import bisq.core.btc.wallet.Restrictions;
+import bisq.core.bch.setup.WalletsSetup;
+import bisq.core.bch.wallet.Restrictions;
 import bisq.core.locale.CurrencyUtil;
 import bisq.core.locale.Res;
 import bisq.core.locale.TradeCurrency;
@@ -60,9 +60,9 @@ import bisq.common.UserThread;
 import bisq.common.app.DevEnv;
 import bisq.common.util.MathUtils;
 
-import org.bitcoinj.core.Address;
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.utils.Fiat;
+import org.bitcoincashj.core.Address;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.utils.Fiat;
 
 import javax.inject.Inject;
 

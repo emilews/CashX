@@ -29,10 +29,10 @@ import bisq.core.util.validation.InputValidator;
 import bisq.common.app.DevEnv;
 import bisq.common.util.MathUtils;
 
-import org.bitcoinj.core.Address;
-import org.bitcoinj.core.AddressFormatException;
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.utils.MonetaryFormat;
+import org.bitcoincashj.core.Address;
+import org.bitcoincashj.core.AddressFormatException;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.utils.MonetaryFormat;
 
 import javax.inject.Inject;
 

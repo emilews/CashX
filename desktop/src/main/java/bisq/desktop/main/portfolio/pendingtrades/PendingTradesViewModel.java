@@ -38,7 +38,7 @@ import bisq.network.p2p.P2PService;
 import bisq.common.Clock;
 import bisq.common.app.DevEnv;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import com.google.inject.Inject;
 

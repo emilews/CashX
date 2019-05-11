@@ -19,7 +19,7 @@ package bisq.common.util;
 
 import bisq.common.crypto.LimitedKeyStrengthException;
 
-import org.bitcoinj.core.Utils;
+import org.bitcoincashj.core.Utils;
 
 import com.google.gson.ExclusionStrategy;
 import com.google.gson.FieldAttributes;

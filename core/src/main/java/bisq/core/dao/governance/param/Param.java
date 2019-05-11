@@ -51,10 +51,10 @@ public enum Param {
     UNDEFINED("N/A", ParamType.UNDEFINED),
 
     // Fee in BTC for a 1 BTC trade. 0.001 is 0.1%. @5000 USD/BTC price 0.1% fee is 5 USD.
-    DEFAULT_MAKER_FEE_BTC("0.001", ParamType.BTC, 5, 5),
-    DEFAULT_TAKER_FEE_BTC("0.003", ParamType.BTC, 5, 5),       // 0.2% of trade amount
-    MIN_MAKER_FEE_BTC("0.00005", ParamType.BTC, 5, 5),         // 0.005% of trade amount
-    MIN_TAKER_FEE_BTC("0.00005", ParamType.BTC, 5, 5),
+    DEFAULT_MAKER_FEE_BCH("0.0001", ParamType.BTC, 5, 5),
+    DEFAULT_TAKER_FEE_BCH("0.0003", ParamType.BTC, 5, 5),       // 0.2% of trade amount
+    MIN_MAKER_FEE_BCH("0.000005", ParamType.BTC, 5, 5),         // 0.005% of trade amount
+    MIN_TAKER_FEE_BCH("0.000005", ParamType.BTC, 5, 5),
 
     // Fee in BSQ satoshi for a 1 BTC trade. 100 Satoshi = 1 BSQ
     // If 1 BTS is 1 USD the fee @5000 USD/BTC is 0.5 USD which is 10% of the BTC fee of 5 USD.
@@ -106,10 +106,9 @@ public enum Param {
     // the time locked payout tx in case the traders do not cooperate. Will be likely a donation address (Bisq, Tor,...)
     // but can be also a burner address if we prefer to burn the BTC
     @SuppressWarnings("SpellCheckingInspection")
-    RECIPIENT_BTC_ADDRESS(BisqEnvironment.getBaseCurrencyNetwork().isMainnet() ? "1BVxNn3T12veSK6DgqwU4Hdn7QHcDDRag7" :  // mainnet
-            BisqEnvironment.getBaseCurrencyNetwork().isDaoBetaNet() ? "1BVxNn3T12veSK6DgqwU4Hdn7QHcDDRag7" :  // mainnet
+    RECIPIENT_BCH_ADDRESS(BisqEnvironment.getBaseCurrencyNetwork().isMainnet() ? "bitcoincash:qre9wjxxprgf84ek5mysecetpdpvhvhe6cvzpfd275" :  // mainnet
                     BisqEnvironment.getBaseCurrencyNetwork().isTestnet() ? "2N4mVTpUZAnhm9phnxB7VrHB4aBhnWrcUrV" : // testnet
-                            "mquz1zFmhs7iy8qJTkhY7C9bhJ5S3g8Xim", // regtest or DAO testnet (regtest)
+                            "bchreg:qq0n3vyktux52g89nqr7j8tprrp7m2w9c5lprgm67l", // regtest or DAO testnet (regtest)
             ParamType.ADDRESS),
 
     // Fee for activating an asset or re-listing after deactivation due lack of trade activity. Fee per day of trial period without activity checks.
@@ -140,71 +139,43 @@ public enum Param {
             "3601" :    // mainnet; 24 days
             BisqEnvironment.getBaseCurrencyNetwork().isRegtest() ?
                     "4" :       // regtest
-                    BisqEnvironment.getBaseCurrencyNetwork().isDaoBetaNet() ?
-                            "144" :       // daoBetaNet; 1 day
-                            BisqEnvironment.getBaseCurrencyNetwork().isDaoRegTest() ?
-                                    "134" :      // dao regtest; 0.93 days
-                                    "380",       // testnet or dao testnet (server side regtest); 2.6 days
+                    "380",       // testnet or dao testnet (server side regtest); 2.6 days
             ParamType.BLOCK, 2, 2),
     PHASE_BREAK1(BisqEnvironment.getBaseCurrencyNetwork().isMainnet() ?
             "149" :     // mainnet; 1 day
             BisqEnvironment.getBaseCurrencyNetwork().isRegtest() ?
                     "1" :       // regtest
-                    BisqEnvironment.getBaseCurrencyNetwork().isDaoBetaNet() ?
-                            "10" :       // daoBetaNet
-                            BisqEnvironment.getBaseCurrencyNetwork().isDaoRegTest() ?
-                                    "10" :      // dao regtest
-                                    "10",       // testnet or dao testnet (server side regtest)
+                    "10",       // testnet or dao testnet (server side regtest)
             ParamType.BLOCK, 2, 2),
     PHASE_BLIND_VOTE(BisqEnvironment.getBaseCurrencyNetwork().isMainnet() ?
             "451" :     // mainnet; 3 days
             BisqEnvironment.getBaseCurrencyNetwork().isRegtest() ?
                     "2" :       // regtest
-                    BisqEnvironment.getBaseCurrencyNetwork().isDaoBetaNet() ?
-                            "144" :       // daoBetaNet; 1 day
-                            BisqEnvironment.getBaseCurrencyNetwork().isDaoRegTest() ?
-                                    "134" :      // dao regtest; 0.93 days
-                                    "300",      // testnet or dao testnet (server side regtest); 2 days
+                    "300",      // testnet or dao testnet (server side regtest); 2 days
             ParamType.BLOCK, 2, 2),
     PHASE_BREAK2(BisqEnvironment.getBaseCurrencyNetwork().isMainnet() ?
             "9" :       // mainnet
             BisqEnvironment.getBaseCurrencyNetwork().isRegtest() ?
                     "1" :       // regtest
-                    BisqEnvironment.getBaseCurrencyNetwork().isDaoBetaNet() ?
-                            "10" :       // daoBetaNet
-                            BisqEnvironment.getBaseCurrencyNetwork().isDaoRegTest() ?
-                                    "10" :      // dao regtest
-                                    "10",       // testnet or dao testnet (server side regtest)
+                    "10",       // testnet or dao testnet (server side regtest)
             ParamType.BLOCK, 2, 2),
     PHASE_VOTE_REVEAL(BisqEnvironment.getBaseCurrencyNetwork().isMainnet() ?
             "451" :     // mainnet; 3 days
             BisqEnvironment.getBaseCurrencyNetwork().isRegtest() ?
                     "2" :       // regtest
-                    BisqEnvironment.getBaseCurrencyNetwork().isDaoBetaNet() ?
-                            "144" :       // daoBetaNet; 1 day
-                            BisqEnvironment.getBaseCurrencyNetwork().isDaoRegTest() ?
-                                    "132" :      // dao regtest; 0.93 days
-                                    "300",      // testnet or dao testnet (server side regtest); 2 days
+                    "300",      // testnet or dao testnet (server side regtest); 2 days
             ParamType.BLOCK, 2, 2),
     PHASE_BREAK3(BisqEnvironment.getBaseCurrencyNetwork().isMainnet() ?
             "9" :       // mainnet
             BisqEnvironment.getBaseCurrencyNetwork().isRegtest() ?
                     "1" :       // regtest
-                    BisqEnvironment.getBaseCurrencyNetwork().isDaoBetaNet() ?
-                            "10" :       // daoBetaNet
-                            BisqEnvironment.getBaseCurrencyNetwork().isDaoRegTest() ?
-                                    "10" :      // dao regtest
-                                    "10",       // testnet or dao testnet (server side regtest)
+                    "10",       // testnet or dao testnet (server side regtest)
             ParamType.BLOCK, 2, 2),
     PHASE_RESULT(BisqEnvironment.getBaseCurrencyNetwork().isMainnet() ?
             "10" :      // mainnet
             BisqEnvironment.getBaseCurrencyNetwork().isRegtest() ?
                     "2" :       // regtest
-                    BisqEnvironment.getBaseCurrencyNetwork().isDaoBetaNet() ?
-                            "10" :       // daoBetaNet
-                            BisqEnvironment.getBaseCurrencyNetwork().isDaoRegTest() ?
-                                    "2" :      // dao regtest
-                                    "2",        // testnet or dao testnet (server side regtest)
+                    "2",        // testnet or dao testnet (server side regtest)
             ParamType.BLOCK, 2, 2);
 
     @Getter

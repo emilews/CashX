@@ -22,8 +22,8 @@ import bisq.common.util.Utilities;
 
 import com.google.protobuf.ByteString;
 
-import org.bitcoinj.crypto.KeyCrypterScrypt;
-import org.bitcoinj.wallet.Protos;
+import org.bitcoincashj.crypto.KeyCrypterScrypt;
+import org.bitcoincashj.wallet.Protos;
 
 import org.spongycastle.crypto.params.KeyParameter;
 

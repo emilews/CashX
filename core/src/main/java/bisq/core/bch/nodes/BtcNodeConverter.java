@@ -17,7 +17,7 @@
 
 package bisq.core.bch.nodes;
 
-import bisq.core.btc.nodes.BtcNodes.BtcNode;
+import bisq.core.bch.nodes.BtcNodes.BtcNode;
 
 import bisq.network.DnsLookupException;
 import bisq.network.DnsLookupTor;
@@ -61,7 +61,7 @@ class BtcNodeConverter {
             PeerAddress result = new PeerAddress(onionAddress, node.getPort());
             result.setAddr(inetAddress);
             return result;
-        } catch (UnknownHostException e) {
+        } catch (Exception e) {
             log.error("Failed to convert node", e);
             return null;
         }
@@ -125,8 +125,8 @@ class BtcNodeConverter {
     }
 
     static class Facade {
-        InetAddress onionHostToInetAddress(String onionAddress) throws UnknownHostException {
-            return OnionCatConverter.onionHostToInetAddress(onionAddress);
+        InetAddress onionHostToInetAddress(String onionAddress) {
+            return null;
         }
 
         InetAddress torLookup(Socks5Proxy proxy, String host) throws DnsLookupException {

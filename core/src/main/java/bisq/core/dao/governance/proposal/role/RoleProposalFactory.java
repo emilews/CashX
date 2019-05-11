@@ -17,8 +17,8 @@
 
 package bisq.core.dao.governance.proposal.role;
 
-import bisq.core.btc.wallet.BsqWalletService;
-import bisq.core.btc.wallet.BtcWalletService;
+import bisq.core.bch.wallet.BsqWalletService;
+import bisq.core.bch.wallet.BtcWalletService;
 import bisq.core.dao.governance.proposal.BaseProposalFactory;
 import bisq.core.dao.governance.proposal.ProposalValidationException;
 import bisq.core.dao.governance.proposal.ProposalWithTransaction;
@@ -27,7 +27,7 @@ import bisq.core.dao.state.DaoStateService;
 import bisq.core.dao.state.model.governance.Role;
 import bisq.core.dao.state.model.governance.RoleProposal;
 
-import org.bitcoinj.core.InsufficientMoneyException;
+import org.bitcoincashj.core.InsufficientMoneyException;
 
 import javax.inject.Inject;
 

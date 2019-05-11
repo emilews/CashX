@@ -1,7 +1,7 @@
 package bisq.desktop.main.presentation;
 
-import bisq.core.btc.wallet.BsqWalletService;
-import bisq.core.btc.wallet.BtcWalletService;
+import bisq.core.bch.wallet.BsqWalletService;
+import bisq.core.bch.wallet.BtcWalletService;
 import bisq.core.dao.DaoFacade;
 import bisq.core.dao.state.DaoStateListener;
 import bisq.core.dao.state.DaoStateService;

@@ -23,31 +23,31 @@ import bisq.core.btc.wallet.BisqRiskAnalysis;
 
 import bisq.common.app.Version;
 
-import org.bitcoinj.core.BlockChain;
-import org.bitcoinj.core.CheckpointManager;
-import org.bitcoinj.core.Context;
-import org.bitcoinj.core.NetworkParameters;
-import org.bitcoinj.core.PeerAddress;
-import org.bitcoinj.core.PeerGroup;
-import org.bitcoinj.core.Utils;
-import org.bitcoinj.core.listeners.DownloadProgressTracker;
-import org.bitcoinj.core.listeners.PeerDataEventListener;
-import org.bitcoinj.net.BlockingClientManager;
-import org.bitcoinj.net.discovery.DnsDiscovery;
-import org.bitcoinj.net.discovery.PeerDiscovery;
-import org.bitcoinj.params.MainNetParams;
-import org.bitcoinj.params.RegTestParams;
-import org.bitcoinj.params.TestNet3Params;
-import org.bitcoinj.store.BlockStore;
-import org.bitcoinj.store.BlockStoreException;
-import org.bitcoinj.store.SPVBlockStore;
-import org.bitcoinj.wallet.DeterministicKeyChain;
-import org.bitcoinj.wallet.DeterministicSeed;
-import org.bitcoinj.wallet.KeyChainGroup;
-import org.bitcoinj.wallet.Protos;
-import org.bitcoinj.wallet.Wallet;
-import org.bitcoinj.wallet.WalletExtension;
-import org.bitcoinj.wallet.WalletProtobufSerializer;
+import org.bitcoincashj.core.BlockChain;
+import org.bitcoincashj.core.CheckpointManager;
+import org.bitcoincashj.core.Context;
+import org.bitcoincashj.core.NetworkParameters;
+import org.bitcoincashj.core.PeerAddress;
+import org.bitcoincashj.core.PeerGroup;
+import org.bitcoincashj.core.Utils;
+import org.bitcoincashj.core.listeners.DownloadProgressTracker;
+import org.bitcoincashj.core.listeners.PeerDataEventListener;
+import org.bitcoincashj.net.BlockingClientManager;
+import org.bitcoincashj.net.discovery.DnsDiscovery;
+import org.bitcoincashj.net.discovery.PeerDiscovery;
+import org.bitcoincashj.params.MainNetParams;
+import org.bitcoincashj.params.RegTestParams;
+import org.bitcoincashj.params.TestNet3Params;
+import org.bitcoincashj.store.BlockStore;
+import org.bitcoincashj.store.BlockStoreException;
+import org.bitcoincashj.store.SPVBlockStore;
+import org.bitcoincashj.wallet.DeterministicKeyChain;
+import org.bitcoincashj.wallet.DeterministicSeed;
+import org.bitcoincashj.wallet.KeyChainGroup;
+import org.bitcoincashj.wallet.Protos;
+import org.bitcoincashj.wallet.Wallet;
+import org.bitcoincashj.wallet.WalletExtension;
+import org.bitcoincashj.wallet.WalletProtobufSerializer;
 
 import com.runjva.sourceforge.jsocks.protocol.Socks5Proxy;
 
@@ -114,10 +114,10 @@ public class WalletConfig extends AbstractIdleService {
     private final String userAgent;
     private int numConnectionForBtc;
 
-    private volatile Wallet vBtcWallet;
+    private volatile Wallet vBchWallet;
     @Nullable
     private volatile Wallet vBsqWallet;
-    private volatile File vBtcWalletFile;
+    private volatile File vBchWalletFile;
     @Nullable
     private volatile File vBsqWalletFile;
     @Nullable
@@ -235,8 +235,7 @@ public class WalletConfig extends AbstractIdleService {
 
         // For dao testnet (server side regtest) we prevent to connect to a localhost node to avoid confusion
         // if local btc node is not synced with our dao testnet master node.
-        if (BisqEnvironment.getBaseCurrencyNetwork().isDaoRegTest() || BisqEnvironment.getBaseCurrencyNetwork().isDaoTestNet())
-            peerGroup.setUseLocalhostPeerWhenPossible(false);
+
 
         return peerGroup;
     }
@@ -372,22 +371,22 @@ public class WalletConfig extends AbstractIdleService {
             boolean chainFileExists = chainFile.exists();
 
             // BTC wallet
-            vBtcWalletFile = new File(directory, btcWalletFileName);
-            boolean shouldReplayWallet = (vBtcWalletFile.exists() && !chainFileExists) || seed != null;
+            vBchWalletFile = new File(directory, btcWalletFileName);
+            boolean shouldReplayWallet = (vBchWalletFile.exists() && !chainFileExists) || seed != null;
             BisqKeyChainGroup keyChainGroup;
             if (seed != null)
                 keyChainGroup = new BisqKeyChainGroup(params, new BtcDeterministicKeyChain(seed), true);
             else
                 keyChainGroup = new BisqKeyChainGroup(params, true);
-            vBtcWallet = createOrLoadWallet(vBtcWalletFile, shouldReplayWallet, keyChainGroup, false, seed);
+            vBchWallet = createOrLoadWallet(vBchWalletFile, shouldReplayWallet, keyChainGroup, false, seed);
 
-            vBtcWallet.allowSpendingUnconfirmedTransactions();
-            vBtcWallet.setRiskAnalyzer(new BisqRiskAnalysis.Analyzer());
+            vBchWallet.allowSpendingUnconfirmedTransactions();
+            vBchWallet.setRiskAnalyzer(new BisqRiskAnalysis.Analyzer());
 
             if (seed != null)
                 keyChainGroup = new BisqKeyChainGroup(params, new BisqDeterministicKeyChain(seed), false);
             else
-                keyChainGroup = new BisqKeyChainGroup(params, new BisqDeterministicKeyChain(vBtcWallet.getKeyChainSeed()), false);
+                keyChainGroup = new BisqKeyChainGroup(params, new BisqDeterministicKeyChain(vBchWallet.getKeyChainSeed()), false);
 
             // BSQ wallet
             vBsqWalletFile = new File(directory, bsqWalletFileName);
@@ -406,10 +405,10 @@ public class WalletConfig extends AbstractIdleService {
                         time = seed.getCreationTimeSeconds();
                         if (chainFileExists) {
                             log.info("Clearing the chain file in preparation from restore.");
-                            vStore.clear();
+                            vStore.close();
                         }
                     } else {
-                        time = vBtcWallet.getEarliestKeyCreationTime();
+                        time = vBchWallet.getEarliestKeyCreationTime();
                     }
 
 
@@ -419,7 +418,7 @@ public class WalletConfig extends AbstractIdleService {
                         log.warn("Creating a new uncheckpointed block store due to a wallet with a creation time of zero: this will result in a very slow chain sync");
                 } else if (chainFileExists) {
                     log.info("Clearing the chain file in preparation from restore.");
-                    vStore.clear();
+                    vStore.close();
                 }
             }
             vChain = new BlockChain(params, vStore);
@@ -437,13 +436,12 @@ public class WalletConfig extends AbstractIdleService {
                 int maxConnections = Math.min(numConnectionForBtc, peerAddresses.length);
                 log.info("We try to connect to {} btc nodes", maxConnections);
                 vPeerGroup.setMaxConnections(maxConnections);
-                vPeerGroup.setAddPeersFromAddressMessage(false);
                 peerAddresses = null;
             } else if (!params.equals(RegTestParams.get())) {
                 vPeerGroup.addPeerDiscovery(discovery != null ? discovery : new DnsDiscovery(params));
             }
-            vChain.addWallet(vBtcWallet);
-            vPeerGroup.addWallet(vBtcWallet);
+            vChain.addWallet(vBchWallet);
+            vPeerGroup.addWallet(vBchWallet);
 
             if (vBsqWallet != null) {
                 //noinspection ConstantConditions
@@ -574,14 +572,14 @@ public class WalletConfig extends AbstractIdleService {
         try {
             Context.propagate(context);
             vPeerGroup.stop();
-            vBtcWallet.saveToFile(vBtcWalletFile);
+            vBchWallet.saveToFile(vBchWalletFile);
             if (vBsqWallet != null && vBsqWalletFile != null)
                 //noinspection ConstantConditions,ConstantConditions
                 vBsqWallet.saveToFile(vBsqWalletFile);
             vStore.close();
 
             vPeerGroup = null;
-            vBtcWallet = null;
+            vBchWallet = null;
             vBsqWallet = null;
             vStore = null;
             vChain = null;
@@ -607,7 +605,7 @@ public class WalletConfig extends AbstractIdleService {
 
     public Wallet getBtcWallet() {
         checkState(state() == State.STARTING || state() == State.RUNNING, "Cannot call until startup is complete");
-        return vBtcWallet;
+        return vBchWallet;
     }
 
     @Nullable

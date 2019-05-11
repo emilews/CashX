@@ -30,8 +30,8 @@ import bisq.desktop.main.overlays.windows.TorNetworkSettingsWindow;
 import bisq.desktop.util.GUIUtil;
 
 import bisq.core.app.BisqEnvironment;
-import bisq.core.btc.nodes.BtcNodes;
-import bisq.core.btc.setup.WalletsSetup;
+import bisq.core.bch.nodes.BtcNodes;
+import bisq.core.bch.setup.WalletsSetup;
 import bisq.core.filter.Filter;
 import bisq.core.filter.FilterManager;
 import bisq.core.locale.Res;
@@ -44,7 +44,7 @@ import bisq.network.p2p.network.Statistic;
 import bisq.common.Clock;
 import bisq.common.UserThread;
 
-import org.bitcoinj.core.Peer;
+import org.bitcoincashj.core.Peer;
 
 import javax.inject.Inject;
 

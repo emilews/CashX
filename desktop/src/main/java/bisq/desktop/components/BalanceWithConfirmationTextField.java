@@ -20,15 +20,15 @@ package bisq.desktop.components;
 import bisq.desktop.components.indicator.TxConfidenceIndicator;
 import bisq.desktop.util.GUIUtil;
 
-import bisq.core.btc.listeners.AddressConfidenceListener;
-import bisq.core.btc.listeners.BalanceListener;
-import bisq.core.btc.wallet.BtcWalletService;
+import bisq.core.bch.listeners.AddressConfidenceListener;
+import bisq.core.bch.listeners.BalanceListener;
+import bisq.core.bch.wallet.BtcWalletService;
 import bisq.core.util.BSFormatter;
 
-import org.bitcoinj.core.Address;
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.Transaction;
-import org.bitcoinj.core.TransactionConfidence;
+import org.bitcoincashj.core.Address;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.Transaction;
+import org.bitcoincashj.core.TransactionConfidence;
 
 import com.jfoenix.controls.JFXTextField;
 

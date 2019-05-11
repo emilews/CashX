@@ -18,13 +18,13 @@
 package bisq.core.offer.placeoffer.tasks;
 
 import bisq.core.arbitration.Arbitrator;
-import bisq.core.btc.exceptions.TxBroadcastException;
-import bisq.core.btc.model.AddressEntry;
-import bisq.core.btc.wallet.BsqWalletService;
-import bisq.core.btc.wallet.BtcWalletService;
-import bisq.core.btc.wallet.TradeWalletService;
-import bisq.core.btc.wallet.TxBroadcaster;
-import bisq.core.btc.wallet.WalletService;
+import bisq.core.bch.exceptions.TxBroadcastException;
+import bisq.core.bch.model.AddressEntry;
+import bisq.core.bch.wallet.BsqWalletService;
+import bisq.core.bch.wallet.BtcWalletService;
+import bisq.core.bch.wallet.TradeWalletService;
+import bisq.core.bch.wallet.TxBroadcaster;
+import bisq.core.bch.wallet.WalletService;
 import bisq.core.dao.exceptions.DaoDisabledException;
 import bisq.core.dao.state.model.blockchain.TxType;
 import bisq.core.offer.Offer;
@@ -35,8 +35,8 @@ import bisq.common.UserThread;
 import bisq.common.taskrunner.Task;
 import bisq.common.taskrunner.TaskRunner;
 
-import org.bitcoinj.core.Address;
-import org.bitcoinj.core.Transaction;
+import org.bitcoincashj.core.Address;
+import org.bitcoincashj.core.Transaction;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

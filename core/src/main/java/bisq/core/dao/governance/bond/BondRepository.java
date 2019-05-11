@@ -17,7 +17,7 @@
 
 package bisq.core.dao.governance.bond;
 
-import bisq.core.btc.wallet.BsqWalletService;
+import bisq.core.bch.wallet.BsqWalletService;
 import bisq.core.dao.DaoSetupService;
 import bisq.core.dao.state.DaoStateListener;
 import bisq.core.dao.state.DaoStateService;
@@ -28,9 +28,9 @@ import bisq.core.dao.state.model.blockchain.Tx;
 import bisq.core.dao.state.model.blockchain.TxOutput;
 import bisq.core.dao.state.model.blockchain.TxType;
 
-import org.bitcoinj.core.Transaction;
-import org.bitcoinj.core.TransactionInput;
-import org.bitcoinj.core.TransactionOutput;
+import org.bitcoincashj.core.Transaction;
+import org.bitcoincashj.core.TransactionInput;
+import org.bitcoincashj.core.TransactionOutput;
 
 import javax.inject.Inject;
 

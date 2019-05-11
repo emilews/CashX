@@ -19,10 +19,10 @@ package bisq.core.user;
 
 import bisq.core.app.AppOptionKeys;
 import bisq.core.app.BisqEnvironment;
-import bisq.core.btc.BaseCurrencyNetwork;
-import bisq.core.btc.BtcOptionKeys;
-import bisq.core.btc.nodes.BtcNodes;
-import bisq.core.btc.wallet.Restrictions;
+import bisq.core.bch.BaseCurrencyNetwork;
+import bisq.core.bch.BtcOptionKeys;
+import bisq.core.bch.nodes.BtcNodes;
+import bisq.core.bch.wallet.Restrictions;
 import bisq.core.dao.DaoOptionKeys;
 import bisq.core.locale.Country;
 import bisq.core.locale.CountryUtil;
@@ -144,8 +144,8 @@ public final class Preferences implements PersistedDataHost, BridgeAddressProvid
     @Inject
     public Preferences(Storage<PreferencesPayload> storage,
                        BisqEnvironment bisqEnvironment,
-                       @Named(BtcOptionKeys.BTC_NODES) String btcNodesFromOptions,
-                       @Named(BtcOptionKeys.USE_TOR_FOR_BTC) String useTorFlagFromOptions,
+                       @Named(BtcOptionKeys.BCH_NODES) String btcNodesFromOptions,
+                       @Named(BtcOptionKeys.USE_TOR_FOR_BCH) String useTorFlagFromOptions,
                        @Named(AppOptionKeys.REFERRAL_ID) String referralId,
                        @Named(DaoOptionKeys.FULL_DAO_NODE) String fullDaoNode,
                        @Named(DaoOptionKeys.RPC_USER) String rpcUser,
@@ -241,7 +241,6 @@ public final class Preferences implements PersistedDataHost, BridgeAddressProvid
         }
 
         prefPayload.setBsqBlockChainExplorer(baseCurrencyNetwork.isMainnet() ? BSQ_MAIN_NET_EXPLORER :
-                baseCurrencyNetwork.isDaoBetaNet() ? BSQ_BETA_NET_EXPLORER :
                         BSQ_TEST_NET_EXPLORER);
 
         // We don't want to pass Preferences to all popups where the dont show again checkbox is used, so we use
@@ -657,15 +656,9 @@ public final class Preferences implements PersistedDataHost, BridgeAddressProvid
         switch (baseCurrencyNetwork) {
             case BTC_MAINNET:
                 return prefPayload.getBlockChainExplorerMainNet();
-            case BTC_TESTNET:
-            case BTC_REGTEST:
+            case BCH_TESTNET:
+            case BCH_REGTEST:
                 return prefPayload.getBlockChainExplorerTestNet();
-            case BTC_DAO_TESTNET:
-                return BTC_DAO_TEST_NET_EXPLORERS.get(0);
-            case BTC_DAO_BETANET:
-                return prefPayload.getBlockChainExplorerMainNet();
-            case BTC_DAO_REGTEST:
-                return BTC_DAO_TEST_NET_EXPLORERS.get(0);
             default:
                 throw new RuntimeException("BaseCurrencyNetwork not defined. BaseCurrencyNetwork=" + baseCurrencyNetwork);
         }
@@ -676,15 +669,9 @@ public final class Preferences implements PersistedDataHost, BridgeAddressProvid
         switch (baseCurrencyNetwork) {
             case BTC_MAINNET:
                 return BTC_MAIN_NET_EXPLORERS;
-            case BTC_TESTNET:
-            case BTC_REGTEST:
+            case BCH_TESTNET:
+            case BCH_REGTEST:
                 return BTC_TEST_NET_EXPLORERS;
-            case BTC_DAO_TESTNET:
-                return BTC_DAO_TEST_NET_EXPLORERS;
-            case BTC_DAO_BETANET:
-                return BTC_MAIN_NET_EXPLORERS;
-            case BTC_DAO_REGTEST:
-                return BTC_DAO_TEST_NET_EXPLORERS;
             default:
                 throw new RuntimeException("BaseCurrencyNetwork not defined. BaseCurrencyNetwork=" + baseCurrencyNetwork);
         }

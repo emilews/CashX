@@ -19,7 +19,7 @@ package bisq.core.filter;
 
 import bisq.core.app.AppOptionKeys;
 import bisq.core.app.BisqEnvironment;
-import bisq.core.btc.nodes.BtcNodes;
+import bisq.core.bch.nodes.BtcNodes;
 import bisq.core.payment.payload.PaymentAccountPayload;
 import bisq.core.payment.payload.PaymentMethod;
 import bisq.core.provider.ProvidersRepository;
@@ -40,8 +40,8 @@ import bisq.common.crypto.KeyRing;
 
 import io.bisq.generated.protobuffer.PB;
 
-import org.bitcoinj.core.ECKey;
-import org.bitcoinj.core.Utils;
+import org.bitcoincashj.core.ECKey;
+import org.bitcoincashj.core.Utils;
 
 import com.google.inject.Inject;
 import com.google.inject.name.Named;
@@ -66,7 +66,7 @@ import org.slf4j.LoggerFactory;
 
 import javax.annotation.Nullable;
 
-import static org.bitcoinj.core.Utils.HEX;
+import static org.bitcoincashj.core.Utils.HEX;
 
 public class FilterManager {
     private static final Logger log = LoggerFactory.getLogger(FilterManager.class);

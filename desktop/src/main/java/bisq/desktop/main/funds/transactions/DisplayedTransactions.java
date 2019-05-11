@@ -17,10 +17,10 @@
 
 package bisq.desktop.main.funds.transactions;
 
-import bisq.core.btc.wallet.BtcWalletService;
+import bisq.core.bch.wallet.BtcWalletService;
 import bisq.core.trade.Tradable;
 
-import org.bitcoinj.core.Transaction;
+import org.bitcoincashj.core.Transaction;
 
 import java.util.List;
 import java.util.Set;

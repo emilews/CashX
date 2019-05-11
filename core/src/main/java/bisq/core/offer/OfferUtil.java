@@ -17,8 +17,8 @@
 
 package bisq.core.offer;
 
-import bisq.core.btc.wallet.BsqWalletService;
-import bisq.core.btc.wallet.Restrictions;
+import bisq.core.bch.wallet.BsqWalletService;
+import bisq.core.bch.wallet.Restrictions;
 import bisq.core.filter.FilterManager;
 import bisq.core.locale.CurrencyUtil;
 import bisq.core.locale.Res;
@@ -40,8 +40,8 @@ import bisq.network.p2p.P2PService;
 
 import bisq.common.util.MathUtils;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.utils.Fiat;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.utils.Fiat;
 
 import com.google.common.annotations.VisibleForTesting;
 

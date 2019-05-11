@@ -23,7 +23,7 @@ import bisq.core.offer.Offer;
 import bisq.core.trade.Tradable;
 import bisq.core.trade.Trade;
 
-import org.bitcoinj.core.Transaction;
+import org.bitcoincashj.core.Transaction;
 
 import javafx.collections.ObservableList;
 

@@ -1,8 +1,8 @@
 package bisq.desktop.main.offer.createoffer;
 
-import bisq.core.btc.TxFeeEstimationService;
-import bisq.core.btc.model.AddressEntry;
-import bisq.core.btc.wallet.BtcWalletService;
+import bisq.core.bch.TxFeeEstimationService;
+import bisq.core.bch.model.AddressEntry;
+import bisq.core.bch.wallet.BtcWalletService;
 import bisq.core.locale.CryptoCurrency;
 import bisq.core.locale.FiatCurrency;
 import bisq.core.locale.GlobalSettings;
@@ -17,7 +17,7 @@ import bisq.core.provider.price.PriceFeedService;
 import bisq.core.user.Preferences;
 import bisq.core.user.User;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import java.util.HashSet;
 

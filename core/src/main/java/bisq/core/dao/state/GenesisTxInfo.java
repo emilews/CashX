@@ -18,10 +18,10 @@
 package bisq.core.dao.state;
 
 import bisq.core.app.BisqEnvironment;
-import bisq.core.btc.BaseCurrencyNetwork;
+import bisq.core.bch.BaseCurrencyNetwork;
 import bisq.core.dao.DaoOptionKeys;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -110,9 +110,6 @@ public class GenesisTxInfo {
         BaseCurrencyNetwork baseCurrencyNetwork = BisqEnvironment.getBaseCurrencyNetwork();
         boolean isMainnet = baseCurrencyNetwork.isMainnet();
         boolean isTestnet = baseCurrencyNetwork.isTestnet();
-        boolean isDaoTestNet = baseCurrencyNetwork.isDaoTestNet();
-        boolean isDaoBetaNet = baseCurrencyNetwork.isDaoBetaNet();
-        boolean isDaoRegTest = baseCurrencyNetwork.isDaoRegTest();
         boolean isRegtest = baseCurrencyNetwork.isRegtest();
         if (!genesisTxId.isEmpty()) {
             this.genesisTxId = genesisTxId;
@@ -120,12 +117,6 @@ public class GenesisTxInfo {
             this.genesisTxId = MAINNET_GENESIS_TX_ID;
         } else if (isTestnet) {
             this.genesisTxId = TESTNET_GENESIS_TX_ID;
-        } else if (isDaoTestNet) {
-            this.genesisTxId = DAO_TESTNET_GENESIS_TX_ID;
-        } else if (isDaoBetaNet) {
-            this.genesisTxId = DAO_BETANET_GENESIS_TX_ID;
-        } else if (isDaoRegTest) {
-            this.genesisTxId = DAO_REGTEST_GENESIS_TX_ID;
         } else if (isRegtest) {
             this.genesisTxId = REGTEST_GENESIS_TX_ID;
         } else {
@@ -138,12 +129,6 @@ public class GenesisTxInfo {
             this.genesisBlockHeight = MAINNET_GENESIS_BLOCK_HEIGHT;
         } else if (isTestnet) {
             this.genesisBlockHeight = TESTNET_GENESIS_BLOCK_HEIGHT;
-        } else if (isDaoTestNet) {
-            this.genesisBlockHeight = DAO_TESTNET_GENESIS_BLOCK_HEIGHT;
-        } else if (isDaoBetaNet) {
-            this.genesisBlockHeight = DAO_BETANET_GENESIS_BLOCK_HEIGHT;
-        } else if (isDaoRegTest) {
-            this.genesisBlockHeight = DAO_REGTEST_GENESIS_BLOCK_HEIGHT;
         } else if (isRegtest) {
             this.genesisBlockHeight = REGTEST_GENESIS_BLOCK_HEIGHT;
         } else {
@@ -156,12 +141,6 @@ public class GenesisTxInfo {
             this.genesisTotalSupply = MAINNET_GENESIS_TOTAL_SUPPLY.value;
         } else if (isTestnet) {
             this.genesisTotalSupply = TESTNET_GENESIS_TOTAL_SUPPLY.value;
-        } else if (isDaoTestNet) {
-            this.genesisTotalSupply = DAO_TESTNET_GENESIS_TOTAL_SUPPLY.value;
-        } else if (isDaoBetaNet) {
-            this.genesisTotalSupply = DAO_BETANET_GENESIS_TOTAL_SUPPLY.value;
-        } else if (isDaoRegTest) {
-            this.genesisTotalSupply = DAO_REGTEST_GENESIS_TOTAL_SUPPLY.value;
         } else if (isRegtest) {
             this.genesisTotalSupply = REGTEST_GENESIS_TOTAL_SUPPLY.value;
         } else {

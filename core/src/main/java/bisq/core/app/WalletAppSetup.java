@@ -17,8 +17,8 @@
 
 package bisq.core.app;
 
-import bisq.core.btc.setup.WalletsSetup;
-import bisq.core.btc.wallet.WalletsManager;
+import bisq.core.bch.setup.WalletsSetup;
+import bisq.core.bch.wallet.WalletsManager;
 import bisq.core.locale.Res;
 import bisq.core.user.Preferences;
 import bisq.core.util.BSFormatter;

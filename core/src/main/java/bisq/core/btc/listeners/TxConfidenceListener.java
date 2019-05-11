@@ -17,7 +17,7 @@
 
 package bisq.core.btc.listeners;
 
-import org.bitcoinj.core.TransactionConfidence;
+import org.bitcoincashj.core.TransactionConfidence;
 
 public class TxConfidenceListener {
     private final String txID;

@@ -31,7 +31,7 @@ import bisq.common.crypto.Encryption;
 import bisq.common.crypto.Hash;
 import bisq.common.util.Utilities;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import com.google.common.annotations.VisibleForTesting;
 

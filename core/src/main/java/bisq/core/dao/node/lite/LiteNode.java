@@ -17,7 +17,7 @@
 
 package bisq.core.dao.node.lite;
 
-import bisq.core.btc.wallet.BsqWalletService;
+import bisq.core.bch.wallet.BsqWalletService;
 import bisq.core.dao.node.BsqNode;
 import bisq.core.dao.node.explorer.ExportJsonFilesService;
 import bisq.core.dao.node.full.RawBlock;

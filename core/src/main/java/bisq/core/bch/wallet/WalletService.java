@@ -476,8 +476,7 @@ public abstract class WalletService {
 
     public void emptyWallet(String toAddress, KeyParameter aesKey, ResultHandler resultHandler, ErrorMessageHandler errorMessageHandler)
             throws InsufficientMoneyException, AddressFormatException {
-        SendRequest sendRequest = SendRequest.emptyWallet(Address.fromBase58(params, toAddress));
-        sendRequest.fee = Coin.ZERO;
+        SendRequest sendRequest = SendRequest.emptyWallet(params, Address.fromCashAddr(params, toAddress).toString());
         sendRequest.feePerKb = getTxFeeForWithdrawalPerByte().multiply(1000);
         sendRequest.aesKey = aesKey;
         Wallet.SendResult sendResult = wallet.sendCoins(sendRequest);

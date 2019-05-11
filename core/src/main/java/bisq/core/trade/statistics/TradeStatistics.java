@@ -36,9 +36,9 @@ import io.bisq.generated.protobuffer.PB;
 
 import com.google.protobuf.ByteString;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.utils.ExchangeRate;
-import org.bitcoinj.utils.Fiat;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.utils.ExchangeRate;
+import org.bitcoincashj.utils.Fiat;
 
 import org.springframework.util.CollectionUtils;
 

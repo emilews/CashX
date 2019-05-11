@@ -21,7 +21,7 @@ import bisq.core.monetary.Price;
 import bisq.core.monetary.Volume;
 import bisq.core.trade.Trade;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import javafx.beans.property.ReadOnlyObjectProperty;
 

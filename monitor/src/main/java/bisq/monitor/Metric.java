@@ -30,7 +30,7 @@ import java.util.concurrent.TimeUnit;
 
 import lombok.extern.slf4j.Slf4j;
 
-import static bisq.core.btc.BtcOptionKeys.BASE_CURRENCY_NETWORK;
+import static bisq.core.bch.BtcOptionKeys.BASE_CURRENCY_NETWORK;
 
 /**
  * Starts a Metric (in its own {@link Thread}), manages its properties and shuts

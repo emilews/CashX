@@ -31,13 +31,13 @@ import bisq.desktop.main.overlays.popups.Popup;
 import bisq.desktop.util.Layout;
 import bisq.desktop.util.validation.PasswordValidator;
 
-import bisq.core.btc.wallet.WalletsManager;
+import bisq.core.bch.wallet.WalletsManager;
 import bisq.core.crypto.ScryptUtil;
 import bisq.core.locale.Res;
 
 import bisq.common.util.Tuple4;
 
-import org.bitcoinj.crypto.KeyCrypterScrypt;
+import org.bitcoincashj.crypto.KeyCrypterScrypt;
 
 import javax.inject.Inject;
 

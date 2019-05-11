@@ -23,8 +23,8 @@ import bisq.core.user.Preferences;
 
 import bisq.common.util.Tuple2;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.InsufficientMoneyException;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.InsufficientMoneyException;
 
 import javax.inject.Inject;
 

@@ -29,8 +29,8 @@ import bisq.desktop.util.GUIUtil;
 import bisq.desktop.util.Layout;
 import bisq.desktop.util.validation.BsqValidator;
 
-import bisq.core.btc.listeners.BsqBalanceListener;
-import bisq.core.btc.wallet.BsqWalletService;
+import bisq.core.bch.listeners.BsqBalanceListener;
+import bisq.core.bch.wallet.BsqWalletService;
 import bisq.core.dao.DaoFacade;
 import bisq.core.dao.governance.bond.BondConsensus;
 import bisq.core.dao.governance.bond.BondState;
@@ -44,7 +44,7 @@ import bisq.core.util.validation.IntegerValidator;
 import bisq.common.crypto.Hash;
 import bisq.common.util.Utilities;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import javax.inject.Inject;
 

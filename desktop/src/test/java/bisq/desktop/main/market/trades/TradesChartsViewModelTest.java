@@ -32,8 +32,8 @@ import bisq.core.util.BSFormatter;
 import bisq.common.crypto.KeyRing;
 import bisq.common.crypto.KeyStorage;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.utils.Fiat;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.utils.Fiat;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableSet;

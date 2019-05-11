@@ -17,15 +17,15 @@
 
 package bisq.core.btc.setup;
 
-import org.bitcoinj.crypto.ChildNumber;
-import org.bitcoinj.crypto.DeterministicKey;
-import org.bitcoinj.crypto.HDUtils;
-import org.bitcoinj.crypto.KeyCrypter;
-import org.bitcoinj.wallet.DeterministicKeyChain;
-import org.bitcoinj.wallet.DeterministicSeed;
-import org.bitcoinj.wallet.KeyChainFactory;
-import org.bitcoinj.wallet.Protos;
-import org.bitcoinj.wallet.UnreadableWalletException;
+import org.bitcoincashj.crypto.ChildNumber;
+import org.bitcoincashj.crypto.DeterministicKey;
+import org.bitcoincashj.crypto.HDUtils;
+import org.bitcoincashj.crypto.KeyCrypter;
+import org.bitcoincashj.wallet.DeterministicKeyChain;
+import org.bitcoincashj.wallet.DeterministicSeed;
+import org.bitcoincashj.wallet.KeyChainFactory;
+import org.bitcoincashj.wallet.Protos;
+import org.bitcoincashj.wallet.UnreadableWalletException;
 
 import com.google.common.collect.ImmutableList;
 

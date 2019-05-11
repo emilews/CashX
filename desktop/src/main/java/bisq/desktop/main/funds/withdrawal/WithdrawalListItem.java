@@ -19,15 +19,15 @@ package bisq.desktop.main.funds.withdrawal;
 
 import bisq.desktop.components.AutoTooltipLabel;
 
-import bisq.core.btc.listeners.BalanceListener;
-import bisq.core.btc.model.AddressEntry;
-import bisq.core.btc.wallet.BtcWalletService;
+import bisq.core.bch.listeners.BalanceListener;
+import bisq.core.bch.model.AddressEntry;
+import bisq.core.bch.wallet.BtcWalletService;
 import bisq.core.locale.Res;
 import bisq.core.util.BSFormatter;
 
-import org.bitcoinj.core.Address;
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.Transaction;
+import org.bitcoincashj.core.Address;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.Transaction;
 
 import javafx.scene.control.Label;
 

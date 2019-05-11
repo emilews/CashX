@@ -17,7 +17,7 @@
 
 package bisq.core.trade;
 
-import bisq.core.btc.wallet.BtcWalletService;
+import bisq.core.bch.wallet.BtcWalletService;
 import bisq.core.offer.OpenOffer;
 import bisq.core.proto.CoreProtoResolver;
 

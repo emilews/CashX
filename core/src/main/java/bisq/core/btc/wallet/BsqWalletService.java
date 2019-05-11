@@ -34,25 +34,25 @@ import bisq.core.dao.state.unconfirmed.UnconfirmedBsqChangeOutputListService;
 import bisq.core.provider.fee.FeeService;
 import bisq.core.user.Preferences;
 
-import org.bitcoinj.core.Address;
-import org.bitcoinj.core.AddressFormatException;
-import org.bitcoinj.core.BlockChain;
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.ECKey;
-import org.bitcoinj.core.InsufficientMoneyException;
-import org.bitcoinj.core.NetworkParameters;
-import org.bitcoinj.core.ScriptException;
-import org.bitcoinj.core.Transaction;
-import org.bitcoinj.core.TransactionConfidence;
-import org.bitcoinj.core.TransactionInput;
-import org.bitcoinj.core.TransactionOutPoint;
-import org.bitcoinj.core.TransactionOutput;
-import org.bitcoinj.script.Script;
-import org.bitcoinj.wallet.CoinSelection;
-import org.bitcoinj.wallet.CoinSelector;
-import org.bitcoinj.wallet.SendRequest;
-import org.bitcoinj.wallet.Wallet;
-import org.bitcoinj.wallet.listeners.AbstractWalletEventListener;
+import org.bitcoincashj.core.Address;
+import org.bitcoincashj.core.AddressFormatException;
+import org.bitcoincashj.core.BlockChain;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.ECKey;
+import org.bitcoincashj.core.InsufficientMoneyException;
+import org.bitcoincashj.core.NetworkParameters;
+import org.bitcoincashj.core.ScriptException;
+import org.bitcoincashj.core.Transaction;
+import org.bitcoincashj.core.TransactionConfidence;
+import org.bitcoincashj.core.TransactionInput;
+import org.bitcoincashj.core.TransactionOutPoint;
+import org.bitcoincashj.core.TransactionOutput;
+import org.bitcoincashj.script.Script;
+import org.bitcoincashj.wallet.CoinSelection;
+import org.bitcoincashj.wallet.CoinSelector;
+import org.bitcoincashj.wallet.SendRequest;
+import org.bitcoincashj.wallet.Wallet;
+import org.bitcoincashj.wallet.listeners.AbstractWalletEventListener;
 
 import javax.inject.Inject;
 
@@ -74,8 +74,8 @@ import lombok.extern.slf4j.Slf4j;
 
 import static com.google.common.base.Preconditions.checkArgument;
 import static com.google.common.base.Preconditions.checkNotNull;
-import static org.bitcoinj.core.TransactionConfidence.ConfidenceType.BUILDING;
-import static org.bitcoinj.core.TransactionConfidence.ConfidenceType.PENDING;
+import static org.bitcoincashj.core.TransactionConfidence.ConfidenceType.BUILDING;
+import static org.bitcoincashj.core.TransactionConfidence.ConfidenceType.PENDING;
 
 @Slf4j
 public class BsqWalletService extends WalletService implements DaoStateListener {
@@ -203,9 +203,7 @@ public class BsqWalletService extends WalletService implements DaoStateListener 
 
     @Override
     String getWalletAsString(boolean includePrivKeys) {
-        return wallet.toString(includePrivKeys, true, true, walletsSetup.getChain()) + "\n\n" +
-                "All pubKeys as hex:\n" +
-                wallet.printAllPubKeysAsHex();
+        return wallet.toString(includePrivKeys, true, true, walletsSetup.getChain());
     }
 
 
@@ -497,7 +495,6 @@ public class BsqWalletService extends WalletService implements DaoStateListener 
         tx.addOutput(receiverAmount, Address.fromBase58(params, receiverAddress));
 
         SendRequest sendRequest = SendRequest.forTx(tx);
-        sendRequest.fee = Coin.ZERO;
         sendRequest.feePerKb = Coin.ZERO;
         sendRequest.ensureMinRequiredFee = false;
         sendRequest.aesKey = aesKey;

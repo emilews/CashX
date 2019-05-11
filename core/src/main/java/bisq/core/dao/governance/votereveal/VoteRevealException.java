@@ -19,7 +19,7 @@ package bisq.core.dao.governance.votereveal;
 
 import bisq.core.dao.governance.myvote.MyVote;
 
-import org.bitcoinj.core.Transaction;
+import org.bitcoincashj.core.Transaction;
 
 import lombok.Getter;
 

@@ -25,7 +25,7 @@ import bisq.core.util.BsqFormatter;
 
 import bisq.common.util.Tuple2;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import de.jensd.fx.fontawesome.AwesomeIcon;
 

@@ -203,9 +203,7 @@ public class BsqWalletService extends WalletService implements DaoStateListener 
 
     @Override
     String getWalletAsString(boolean includePrivKeys) {
-        return wallet.toString(includePrivKeys, true, true, walletsSetup.getChain()) + "\n\n" +
-                "All pubKeys as hex:\n" +
-                wallet.printAllPubKeysAsHex();
+        return wallet.toString(includePrivKeys, true, true, walletsSetup.getChain());
     }
 
 
@@ -494,10 +492,9 @@ public class BsqWalletService extends WalletService implements DaoStateListener 
         Transaction tx = new Transaction(params);
         checkArgument(Restrictions.isAboveDust(receiverAmount),
                 "The amount is too low (dust limit).");
-        tx.addOutput(receiverAmount, Address.fromBase58(params, receiverAddress));
+        tx.addOutput(receiverAmount, Address.fromCashAddr(params, receiverAddress));
 
         SendRequest sendRequest = SendRequest.forTx(tx);
-        sendRequest.fee = Coin.ZERO;
         sendRequest.feePerKb = Coin.ZERO;
         sendRequest.ensureMinRequiredFee = false;
         sendRequest.aesKey = aesKey;

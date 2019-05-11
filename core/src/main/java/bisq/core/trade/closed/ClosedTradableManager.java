@@ -17,7 +17,7 @@
 
 package bisq.core.trade.closed;
 
-import bisq.core.btc.wallet.BtcWalletService;
+import bisq.core.bch.wallet.BtcWalletService;
 import bisq.core.offer.Offer;
 import bisq.core.provider.price.PriceFeedService;
 import bisq.core.trade.Tradable;

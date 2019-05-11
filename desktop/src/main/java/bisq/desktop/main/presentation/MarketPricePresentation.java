@@ -22,7 +22,7 @@ import bisq.desktop.components.TxIdTextField;
 import bisq.desktop.main.PriceFeedComboBoxItem;
 import bisq.desktop.util.GUIUtil;
 
-import bisq.core.btc.wallet.BtcWalletService;
+import bisq.core.bch.wallet.BtcWalletService;
 import bisq.core.locale.CurrencyUtil;
 import bisq.core.locale.Res;
 import bisq.core.locale.TradeCurrency;

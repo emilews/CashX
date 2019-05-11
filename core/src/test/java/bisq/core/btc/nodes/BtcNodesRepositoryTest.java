@@ -19,7 +19,7 @@ package bisq.core.btc.nodes;
 
 import bisq.core.btc.nodes.BtcNodes.BtcNode;
 
-import org.bitcoinj.core.PeerAddress;
+import org.bitcoincashj.core.PeerAddress;
 
 import com.runjva.sourceforge.jsocks.protocol.Socks5Proxy;
 

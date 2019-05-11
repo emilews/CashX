@@ -17,7 +17,7 @@
 
 package bisq.core.dao.governance.bond.reputation;
 
-import bisq.core.btc.wallet.BsqWalletService;
+import bisq.core.bch.wallet.BsqWalletService;
 import bisq.core.dao.governance.bond.Bond;
 import bisq.core.dao.governance.bond.BondConsensus;
 import bisq.core.dao.governance.bond.BondRepository;

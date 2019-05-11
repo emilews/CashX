@@ -7,7 +7,7 @@ import bisq.desktop.components.TitledGroupBg;
 import bisq.desktop.util.GUIUtil;
 import bisq.desktop.util.Layout;
 
-import bisq.core.btc.wallet.BsqWalletService;
+import bisq.core.bch.wallet.BsqWalletService;
 import bisq.core.locale.Res;
 import bisq.core.user.Preferences;
 import bisq.core.util.BsqFormatter;

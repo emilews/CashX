@@ -18,13 +18,13 @@
 package bisq.core.dao.governance.blindvote;
 
 import bisq.core.app.BisqEnvironment;
-import bisq.core.btc.exceptions.TransactionVerificationException;
-import bisq.core.btc.exceptions.TxBroadcastException;
-import bisq.core.btc.exceptions.WalletException;
-import bisq.core.btc.wallet.BsqWalletService;
-import bisq.core.btc.wallet.BtcWalletService;
-import bisq.core.btc.wallet.TxBroadcaster;
-import bisq.core.btc.wallet.WalletsManager;
+import bisq.core.bch.exceptions.TransactionVerificationException;
+import bisq.core.bch.exceptions.TxBroadcastException;
+import bisq.core.bch.exceptions.WalletException;
+import bisq.core.bch.wallet.BsqWalletService;
+import bisq.core.bch.wallet.BtcWalletService;
+import bisq.core.bch.wallet.TxBroadcaster;
+import bisq.core.bch.wallet.WalletsManager;
 import bisq.core.dao.DaoSetupService;
 import bisq.core.dao.exceptions.PublishToP2PNetworkException;
 import bisq.core.dao.governance.ballot.BallotListService;
@@ -57,12 +57,12 @@ import bisq.common.storage.Storage;
 import bisq.common.util.Tuple2;
 import bisq.common.util.Utilities;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.ECKey;
-import org.bitcoinj.core.InsufficientMoneyException;
-import org.bitcoinj.core.Sha256Hash;
-import org.bitcoinj.core.Transaction;
-import org.bitcoinj.crypto.DeterministicKey;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.ECKey;
+import org.bitcoincashj.core.InsufficientMoneyException;
+import org.bitcoincashj.core.Sha256Hash;
+import org.bitcoincashj.core.Transaction;
+import org.bitcoincashj.crypto.DeterministicKey;
 
 import javax.inject.Inject;
 

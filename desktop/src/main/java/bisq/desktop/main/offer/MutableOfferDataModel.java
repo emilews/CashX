@@ -18,13 +18,13 @@
 package bisq.desktop.main.offer;
 
 import bisq.core.arbitration.Arbitrator;
-import bisq.core.btc.TxFeeEstimationService;
-import bisq.core.btc.listeners.BalanceListener;
-import bisq.core.btc.listeners.BsqBalanceListener;
-import bisq.core.btc.model.AddressEntry;
-import bisq.core.btc.wallet.BsqWalletService;
-import bisq.core.btc.wallet.BtcWalletService;
-import bisq.core.btc.wallet.Restrictions;
+import bisq.core.bch.TxFeeEstimationService;
+import bisq.core.bch.listeners.BalanceListener;
+import bisq.core.bch.listeners.BsqBalanceListener;
+import bisq.core.bch.model.AddressEntry;
+import bisq.core.bch.wallet.BsqWalletService;
+import bisq.core.bch.wallet.BtcWalletService;
+import bisq.core.bch.wallet.Restrictions;
 import bisq.core.filter.FilterManager;
 import bisq.core.locale.CurrencyUtil;
 import bisq.core.locale.Res;
@@ -55,8 +55,8 @@ import bisq.common.crypto.KeyRing;
 import bisq.common.util.Tuple2;
 import bisq.common.util.Utilities;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.Transaction;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.Transaction;
 
 import com.google.inject.Inject;
 

@@ -29,8 +29,8 @@ import bisq.desktop.util.GUIUtil;
 import bisq.desktop.util.Layout;
 import bisq.desktop.util.validation.BsqValidator;
 
-import bisq.core.btc.listeners.BsqBalanceListener;
-import bisq.core.btc.wallet.BsqWalletService;
+import bisq.core.bch.listeners.BsqBalanceListener;
+import bisq.core.bch.wallet.BsqWalletService;
 import bisq.core.dao.governance.proofofburn.MyProofOfBurnListService;
 import bisq.core.dao.governance.proofofburn.ProofOfBurnService;
 import bisq.core.dao.governance.proposal.TxException;
@@ -42,9 +42,9 @@ import bisq.core.util.validation.InputValidator;
 
 import bisq.common.app.DevEnv;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.InsufficientMoneyException;
-import org.bitcoinj.core.Transaction;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.InsufficientMoneyException;
+import org.bitcoincashj.core.Transaction;
 
 import javax.inject.Inject;
 

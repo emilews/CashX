@@ -20,7 +20,7 @@ package bisq.monitor.reporter;
 import bisq.monitor.OnionParser;
 import bisq.monitor.Reporter;
 
-import bisq.core.btc.BaseCurrencyNetwork;
+import bisq.core.bch.BaseCurrencyNetwork;
 
 import bisq.network.p2p.NodeAddress;
 

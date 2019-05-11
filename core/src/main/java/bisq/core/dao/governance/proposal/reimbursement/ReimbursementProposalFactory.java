@@ -17,10 +17,10 @@
 
 package bisq.core.dao.governance.proposal.reimbursement;
 
-import bisq.core.btc.exceptions.TransactionVerificationException;
-import bisq.core.btc.exceptions.WalletException;
-import bisq.core.btc.wallet.BsqWalletService;
-import bisq.core.btc.wallet.BtcWalletService;
+import bisq.core.bch.exceptions.TransactionVerificationException;
+import bisq.core.bch.exceptions.WalletException;
+import bisq.core.bch.wallet.BsqWalletService;
+import bisq.core.bch.wallet.BtcWalletService;
 import bisq.core.dao.governance.proposal.BaseProposalFactory;
 import bisq.core.dao.governance.proposal.ProposalConsensus;
 import bisq.core.dao.governance.proposal.ProposalValidationException;
@@ -33,9 +33,9 @@ import bisq.core.dao.state.model.governance.ReimbursementProposal;
 
 import bisq.common.app.Version;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.InsufficientMoneyException;
-import org.bitcoinj.core.Transaction;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.InsufficientMoneyException;
+import org.bitcoincashj.core.Transaction;
 
 import javax.inject.Inject;
 

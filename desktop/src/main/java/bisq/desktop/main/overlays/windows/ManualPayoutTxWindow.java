@@ -22,20 +22,20 @@ import bisq.desktop.main.overlays.Overlay;
 import bisq.desktop.main.overlays.popups.Popup;
 import bisq.desktop.util.GUIUtil;
 
-import bisq.core.btc.exceptions.TransactionVerificationException;
-import bisq.core.btc.exceptions.TxBroadcastException;
-import bisq.core.btc.exceptions.WalletException;
-import bisq.core.btc.setup.WalletsSetup;
-import bisq.core.btc.wallet.TradeWalletService;
-import bisq.core.btc.wallet.TxBroadcaster;
+import bisq.core.bch.exceptions.TransactionVerificationException;
+import bisq.core.bch.exceptions.TxBroadcastException;
+import bisq.core.bch.exceptions.WalletException;
+import bisq.core.bch.setup.WalletsSetup;
+import bisq.core.bch.wallet.TradeWalletService;
+import bisq.core.bch.wallet.TxBroadcaster;
 
 import bisq.network.p2p.P2PService;
 
 import bisq.common.UserThread;
 
-import org.bitcoinj.core.AddressFormatException;
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.Transaction;
+import org.bitcoincashj.core.AddressFormatException;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.Transaction;
 
 import javax.inject.Inject;
 

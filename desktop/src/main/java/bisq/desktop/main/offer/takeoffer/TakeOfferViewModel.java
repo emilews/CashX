@@ -27,7 +27,7 @@ import bisq.desktop.main.overlays.popups.Popup;
 import bisq.desktop.util.GUIUtil;
 import bisq.desktop.util.validation.BtcValidator;
 
-import bisq.core.btc.setup.WalletsSetup;
+import bisq.core.bch.setup.WalletsSetup;
 import bisq.core.locale.CurrencyUtil;
 import bisq.core.locale.Res;
 import bisq.core.monetary.Price;
@@ -51,7 +51,7 @@ import bisq.network.p2p.network.ConnectionListener;
 
 import bisq.common.app.DevEnv;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import javax.inject.Inject;
 

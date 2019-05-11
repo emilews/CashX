@@ -28,13 +28,13 @@ import bisq.desktop.main.overlays.windows.WalletPasswordWindow;
 import bisq.desktop.util.GUIUtil;
 import bisq.desktop.util.Layout;
 
-import bisq.core.btc.exceptions.AddressEntryException;
-import bisq.core.btc.exceptions.InsufficientFundsException;
-import bisq.core.btc.listeners.BalanceListener;
-import bisq.core.btc.model.AddressEntry;
-import bisq.core.btc.setup.WalletsSetup;
-import bisq.core.btc.wallet.BtcWalletService;
-import bisq.core.btc.wallet.Restrictions;
+import bisq.core.bch.exceptions.AddressEntryException;
+import bisq.core.bch.exceptions.InsufficientFundsException;
+import bisq.core.bch.listeners.BalanceListener;
+import bisq.core.bch.model.AddressEntry;
+import bisq.core.bch.setup.WalletsSetup;
+import bisq.core.bch.wallet.BtcWalletService;
+import bisq.core.bch.wallet.Restrictions;
 import bisq.core.locale.Res;
 import bisq.core.trade.Trade;
 import bisq.core.trade.TradeManager;
@@ -49,11 +49,11 @@ import bisq.common.UserThread;
 import bisq.common.util.Tuple3;
 import bisq.common.util.Tuple4;
 
-import org.bitcoinj.core.AddressFormatException;
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.InsufficientMoneyException;
-import org.bitcoinj.core.Transaction;
-import org.bitcoinj.wallet.Wallet;
+import org.bitcoincashj.core.AddressFormatException;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.InsufficientMoneyException;
+import org.bitcoincashj.core.Transaction;
+import org.bitcoincashj.wallet.Wallet;
 
 import javax.inject.Inject;
 
@@ -469,7 +469,7 @@ public class WithdrawalView extends ActivatableView<VBox, Void> {
             reset();
             updateList();
         } catch (AddressFormatException e) {
-            new Popup<>().warning(Res.get("validation.btc.invalidAddress")).show();
+            new Popup<>().warning(Res.get("validation.bch.invalidAddress")).show();
         } catch (Wallet.DustySendRequested e) {
             new Popup<>().warning(Res.get("validation.amountBelowDust",
                     formatter.formatCoinWithCode(Restrictions.getMinNonDustOutput()))).show();
@@ -509,7 +509,7 @@ public class WithdrawalView extends ActivatableView<VBox, Void> {
         }
 
         if (!btcAddressValidator.validate(withdrawToTextField.getText()).isValid) {
-            new Popup<>().warning(Res.get("validation.btc.invalidAddress")).show();
+            new Popup<>().warning(Res.get("validation.bch.invalidAddress")).show();
             return false;
         }
         if (!totalAvailableAmountOfSelectedItems.isPositive()) {

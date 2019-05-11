@@ -30,7 +30,7 @@ import bisq.core.dao.state.model.blockchain.TxOutputType;
 
 import bisq.common.util.Utilities;
 
-import org.bitcoinj.core.Utils;
+import org.bitcoincashj.core.Utils;
 
 import java.util.Optional;
 

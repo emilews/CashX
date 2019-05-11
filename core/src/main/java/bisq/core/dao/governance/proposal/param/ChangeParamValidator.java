@@ -18,7 +18,7 @@
 package bisq.core.dao.governance.proposal.param;
 
 import bisq.core.app.BisqEnvironment;
-import bisq.core.btc.wallet.Restrictions;
+import bisq.core.bch.wallet.Restrictions;
 import bisq.core.dao.governance.ConsensusCritical;
 import bisq.core.dao.governance.param.Param;
 import bisq.core.dao.governance.period.PeriodService;
@@ -32,7 +32,7 @@ import bisq.core.util.BsqFormatter;
 import bisq.core.util.validation.BtcAddressValidator;
 import bisq.core.util.validation.InputValidator;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import javax.inject.Inject;
 
@@ -170,10 +170,10 @@ public class ChangeParamValidator extends ProposalValidator implements Consensus
 
     private void validateBtcValue(Coin currentParamValueAsCoin, Coin inputValueAsCoin, Param param) throws ParamValidationException {
         switch (param) {
-            case DEFAULT_MAKER_FEE_BTC:
-            case DEFAULT_TAKER_FEE_BTC:
-            case MIN_MAKER_FEE_BTC:
-            case MIN_TAKER_FEE_BTC:
+            case DEFAULT_MAKER_FEE_BCH:
+            case DEFAULT_TAKER_FEE_BCH:
+            case MIN_MAKER_FEE_BCH:
+            case MIN_TAKER_FEE_BCH:
                 checkArgument(inputValueAsCoin.value >= Restrictions.getMinNonDustOutput().value,
                         Res.get("validation.amountBelowDust", Restrictions.getMinNonDustOutput().value));
                 break;

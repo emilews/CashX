@@ -19,10 +19,10 @@ package bisq.desktop.main.offer;
 
 import bisq.desktop.common.model.ActivatableDataModel;
 
-import bisq.core.btc.model.AddressEntry;
-import bisq.core.btc.wallet.BtcWalletService;
+import bisq.core.bch.model.AddressEntry;
+import bisq.core.bch.wallet.BtcWalletService;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.ObjectProperty;

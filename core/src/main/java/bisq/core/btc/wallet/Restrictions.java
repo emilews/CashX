@@ -19,7 +19,7 @@ package bisq.core.btc.wallet;
 
 import bisq.core.app.BisqEnvironment;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 public class Restrictions {
     private static Coin MIN_TRADE_AMOUNT;

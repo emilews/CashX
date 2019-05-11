@@ -34,7 +34,7 @@ import bisq.core.locale.CurrencyUtil;
 import bisq.core.locale.Res;
 import bisq.core.util.BsqFormatter;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import de.jensd.fx.fontawesome.AwesomeIcon;
 

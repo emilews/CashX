@@ -22,10 +22,10 @@ import bisq.desktop.util.validation.BtcValidator;
 import bisq.desktop.util.validation.FiatPriceValidator;
 import bisq.desktop.util.validation.SecurityDepositValidator;
 
-import bisq.core.btc.TxFeeEstimationService;
-import bisq.core.btc.model.AddressEntry;
-import bisq.core.btc.wallet.BsqWalletService;
-import bisq.core.btc.wallet.BtcWalletService;
+import bisq.core.bch.TxFeeEstimationService;
+import bisq.core.bch.model.AddressEntry;
+import bisq.core.bch.wallet.BsqWalletService;
+import bisq.core.bch.wallet.BtcWalletService;
 import bisq.core.locale.Country;
 import bisq.core.locale.CryptoCurrency;
 import bisq.core.locale.GlobalSettings;
@@ -42,7 +42,7 @@ import bisq.core.util.BSFormatter;
 import bisq.core.util.BsqFormatter;
 import bisq.core.util.validation.InputValidator;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import javafx.beans.property.SimpleIntegerProperty;
 

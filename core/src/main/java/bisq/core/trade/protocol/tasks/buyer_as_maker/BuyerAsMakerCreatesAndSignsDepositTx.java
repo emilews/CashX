@@ -17,10 +17,10 @@
 
 package bisq.core.trade.protocol.tasks.buyer_as_maker;
 
-import bisq.core.btc.model.AddressEntry;
-import bisq.core.btc.wallet.BtcWalletService;
-import bisq.core.btc.model.PreparedDepositTxAndMakerInputs;
-import bisq.core.btc.model.RawTransactionInput;
+import bisq.core.bch.model.AddressEntry;
+import bisq.core.bch.wallet.BtcWalletService;
+import bisq.core.bch.model.PreparedDepositTxAndMakerInputs;
+import bisq.core.bch.model.RawTransactionInput;
 import bisq.core.offer.Offer;
 import bisq.core.trade.Trade;
 import bisq.core.trade.protocol.TradingPeer;
@@ -29,8 +29,8 @@ import bisq.core.trade.protocol.tasks.TradeTask;
 import bisq.common.crypto.Hash;
 import bisq.common.taskrunner.TaskRunner;
 
-import org.bitcoinj.core.Address;
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Address;
+import org.bitcoincashj.core.Coin;
 
 import java.util.Arrays;
 import java.util.List;

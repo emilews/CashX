@@ -21,8 +21,8 @@ import bisq.core.dao.state.DaoStateService;
 import bisq.core.dao.state.model.blockchain.TxOutputKey;
 import bisq.core.dao.state.unconfirmed.UnconfirmedBsqChangeOutputListService;
 
-import org.bitcoinj.core.Transaction;
-import org.bitcoinj.core.TransactionOutput;
+import org.bitcoincashj.core.Transaction;
+import org.bitcoincashj.core.TransactionOutput;
 
 import javax.inject.Inject;
 

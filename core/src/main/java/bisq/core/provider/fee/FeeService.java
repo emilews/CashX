@@ -71,19 +71,19 @@ public class FeeService {
     }
 
     public static Coin getMakerFeePerBtc(boolean currencyForFeeIsBtc) {
-        return currencyForFeeIsBtc ? getFeeFromParamAsCoin(Param.DEFAULT_MAKER_FEE_BTC) : getFeeFromParamAsCoin(Param.DEFAULT_MAKER_FEE_BSQ);
+        return currencyForFeeIsBtc ? getFeeFromParamAsCoin(Param.DEFAULT_MAKER_FEE_BCH) : getFeeFromParamAsCoin(Param.DEFAULT_MAKER_FEE_BSQ);
     }
 
     public static Coin getMinMakerFee(boolean currencyForFeeIsBtc) {
-        return currencyForFeeIsBtc ? getFeeFromParamAsCoin(Param.MIN_MAKER_FEE_BTC) : getFeeFromParamAsCoin(Param.MIN_MAKER_FEE_BSQ);
+        return currencyForFeeIsBtc ? getFeeFromParamAsCoin(Param.MIN_MAKER_FEE_BCH) : getFeeFromParamAsCoin(Param.MIN_MAKER_FEE_BSQ);
     }
 
     public static Coin getTakerFeePerBtc(boolean currencyForFeeIsBtc) {
-        return currencyForFeeIsBtc ? getFeeFromParamAsCoin(Param.DEFAULT_TAKER_FEE_BTC) : getFeeFromParamAsCoin(Param.DEFAULT_TAKER_FEE_BSQ);
+        return currencyForFeeIsBtc ? getFeeFromParamAsCoin(Param.DEFAULT_TAKER_FEE_BCH) : getFeeFromParamAsCoin(Param.DEFAULT_TAKER_FEE_BSQ);
     }
 
     public static Coin getMinTakerFee(boolean currencyForFeeIsBtc) {
-        return currencyForFeeIsBtc ? getFeeFromParamAsCoin(Param.MIN_TAKER_FEE_BTC) : getFeeFromParamAsCoin(Param.MIN_TAKER_FEE_BSQ);
+        return currencyForFeeIsBtc ? getFeeFromParamAsCoin(Param.MIN_TAKER_FEE_BCH) : getFeeFromParamAsCoin(Param.MIN_TAKER_FEE_BSQ);
     }
 
 

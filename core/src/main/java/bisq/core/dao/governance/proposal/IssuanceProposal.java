@@ -17,7 +17,7 @@
 
 package bisq.core.dao.governance.proposal;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 /**
  * Marker interface for proposals which can lead to new BSQ issuance

@@ -30,8 +30,8 @@ import bisq.desktop.util.GUIUtil;
 import bisq.core.arbitration.Dispute;
 import bisq.core.arbitration.DisputeAlreadyOpenException;
 import bisq.core.arbitration.DisputeManager;
-import bisq.core.btc.setup.WalletsSetup;
-import bisq.core.btc.wallet.BtcWalletService;
+import bisq.core.bch.setup.WalletsSetup;
+import bisq.core.bch.wallet.BtcWalletService;
 import bisq.core.locale.Res;
 import bisq.core.offer.Offer;
 import bisq.core.offer.OfferPayload;
@@ -50,8 +50,8 @@ import bisq.common.handlers.ErrorMessageHandler;
 import bisq.common.handlers.FaultHandler;
 import bisq.common.handlers.ResultHandler;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.Transaction;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.Transaction;
 
 import com.google.inject.Inject;
 

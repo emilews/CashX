@@ -17,7 +17,7 @@
 
 package bisq.core.dao.governance.blindvote;
 
-import bisq.core.btc.wallet.Restrictions;
+import bisq.core.bch.wallet.Restrictions;
 import bisq.core.dao.governance.period.PeriodService;
 import bisq.core.dao.governance.proposal.ProposalValidationException;
 import bisq.core.dao.state.DaoStateService;

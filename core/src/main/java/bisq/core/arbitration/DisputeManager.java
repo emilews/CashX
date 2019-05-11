@@ -23,13 +23,13 @@ import bisq.core.arbitration.messages.DisputeResultMessage;
 import bisq.core.arbitration.messages.OpenNewDisputeMessage;
 import bisq.core.arbitration.messages.PeerOpenedDisputeMessage;
 import bisq.core.arbitration.messages.PeerPublishedDisputePayoutTxMessage;
-import bisq.core.btc.exceptions.TransactionVerificationException;
-import bisq.core.btc.exceptions.TxBroadcastException;
-import bisq.core.btc.exceptions.WalletException;
-import bisq.core.btc.setup.WalletsSetup;
-import bisq.core.btc.wallet.BtcWalletService;
-import bisq.core.btc.wallet.TradeWalletService;
-import bisq.core.btc.wallet.TxBroadcaster;
+import bisq.core.bch.exceptions.TransactionVerificationException;
+import bisq.core.bch.exceptions.TxBroadcastException;
+import bisq.core.bch.exceptions.WalletException;
+import bisq.core.bch.setup.WalletsSetup;
+import bisq.core.bch.wallet.BtcWalletService;
+import bisq.core.bch.wallet.TradeWalletService;
+import bisq.core.bch.wallet.TxBroadcaster;
 import bisq.core.locale.Res;
 import bisq.core.offer.OpenOffer;
 import bisq.core.offer.OpenOfferManager;
@@ -60,9 +60,9 @@ import bisq.common.proto.persistable.PersistenceProtoResolver;
 import bisq.common.storage.Storage;
 import bisq.common.util.Tuple2;
 
-import org.bitcoinj.core.AddressFormatException;
-import org.bitcoinj.core.Transaction;
-import org.bitcoinj.crypto.DeterministicKey;
+import org.bitcoincashj.core.AddressFormatException;
+import org.bitcoincashj.core.Transaction;
+import org.bitcoincashj.crypto.DeterministicKey;
 
 import com.google.inject.Inject;
 

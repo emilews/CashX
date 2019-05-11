@@ -105,7 +105,7 @@ public class BisqEnvironment extends StandardEnvironment {
 
     @SuppressWarnings("SameReturnValue")
     public static BaseCurrencyNetwork getDefaultBaseCurrencyNetwork() {
-        return BaseCurrencyNetwork.BCH_MAINNET;
+        return BaseCurrencyNetwork.BTC_MAINNET;
     }
 
     protected static BaseCurrencyNetwork baseCurrencyNetwork = getDefaultBaseCurrencyNetwork();
@@ -361,8 +361,7 @@ public class BisqEnvironment extends StandardEnvironment {
             final String bannedBtcNodesAsString = getProperty(FilterManager.BANNED_BTC_NODES, "");
             bannedBtcNodes = !bannedBtcNodesAsString.isEmpty() ? Arrays.asList(StringUtils.deleteWhitespace(bannedBtcNodesAsString).split(",")) : null;
 
-            baseCurrencyNetwork = BaseCurrencyNetwork.valueOf(getProperty(BtcOptionKeys.BASE_CURRENCY_NETWORK,
-                    getDefaultBaseCurrencyNetwork().name()).toUpperCase());
+            baseCurrencyNetwork = getDefaultBaseCurrencyNetwork();
 
             btcNetworkDir = Paths.get(appDataDir, baseCurrencyNetwork.name().toLowerCase()).toString();
             File btcNetworkDirFile = new File(btcNetworkDir);

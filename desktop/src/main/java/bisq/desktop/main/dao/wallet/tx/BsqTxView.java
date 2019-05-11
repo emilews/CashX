@@ -27,9 +27,9 @@ import bisq.desktop.main.dao.wallet.BsqBalanceUtil;
 import bisq.desktop.util.FormBuilder;
 import bisq.desktop.util.GUIUtil;
 
-import bisq.core.btc.listeners.BsqBalanceListener;
-import bisq.core.btc.wallet.BsqWalletService;
-import bisq.core.btc.wallet.BtcWalletService;
+import bisq.core.bch.listeners.BsqBalanceListener;
+import bisq.core.bch.wallet.BsqWalletService;
+import bisq.core.bch.wallet.BtcWalletService;
 import bisq.core.dao.DaoFacade;
 import bisq.core.dao.state.DaoStateListener;
 import bisq.core.dao.state.DaoStateService;
@@ -44,8 +44,8 @@ import bisq.common.Timer;
 import bisq.common.UserThread;
 import bisq.common.app.DevEnv;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.Transaction;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.Transaction;
 
 import javax.inject.Inject;
 
@@ -298,7 +298,7 @@ public class BsqTxView extends ActivatableView<GridPane, Void> implements BsqBal
                             btcWalletService,
                             daoFacade,
                             // Use tx.getIncludedInBestChainAt() when available, otherwise use tx.getUpdateTime()
-                            transaction.getIncludedInBestChainAt() != null ? transaction.getIncludedInBestChainAt() : transaction.getUpdateTime(),
+                            transaction.getUpdateTime(),
                             bsqFormatter);
                 })
                 .collect(Collectors.toList());

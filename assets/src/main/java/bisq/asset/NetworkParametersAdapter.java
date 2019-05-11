@@ -17,14 +17,14 @@
 
 package bisq.asset;
 
-import org.bitcoinj.core.BitcoinSerializer;
-import org.bitcoinj.core.Block;
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.NetworkParameters;
-import org.bitcoinj.core.StoredBlock;
-import org.bitcoinj.core.VerificationException;
-import org.bitcoinj.store.BlockStore;
-import org.bitcoinj.utils.MonetaryFormat;
+import org.bitcoincashj.core.BitcoinSerializer;
+import org.bitcoincashj.core.Block;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.NetworkParameters;
+import org.bitcoincashj.core.StoredBlock;
+import org.bitcoincashj.core.VerificationException;
+import org.bitcoincashj.store.BlockStore;
+import org.bitcoincashj.utils.MonetaryFormat;
 
 /**
  * Convenient abstract {@link NetworkParameters} base class providing no-op
@@ -41,7 +41,6 @@ public abstract class NetworkParametersAdapter extends NetworkParameters {
         return PAYMENT_PROTOCOL_ID_MAINNET;
     }
 
-    @Override
     public void checkDifficultyTransitions(StoredBlock storedPrev, Block next, BlockStore blockStore)
             throws VerificationException {
     }

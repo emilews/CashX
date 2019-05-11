@@ -17,8 +17,8 @@
 
 package bisq.core.trade.protocol.tasks.taker;
 
-import bisq.core.btc.model.AddressEntry;
-import bisq.core.btc.wallet.BtcWalletService;
+import bisq.core.bch.model.AddressEntry;
+import bisq.core.bch.wallet.BtcWalletService;
 import bisq.core.payment.payload.PaymentAccountPayload;
 import bisq.core.trade.Contract;
 import bisq.core.trade.SellerAsTakerTrade;
@@ -32,7 +32,7 @@ import bisq.common.crypto.Sig;
 import bisq.common.taskrunner.TaskRunner;
 import bisq.common.util.Utilities;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import java.util.Arrays;
 

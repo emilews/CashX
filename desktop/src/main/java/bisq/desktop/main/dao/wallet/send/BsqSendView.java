@@ -33,14 +33,14 @@ import bisq.desktop.util.validation.BsqAddressValidator;
 import bisq.desktop.util.validation.BsqValidator;
 import bisq.desktop.util.validation.BtcValidator;
 
-import bisq.core.btc.exceptions.TxBroadcastException;
-import bisq.core.btc.listeners.BsqBalanceListener;
-import bisq.core.btc.setup.WalletsSetup;
-import bisq.core.btc.wallet.BsqWalletService;
-import bisq.core.btc.wallet.BtcWalletService;
-import bisq.core.btc.wallet.Restrictions;
-import bisq.core.btc.wallet.TxBroadcaster;
-import bisq.core.btc.wallet.WalletsManager;
+import bisq.core.bch.exceptions.TxBroadcastException;
+import bisq.core.bch.listeners.BsqBalanceListener;
+import bisq.core.bch.setup.WalletsSetup;
+import bisq.core.bch.wallet.BsqWalletService;
+import bisq.core.bch.wallet.BtcWalletService;
+import bisq.core.bch.wallet.Restrictions;
+import bisq.core.bch.wallet.TxBroadcaster;
+import bisq.core.bch.wallet.WalletsManager;
 import bisq.core.dao.state.model.blockchain.TxType;
 import bisq.core.locale.Res;
 import bisq.core.util.BSFormatter;
@@ -52,9 +52,9 @@ import bisq.network.p2p.P2PService;
 
 import bisq.common.handlers.ResultHandler;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.InsufficientMoneyException;
-import org.bitcoinj.core.Transaction;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.InsufficientMoneyException;
+import org.bitcoincashj.core.Transaction;
 
 import javax.inject.Inject;
 

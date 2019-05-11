@@ -27,7 +27,7 @@ import bisq.common.UserThread;
 import bisq.common.handlers.ResultHandler;
 import bisq.common.util.Utilities;
 
-import org.bitcoinj.core.Utils;
+import org.bitcoincashj.core.Utils;
 
 import com.neemre.btcdcli4j.core.BitcoindException;
 import com.neemre.btcdcli4j.core.BtcdCli4jVersion;
@@ -99,7 +99,7 @@ public class RpcService {
         boolean isPortSet = rpcPort != null && !rpcPort.isEmpty();
         boolean isMainnet = BisqEnvironment.getBaseCurrencyNetwork().isMainnet();
         boolean isTestnet = BisqEnvironment.getBaseCurrencyNetwork().isTestnet();
-        boolean isDaoBetaNet = BisqEnvironment.getBaseCurrencyNetwork().isDaoBetaNet();
+        boolean isDaoBetaNet = false;
         this.rpcPort = isPortSet ? rpcPort :
                 isMainnet || isDaoBetaNet ? "8332" :
                         isTestnet ? "18332" :

@@ -18,10 +18,10 @@
 package bisq.core.trade.protocol.tasks.taker;
 
 import bisq.core.arbitration.Arbitrator;
-import bisq.core.btc.model.AddressEntry;
-import bisq.core.btc.wallet.BtcWalletService;
-import bisq.core.btc.wallet.TradeWalletService;
-import bisq.core.btc.wallet.WalletService;
+import bisq.core.bch.model.AddressEntry;
+import bisq.core.bch.wallet.BtcWalletService;
+import bisq.core.bch.wallet.TradeWalletService;
+import bisq.core.bch.wallet.WalletService;
 import bisq.core.dao.exceptions.DaoDisabledException;
 import bisq.core.offer.availability.ArbitratorSelection;
 import bisq.core.trade.Trade;
@@ -29,8 +29,8 @@ import bisq.core.trade.protocol.tasks.TradeTask;
 
 import bisq.common.taskrunner.TaskRunner;
 
-import org.bitcoinj.core.Address;
-import org.bitcoinj.core.Transaction;
+import org.bitcoincashj.core.Address;
+import org.bitcoincashj.core.Transaction;
 
 import lombok.extern.slf4j.Slf4j;
 

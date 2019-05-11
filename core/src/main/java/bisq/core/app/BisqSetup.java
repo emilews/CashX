@@ -23,11 +23,11 @@ import bisq.core.alert.PrivateNotificationManager;
 import bisq.core.alert.PrivateNotificationPayload;
 import bisq.core.arbitration.ArbitratorManager;
 import bisq.core.arbitration.DisputeManager;
-import bisq.core.btc.Balances;
-import bisq.core.btc.model.AddressEntry;
-import bisq.core.btc.setup.WalletsSetup;
-import bisq.core.btc.wallet.BtcWalletService;
-import bisq.core.btc.wallet.WalletsManager;
+import bisq.core.bch.Balances;
+import bisq.core.bch.model.AddressEntry;
+import bisq.core.bch.setup.WalletsSetup;
+import bisq.core.bch.wallet.BtcWalletService;
+import bisq.core.bch.wallet.WalletsManager;
 import bisq.core.dao.DaoSetup;
 import bisq.core.dao.governance.asset.AssetService;
 import bisq.core.dao.governance.voteresult.VoteResultException;
@@ -69,7 +69,7 @@ import bisq.common.crypto.SealedAndSigned;
 import bisq.common.proto.ProtobufferException;
 import bisq.common.util.Utilities;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import javax.inject.Inject;
 
@@ -393,7 +393,7 @@ public class BisqSetup {
     ///////////////////////////////////////////////////////////////////////////////////////////
 
     private void maybeReSyncSPVChain() {
-        // We do the delete of the spv file at startup before BitcoinJ is initialized to avoid issues with locked files under Windows.
+        // We do the delete of the spv file at startup before bitcoincashj is initialized to avoid issues with locked files under Windows.
         if (preferences.isResyncSpvRequested()) {
             try {
                 walletsSetup.reSyncSPVChain();
@@ -418,35 +418,32 @@ public class BisqSetup {
 
     private void checkIfLocalHostNodeIsRunning() {
         // For DAO testnet we ignore local btc node
-        if (BisqEnvironment.getBaseCurrencyNetwork().isDaoRegTest() || BisqEnvironment.getBaseCurrencyNetwork().isDaoTestNet()) {
-            step3();
-        } else {
-            Thread checkIfLocalHostNodeIsRunningThread = new Thread(() -> {
-                Thread.currentThread().setName("checkIfLocalHostNodeIsRunningThread");
-                Socket socket = null;
-                try {
-                    socket = new Socket();
-                    socket.connect(new InetSocketAddress(InetAddresses.forString("127.0.0.1"),
-                            BisqEnvironment.getBaseCurrencyNetwork().getParameters().getPort()), 5000);
-                    log.info("Localhost Bitcoin node detected.");
-                    UserThread.execute(() -> {
-                        bisqEnvironment.setBitcoinLocalhostNodeRunning(true);
-                        step3();
-                    });
-                } catch (Throwable e) {
+        Thread checkIfLocalHostNodeIsRunningThread = new Thread(() -> {
+            Thread.currentThread().setName("checkIfLocalHostNodeIsRunningThread");
+            Socket socket = null;
+            try {
+                socket = new Socket();
+                socket.connect(new InetSocketAddress(InetAddresses.forString("127.0.0.1"),
+                        BisqEnvironment.getBaseCurrencyNetwork().getParameters().getPort()), 5000);
+                log.info("Localhost Bitcoin node detected.");
+                UserThread.execute(() -> {
+                    bisqEnvironment.setBitcoinLocalhostNodeRunning(true);
+                    step3();
+                });
+            } catch (Throwable e) {
                     UserThread.execute(BisqSetup.this::step3);
-                } finally {
-                    if (socket != null) {
-                        try {
-                            socket.close();
-                        } catch (IOException ignore) {
-                        }
+            } finally {
+                if (socket != null) {
+                    try {
+                        socket.close();
+                    } catch (IOException ignore) {
                     }
                 }
-            });
-            checkIfLocalHostNodeIsRunningThread.start();
-        }
+            }
+        });
+        checkIfLocalHostNodeIsRunningThread.start();
     }
+
 
     private void readMapsFromResources() {
         SetupUtils.readFromResources(p2PService.getP2PDataStorage()).addListener((observable, oldValue, newValue) -> {
@@ -514,7 +511,7 @@ public class BisqSetup {
 
         p2pNetworkReady = p2PNetworkSetup.init(this::initWallet, displayTorNetworkSettingsHandler);
 
-        // We only init wallet service here if not using Tor for bitcoinj.
+        // We only init wallet service here if not using Tor for bitcoincashj.
         // When using Tor, wallet init must be deferred until Tor is ready.
         if (!preferences.getUseTorForBitcoinJ() || bisqEnvironment.isBitcoinLocalhostNodeRunning()) {
             initWallet();

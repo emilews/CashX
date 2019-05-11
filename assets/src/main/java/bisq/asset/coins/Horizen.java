@@ -21,8 +21,8 @@ import bisq.asset.AddressValidationResult;
 import bisq.asset.AddressValidator;
 import bisq.asset.Coin;
 
-import org.bitcoinj.core.AddressFormatException;
-import org.bitcoinj.core.Base58;
+import org.bitcoincashj.core.AddressFormatException;
+import org.bitcoincashj.core.Base58;
 
 public class Horizen extends Coin {
 

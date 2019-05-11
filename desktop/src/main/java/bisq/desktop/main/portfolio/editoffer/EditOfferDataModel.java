@@ -20,9 +20,9 @@ package bisq.desktop.main.portfolio.editoffer;
 
 import bisq.desktop.main.offer.MutableOfferDataModel;
 
-import bisq.core.btc.TxFeeEstimationService;
-import bisq.core.btc.wallet.BsqWalletService;
-import bisq.core.btc.wallet.BtcWalletService;
+import bisq.core.bch.TxFeeEstimationService;
+import bisq.core.bch.wallet.BsqWalletService;
+import bisq.core.bch.wallet.BtcWalletService;
 import bisq.core.filter.FilterManager;
 import bisq.core.locale.CurrencyUtil;
 import bisq.core.locale.TradeCurrency;

@@ -23,9 +23,9 @@ package bisq.desktop.main.offer.createoffer;
 
 import bisq.desktop.main.offer.MutableOfferDataModel;
 
-import bisq.core.btc.TxFeeEstimationService;
-import bisq.core.btc.wallet.BsqWalletService;
-import bisq.core.btc.wallet.BtcWalletService;
+import bisq.core.bch.TxFeeEstimationService;
+import bisq.core.bch.wallet.BsqWalletService;
+import bisq.core.bch.wallet.BtcWalletService;
 import bisq.core.filter.FilterManager;
 import bisq.core.offer.OpenOfferManager;
 import bisq.core.payment.AccountAgeWitnessService;

@@ -19,17 +19,17 @@ package bisq.desktop.main.dao.wallet.tx;
 
 import bisq.desktop.components.TxConfidenceListItem;
 
-import bisq.core.btc.wallet.BsqWalletService;
-import bisq.core.btc.wallet.BtcWalletService;
-import bisq.core.btc.wallet.WalletService;
+import bisq.core.bch.wallet.BsqWalletService;
+import bisq.core.bch.wallet.BtcWalletService;
+import bisq.core.bch.wallet.WalletService;
 import bisq.core.dao.DaoFacade;
 import bisq.core.dao.state.model.blockchain.TxType;
 import bisq.core.locale.Res;
 import bisq.core.util.BsqFormatter;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.Transaction;
-import org.bitcoinj.core.TransactionOutput;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.Transaction;
+import org.bitcoincashj.core.TransactionOutput;
 
 import java.util.Date;
 

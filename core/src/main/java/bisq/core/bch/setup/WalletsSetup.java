@@ -25,7 +25,7 @@ import bisq.core.bch.nodes.BtcNetworkConfig;
 import bisq.core.bch.nodes.BtcNodes;
 import bisq.core.bch.nodes.BtcNodesRepository;
 import bisq.core.bch.nodes.BtcNodesSetupPreferences;
-import bisq.core.btc.nodes.BtcNodes.BtcNode;
+import bisq.core.bch.nodes.BtcNodes.BtcNode;
 import bisq.core.user.Preferences;
 
 import bisq.network.Socks5MultiDiscovery;
@@ -160,7 +160,6 @@ public class WalletsSetup {
         btcWalletFileName = "bisq_" + BisqEnvironment.getBaseCurrencyNetwork().getCurrencyCode() + ".wallet";
         params = BisqEnvironment.getParameters();
         walletDir = new File(appDir, "wallet");
-        PeerGroup.setIgnoreHttpSeeds(true);
     }
 
 
@@ -182,7 +181,7 @@ public class WalletsSetup {
 
         backupWallets();
 
-        final Socks5Proxy socks5Proxy = preferences.getUseTorForBitcoinJ() ? socks5ProxyProvider.getSocks5Proxy() : null;
+        final Socks5Proxy socks5Proxy = socks5ProxyProvider.getSocks5Proxy();
         log.info("Socks5Proxy for bitcoinj: socks5Proxy=" + socks5Proxy);
 
         walletConfig = new WalletConfig(params,
@@ -203,7 +202,6 @@ public class WalletsSetup {
 
                 // We don't want to get our node white list polluted with nodes from AddressMessage calls.
                 if (preferences.getBitcoinNodes() != null && !preferences.getBitcoinNodes().isEmpty())
-                    peerGroup.setAddPeersFromAddressMessage(false);
 
                 peerGroup.addConnectedEventListener((peer, peerCount) -> {
                     // We get called here on our user thread

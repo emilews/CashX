@@ -27,7 +27,7 @@ import bisq.desktop.util.GUIUtil;
 import bisq.desktop.util.Layout;
 import bisq.desktop.util.Transitions;
 
-import bisq.core.btc.wallet.WalletsManager;
+import bisq.core.bch.wallet.WalletsManager;
 import bisq.core.crypto.ScryptUtil;
 import bisq.core.locale.Res;
 
@@ -35,10 +35,10 @@ import bisq.common.UserThread;
 import bisq.common.storage.Storage;
 import bisq.common.util.Tuple2;
 
-import org.bitcoinj.crypto.KeyCrypterScrypt;
-import org.bitcoinj.crypto.MnemonicCode;
-import org.bitcoinj.crypto.MnemonicException;
-import org.bitcoinj.wallet.DeterministicSeed;
+import org.bitcoincashj.crypto.KeyCrypterScrypt;
+import org.bitcoincashj.crypto.MnemonicCode;
+import org.bitcoincashj.crypto.MnemonicException;
+import org.bitcoincashj.wallet.DeterministicSeed;
 
 import javax.inject.Inject;
 import javax.inject.Named;

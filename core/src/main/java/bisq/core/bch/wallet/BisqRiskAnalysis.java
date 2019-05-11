@@ -114,7 +114,7 @@ public class BisqRiskAnalysis implements RiskAnalysis {
 
         // Relative time-locked transactions are risky too. We can't check the locks because usually we don't know the
         // spent outputs (to know when they were created).
-        if (tx.hasRelativeLockTime()) {
+        if (tx.isTimeLocked()) {
             nonFinal = tx;
             return Result.NON_FINAL;
         }

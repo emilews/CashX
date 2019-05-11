@@ -30,7 +30,7 @@ import bisq.desktop.util.GUIUtil;
 import bisq.desktop.util.Layout;
 import bisq.desktop.util.validation.BsqValidator;
 
-import bisq.core.btc.BaseCurrencyNetwork;
+import bisq.core.bch.BaseCurrencyNetwork;
 import bisq.core.dao.DaoFacade;
 import bisq.core.dao.governance.bond.Bond;
 import bisq.core.dao.governance.bond.role.BondedRole;
@@ -64,7 +64,7 @@ import bisq.asset.Asset;
 
 import bisq.common.util.Tuple3;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;

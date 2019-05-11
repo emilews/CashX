@@ -17,7 +17,7 @@
 
 package bisq.core.presentation;
 
-import bisq.core.btc.Balances;
+import bisq.core.bch.Balances;
 import bisq.core.util.BSFormatter;
 
 import javax.inject.Inject;

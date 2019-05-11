@@ -17,12 +17,12 @@
 
 package bisq.desktop.util.validation;
 
-import bisq.core.btc.wallet.Restrictions;
+import bisq.core.bch.wallet.Restrictions;
 import bisq.core.locale.Res;
 import bisq.core.util.BsqFormatter;
 import bisq.core.util.CoinUtil;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import javax.inject.Inject;
 
@@ -102,7 +102,7 @@ public class BsqValidator extends AltcoinValidator {
         BigDecimal bd = new BigDecimal(input);
         final BigDecimal satoshis = bd.movePointRight(2);
         if (satoshis.scale() > 0)
-            return new ValidationResult(false, Res.get("validation.btc.fraction"));
+            return new ValidationResult(false, Res.get("validation.bch.fraction"));
         else
             return new ValidationResult(true);
     }
@@ -111,7 +111,7 @@ public class BsqValidator extends AltcoinValidator {
         try {
             final Coin coin = bsqFormatter.parseToCoin(input);
             if (maxValue != null && coin.compareTo(maxValue) > 0)
-                return new ValidationResult(false, Res.get("validation.btc.toLarge", bsqFormatter.formatCoinWithCode(maxValue)));
+                return new ValidationResult(false, Res.get("validation.bch.toLarge", bsqFormatter.formatCoinWithCode(maxValue)));
             else
                 return new ValidationResult(true);
         } catch (Throwable t) {

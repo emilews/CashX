@@ -19,7 +19,7 @@ package bisq.core.offer;
 
 import bisq.core.monetary.Price;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import org.junit.Assert;
 import org.junit.Test;

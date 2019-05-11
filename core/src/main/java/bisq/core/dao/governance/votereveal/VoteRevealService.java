@@ -17,13 +17,13 @@
 
 package bisq.core.dao.governance.votereveal;
 
-import bisq.core.btc.exceptions.TransactionVerificationException;
-import bisq.core.btc.exceptions.TxBroadcastException;
-import bisq.core.btc.exceptions.WalletException;
-import bisq.core.btc.wallet.BsqWalletService;
-import bisq.core.btc.wallet.BtcWalletService;
-import bisq.core.btc.wallet.TxBroadcaster;
-import bisq.core.btc.wallet.WalletsManager;
+import bisq.core.bch.exceptions.TransactionVerificationException;
+import bisq.core.bch.exceptions.TxBroadcastException;
+import bisq.core.bch.exceptions.WalletException;
+import bisq.core.bch.wallet.BsqWalletService;
+import bisq.core.bch.wallet.BtcWalletService;
+import bisq.core.bch.wallet.TxBroadcaster;
+import bisq.core.bch.wallet.WalletsManager;
 import bisq.core.dao.DaoSetupService;
 import bisq.core.dao.governance.blindvote.BlindVote;
 import bisq.core.dao.governance.blindvote.BlindVoteConsensus;
@@ -42,8 +42,8 @@ import bisq.network.p2p.P2PService;
 
 import bisq.common.util.Utilities;
 
-import org.bitcoinj.core.InsufficientMoneyException;
-import org.bitcoinj.core.Transaction;
+import org.bitcoincashj.core.InsufficientMoneyException;
+import org.bitcoincashj.core.Transaction;
 
 import javax.inject.Inject;
 

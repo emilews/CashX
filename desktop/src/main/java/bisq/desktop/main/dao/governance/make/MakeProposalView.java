@@ -29,9 +29,9 @@ import bisq.desktop.main.overlays.popups.Popup;
 import bisq.desktop.util.GUIUtil;
 import bisq.desktop.util.Layout;
 
-import bisq.core.btc.exceptions.InsufficientBsqException;
-import bisq.core.btc.setup.WalletsSetup;
-import bisq.core.btc.wallet.BsqWalletService;
+import bisq.core.bch.exceptions.InsufficientBsqException;
+import bisq.core.bch.setup.WalletsSetup;
+import bisq.core.bch.wallet.BsqWalletService;
 import bisq.core.dao.DaoFacade;
 import bisq.core.dao.governance.bond.Bond;
 import bisq.core.dao.governance.param.Param;
@@ -61,9 +61,9 @@ import bisq.common.app.DevEnv;
 import bisq.common.util.Tuple3;
 import bisq.common.util.Tuple4;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.InsufficientMoneyException;
-import org.bitcoinj.core.Transaction;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.InsufficientMoneyException;
+import org.bitcoincashj.core.Transaction;
 
 import javax.inject.Inject;
 

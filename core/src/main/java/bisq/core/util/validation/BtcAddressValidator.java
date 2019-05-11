@@ -20,8 +20,8 @@ package bisq.core.util.validation;
 import bisq.core.app.BisqEnvironment;
 import bisq.core.locale.Res;
 
-import org.bitcoinj.core.Address;
-import org.bitcoinj.core.AddressFormatException;
+import org.bitcoincashj.core.Address;
+import org.bitcoincashj.core.AddressFormatException;
 
 import javax.inject.Inject;
 

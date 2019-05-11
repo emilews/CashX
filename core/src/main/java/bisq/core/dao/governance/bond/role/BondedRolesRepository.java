@@ -17,7 +17,7 @@
 
 package bisq.core.dao.governance.bond.role;
 
-import bisq.core.btc.wallet.BsqWalletService;
+import bisq.core.bch.wallet.BsqWalletService;
 import bisq.core.dao.governance.bond.BondConsensus;
 import bisq.core.dao.governance.bond.BondRepository;
 import bisq.core.dao.state.DaoStateService;
@@ -27,7 +27,7 @@ import bisq.core.dao.state.model.governance.Proposal;
 import bisq.core.dao.state.model.governance.Role;
 import bisq.core.dao.state.model.governance.RoleProposal;
 
-import org.bitcoinj.core.Transaction;
+import org.bitcoincashj.core.Transaction;
 
 import javax.inject.Inject;
 

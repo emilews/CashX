@@ -34,18 +34,18 @@
 
 package bisq.core.btc.wallet;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.ECKey;
-import org.bitcoinj.core.ECKey.ECDSASignature;
-import org.bitcoinj.core.NetworkParameters;
-import org.bitcoinj.core.Transaction;
-import org.bitcoinj.core.TransactionConfidence;
-import org.bitcoinj.core.TransactionInput;
-import org.bitcoinj.core.TransactionOutput;
-import org.bitcoinj.crypto.TransactionSignature;
-import org.bitcoinj.script.ScriptChunk;
-import org.bitcoinj.wallet.RiskAnalysis;
-import org.bitcoinj.wallet.Wallet;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.ECKey;
+import org.bitcoincashj.core.ECKey.ECDSASignature;
+import org.bitcoincashj.core.NetworkParameters;
+import org.bitcoincashj.core.Transaction;
+import org.bitcoincashj.core.TransactionConfidence;
+import org.bitcoincashj.core.TransactionInput;
+import org.bitcoincashj.core.TransactionOutput;
+import org.bitcoincashj.crypto.TransactionSignature;
+import org.bitcoincashj.script.ScriptChunk;
+import org.bitcoincashj.wallet.RiskAnalysis;
+import org.bitcoincashj.wallet.Wallet;
 
 import java.util.List;
 
@@ -115,7 +115,7 @@ public class BisqRiskAnalysis implements RiskAnalysis {
 
         // Relative time-locked transactions are risky too. We can't check the locks because usually we don't know the
         // spent outputs (to know when they were created).
-        if (tx.hasRelativeLockTime()) {
+        if (tx.isTimeLocked()) {
             nonFinal = tx;
             return Result.NON_FINAL;
         }
@@ -145,7 +145,7 @@ public class BisqRiskAnalysis implements RiskAnalysis {
 
     /**
      * The reason a transaction is considered non-standard, returned by
-     * {@link #isStandard(org.bitcoinj.core.Transaction)}.
+     * {@link #isStandard(org.bitcoincashj.core.Transaction)}.
      */
     public enum RuleViolation {
         NONE,

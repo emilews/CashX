@@ -18,9 +18,9 @@
 package bisq.core.dao.governance.proposal;
 
 import bisq.core.app.BisqEnvironment;
-import bisq.core.btc.exceptions.TxBroadcastException;
-import bisq.core.btc.wallet.TxBroadcaster;
-import bisq.core.btc.wallet.WalletsManager;
+import bisq.core.bch.exceptions.TxBroadcastException;
+import bisq.core.bch.wallet.TxBroadcaster;
+import bisq.core.bch.wallet.WalletsManager;
 import bisq.core.dao.governance.period.PeriodService;
 import bisq.core.dao.governance.proposal.storage.temp.TempProposalPayload;
 import bisq.core.dao.state.DaoStateListener;
@@ -38,7 +38,7 @@ import bisq.common.handlers.ResultHandler;
 import bisq.common.proto.persistable.PersistedDataHost;
 import bisq.common.storage.Storage;
 
-import org.bitcoinj.core.Transaction;
+import org.bitcoincashj.core.Transaction;
 
 import com.google.inject.Inject;
 

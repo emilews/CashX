@@ -19,7 +19,7 @@ package bisq.monitor.reporter;
 
 import bisq.monitor.Reporter;
 
-import bisq.core.btc.BaseCurrencyNetwork;
+import bisq.core.bch.BaseCurrencyNetwork;
 
 import bisq.common.app.Version;
 

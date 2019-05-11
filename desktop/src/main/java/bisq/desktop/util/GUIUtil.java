@@ -24,8 +24,8 @@ import bisq.desktop.components.indicator.TxConfidenceIndicator;
 import bisq.desktop.main.overlays.popups.Popup;
 
 import bisq.core.app.BisqEnvironment;
-import bisq.core.btc.setup.WalletsSetup;
-import bisq.core.btc.wallet.WalletsManager;
+import bisq.core.bch.setup.WalletsSetup;
+import bisq.core.bch.wallet.WalletsManager;
 import bisq.core.locale.Country;
 import bisq.core.locale.CountryUtil;
 import bisq.core.locale.CurrencyUtil;
@@ -54,11 +54,11 @@ import bisq.common.util.Tuple2;
 import bisq.common.util.Tuple3;
 import bisq.common.util.Utilities;
 
-import org.bitcoinj.core.Address;
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.TransactionConfidence;
-import org.bitcoinj.uri.BitcoinURI;
-import org.bitcoinj.wallet.DeterministicSeed;
+import org.bitcoincashj.core.Address;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.TransactionConfidence;
+import org.bitcoincashj.uri.BitcoinURI;
+import org.bitcoincashj.wallet.DeterministicSeed;
 
 import com.googlecode.jcsv.CSVStrategy;
 import com.googlecode.jcsv.writer.CSVEntryConverter;

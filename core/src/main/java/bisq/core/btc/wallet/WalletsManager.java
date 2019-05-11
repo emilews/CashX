@@ -25,12 +25,12 @@ import bisq.core.locale.Res;
 import bisq.common.handlers.ExceptionHandler;
 import bisq.common.handlers.ResultHandler;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.Transaction;
-import org.bitcoinj.crypto.KeyCrypter;
-import org.bitcoinj.crypto.KeyCrypterScrypt;
-import org.bitcoinj.wallet.DeterministicSeed;
-import org.bitcoinj.wallet.Wallet;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.Transaction;
+import org.bitcoincashj.crypto.KeyCrypter;
+import org.bitcoincashj.crypto.KeyCrypterScrypt;
+import org.bitcoincashj.wallet.DeterministicSeed;
+import org.bitcoincashj.wallet.Wallet;
 
 import com.google.inject.Inject;
 

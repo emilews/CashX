@@ -18,9 +18,9 @@
 package bisq.core.offer;
 
 import bisq.core.arbitration.ArbitratorManager;
-import bisq.core.btc.wallet.BsqWalletService;
-import bisq.core.btc.wallet.BtcWalletService;
-import bisq.core.btc.wallet.TradeWalletService;
+import bisq.core.bch.wallet.BsqWalletService;
+import bisq.core.bch.wallet.BtcWalletService;
+import bisq.core.bch.wallet.TradeWalletService;
 import bisq.core.exceptions.TradePriceOutOfToleranceException;
 import bisq.core.offer.availability.ArbitratorSelection;
 import bisq.core.offer.messages.OfferAvailabilityRequest;
@@ -57,7 +57,7 @@ import bisq.common.proto.persistable.PersistedDataHost;
 import bisq.common.proto.persistable.PersistenceProtoResolver;
 import bisq.common.storage.Storage;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import javax.inject.Inject;
 import javax.inject.Named;

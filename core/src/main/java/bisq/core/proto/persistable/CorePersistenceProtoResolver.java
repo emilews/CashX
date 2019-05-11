@@ -18,8 +18,8 @@
 package bisq.core.proto.persistable;
 
 import bisq.core.arbitration.DisputeList;
-import bisq.core.btc.model.AddressEntryList;
-import bisq.core.btc.wallet.BtcWalletService;
+import bisq.core.bch.model.AddressEntryList;
+import bisq.core.bch.wallet.BtcWalletService;
 import bisq.core.dao.governance.blindvote.MyBlindVoteList;
 import bisq.core.dao.governance.blindvote.storage.BlindVoteStore;
 import bisq.core.dao.governance.bond.reputation.MyReputationList;

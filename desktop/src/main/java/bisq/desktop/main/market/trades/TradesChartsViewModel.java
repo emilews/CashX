@@ -40,7 +40,7 @@ import bisq.core.util.BSFormatter;
 
 import bisq.common.util.MathUtils;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import com.google.inject.Inject;
 

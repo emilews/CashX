@@ -30,7 +30,7 @@ import bisq.core.util.BSFormatter;
 
 import bisq.common.util.MathUtils;
 
-import org.bitcoinj.utils.Fiat;
+import org.bitcoincashj.utils.Fiat;
 
 import javax.inject.Inject;
 

@@ -30,7 +30,7 @@ import bisq.desktop.util.FormBuilder;
 import bisq.desktop.util.GUIUtil;
 import bisq.desktop.util.Layout;
 
-import bisq.core.btc.wallet.BsqWalletService;
+import bisq.core.bch.wallet.BsqWalletService;
 import bisq.core.dao.DaoFacade;
 import bisq.core.dao.governance.blindvote.MyBlindVoteListService;
 import bisq.core.dao.governance.param.Param;
@@ -63,7 +63,7 @@ import bisq.core.util.BsqFormatter;
 
 import bisq.common.util.Utilities;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;

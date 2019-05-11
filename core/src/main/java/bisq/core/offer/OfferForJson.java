@@ -25,8 +25,8 @@ import bisq.core.payment.payload.PaymentMethod;
 
 import bisq.common.util.MathUtils;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.utils.MonetaryFormat;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.utils.MonetaryFormat;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 

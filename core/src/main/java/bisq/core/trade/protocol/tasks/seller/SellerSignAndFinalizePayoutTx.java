@@ -17,8 +17,8 @@
 
 package bisq.core.trade.protocol.tasks.seller;
 
-import bisq.core.btc.model.AddressEntry;
-import bisq.core.btc.wallet.BtcWalletService;
+import bisq.core.bch.model.AddressEntry;
+import bisq.core.bch.wallet.BtcWalletService;
 import bisq.core.offer.Offer;
 import bisq.core.trade.Trade;
 import bisq.core.trade.protocol.TradingPeer;
@@ -26,9 +26,9 @@ import bisq.core.trade.protocol.tasks.TradeTask;
 
 import bisq.common.taskrunner.TaskRunner;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.Transaction;
-import org.bitcoinj.crypto.DeterministicKey;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.Transaction;
+import org.bitcoincashj.crypto.DeterministicKey;
 
 import java.util.Arrays;
 import java.util.Optional;

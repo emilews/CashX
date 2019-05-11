@@ -21,8 +21,8 @@ import bisq.desktop.common.model.ActivatableViewModel;
 
 import bisq.core.arbitration.Arbitrator;
 import bisq.core.arbitration.ArbitratorManager;
-import bisq.core.btc.model.AddressEntry;
-import bisq.core.btc.wallet.BtcWalletService;
+import bisq.core.bch.model.AddressEntry;
+import bisq.core.bch.wallet.BtcWalletService;
 import bisq.core.locale.LanguageUtil;
 import bisq.core.user.User;
 
@@ -33,8 +33,8 @@ import bisq.common.crypto.KeyRing;
 import bisq.common.handlers.ErrorMessageHandler;
 import bisq.common.handlers.ResultHandler;
 
-import org.bitcoinj.core.ECKey;
-import org.bitcoinj.core.Utils;
+import org.bitcoincashj.core.ECKey;
+import org.bitcoincashj.core.Utils;
 
 import com.google.inject.Inject;
 

@@ -30,8 +30,8 @@ import bisq.desktop.util.ImageUtil;
 import bisq.desktop.util.Layout;
 
 import bisq.core.app.BisqEnvironment;
-import bisq.core.btc.BaseCurrencyNetwork;
-import bisq.core.btc.wallet.Restrictions;
+import bisq.core.bch.BaseCurrencyNetwork;
+import bisq.core.bch.wallet.Restrictions;
 import bisq.core.dao.DaoFacade;
 import bisq.core.dao.governance.asset.AssetService;
 import bisq.core.filter.FilterManager;
@@ -53,7 +53,7 @@ import bisq.common.UserThread;
 import bisq.common.app.DevEnv;
 import bisq.common.util.Tuple3;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import javax.inject.Inject;
 

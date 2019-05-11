@@ -17,7 +17,7 @@
 
 package bisq.core.trade.handlers;
 
-import org.bitcoinj.core.Transaction;
+import org.bitcoincashj.core.Transaction;
 
 public interface TransactionResultHandler {
     void handleResult(Transaction transaction);

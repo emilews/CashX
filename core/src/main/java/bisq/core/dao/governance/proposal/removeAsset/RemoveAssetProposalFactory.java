@@ -17,8 +17,8 @@
 
 package bisq.core.dao.governance.proposal.removeAsset;
 
-import bisq.core.btc.wallet.BsqWalletService;
-import bisq.core.btc.wallet.BtcWalletService;
+import bisq.core.bch.wallet.BsqWalletService;
+import bisq.core.bch.wallet.BtcWalletService;
 import bisq.core.dao.governance.proposal.BaseProposalFactory;
 import bisq.core.dao.governance.proposal.ProposalValidationException;
 import bisq.core.dao.governance.proposal.ProposalWithTransaction;
@@ -28,7 +28,7 @@ import bisq.core.dao.state.model.governance.RemoveAssetProposal;
 
 import bisq.asset.Asset;
 
-import org.bitcoinj.core.InsufficientMoneyException;
+import org.bitcoincashj.core.InsufficientMoneyException;
 
 import javax.inject.Inject;
 

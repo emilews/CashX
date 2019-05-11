@@ -235,9 +235,6 @@ public class WalletConfig extends AbstractIdleService {
 
         // For dao testnet (server side regtest) we prevent to connect to a localhost node to avoid confusion
         // if local btc node is not synced with our dao testnet master node.
-        if (BisqEnvironment.getBaseCurrencyNetwork().isDaoRegTest() || BisqEnvironment.getBaseCurrencyNetwork().isDaoTestNet())
-            peerGroup.setUseLocalhostPeerWhenPossible(false);
-
         return peerGroup;
     }
 
@@ -406,7 +403,7 @@ public class WalletConfig extends AbstractIdleService {
                         time = seed.getCreationTimeSeconds();
                         if (chainFileExists) {
                             log.info("Clearing the chain file in preparation from restore.");
-                            vStore.clear();
+                            vStore.close();
                         }
                     } else {
                         time = vBtcWallet.getEarliestKeyCreationTime();
@@ -419,7 +416,7 @@ public class WalletConfig extends AbstractIdleService {
                         log.warn("Creating a new uncheckpointed block store due to a wallet with a creation time of zero: this will result in a very slow chain sync");
                 } else if (chainFileExists) {
                     log.info("Clearing the chain file in preparation from restore.");
-                    vStore.clear();
+                    vStore.close();
                 }
             }
             vChain = new BlockChain(params, vStore);
@@ -437,7 +434,6 @@ public class WalletConfig extends AbstractIdleService {
                 int maxConnections = Math.min(numConnectionForBtc, peerAddresses.length);
                 log.info("We try to connect to {} btc nodes", maxConnections);
                 vPeerGroup.setMaxConnections(maxConnections);
-                vPeerGroup.setAddPeersFromAddressMessage(false);
                 peerAddresses = null;
             } else if (!params.equals(RegTestParams.get())) {
                 vPeerGroup.addPeerDiscovery(discovery != null ? discovery : new DnsDiscovery(params));

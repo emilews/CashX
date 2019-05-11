@@ -18,11 +18,11 @@
 package bisq.core.app;
 
 import bisq.core.arbitration.ArbitratorManager;
-import bisq.core.btc.BtcOptionKeys;
-import bisq.core.btc.setup.RegTestHost;
-import bisq.core.btc.setup.WalletsSetup;
-import bisq.core.btc.wallet.BsqWalletService;
-import bisq.core.btc.wallet.BtcWalletService;
+import bisq.core.bch.BtcOptionKeys;
+import bisq.core.bch.setup.RegTestHost;
+import bisq.core.bch.setup.WalletsSetup;
+import bisq.core.bch.wallet.BsqWalletService;
+import bisq.core.bch.wallet.BtcWalletService;
 import bisq.core.dao.DaoOptionKeys;
 import bisq.core.dao.DaoSetup;
 import bisq.core.exceptions.BisqException;
@@ -69,7 +69,7 @@ import lombok.extern.slf4j.Slf4j;
 
 import static bisq.core.app.BisqEnvironment.DEFAULT_APP_NAME;
 import static bisq.core.app.BisqEnvironment.DEFAULT_USER_DATA_DIR;
-import static bisq.core.btc.BaseCurrencyNetwork.*;
+import static bisq.core.bch.BaseCurrencyNetwork.*;
 import static com.google.common.base.Preconditions.checkNotNull;
 import static java.lang.String.format;
 
@@ -494,19 +494,19 @@ public abstract class BisqExecutable implements GracefulShutDownHandler, BisqSet
                 format("Base currency network (default: %s)", BisqEnvironment.getDefaultBaseCurrencyNetwork().name()))
                 .withRequiredArg()
                 .ofType(String.class)
-                .describedAs(format("%s|%s|%s|%s", BTC_MAINNET, BTC_TESTNET, BTC_REGTEST, BTC_DAO_TESTNET, BTC_DAO_BETANET, BTC_DAO_REGTEST));
+                .describedAs(format("%s|%s|%s", BTC_MAINNET, BCH_TESTNET, BCH_REGTEST));
 
         parser.accepts(BtcOptionKeys.REG_TEST_HOST,
                 format("Bitcoin regtest host when using BTC_REGTEST network (default: %s)", RegTestHost.DEFAULT_HOST))
                 .withRequiredArg()
                 .describedAs("host");
 
-        parser.accepts(BtcOptionKeys.BTC_NODES,
+        parser.accepts(BtcOptionKeys.BCH_NODES,
                 "Custom nodes used for BitcoinJ as comma separated IP addresses.")
                 .withRequiredArg()
                 .describedAs("ip[,...]");
 
-        parser.accepts(BtcOptionKeys.USE_TOR_FOR_BTC,
+        parser.accepts(BtcOptionKeys.USE_TOR_FOR_BCH,
                 "If set to true BitcoinJ is routed over tor (socks 5 proxy).")
                 .withRequiredArg();
 

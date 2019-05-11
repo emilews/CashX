@@ -18,9 +18,9 @@
 package bisq.core.offer.placeoffer;
 
 import bisq.core.arbitration.ArbitratorManager;
-import bisq.core.btc.wallet.BsqWalletService;
-import bisq.core.btc.wallet.BtcWalletService;
-import bisq.core.btc.wallet.TradeWalletService;
+import bisq.core.bch.wallet.BsqWalletService;
+import bisq.core.bch.wallet.BtcWalletService;
+import bisq.core.bch.wallet.TradeWalletService;
 import bisq.core.offer.Offer;
 import bisq.core.offer.OfferBookService;
 import bisq.core.trade.statistics.TradeStatisticsManager;
@@ -28,8 +28,8 @@ import bisq.core.user.User;
 
 import bisq.common.taskrunner.Model;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.Transaction;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.Transaction;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -17,15 +17,15 @@
 
 package bisq.core.trade.protocol.tasks.buyer_as_maker;
 
-import bisq.core.btc.model.AddressEntry;
-import bisq.core.btc.wallet.BtcWalletService;
+import bisq.core.bch.model.AddressEntry;
+import bisq.core.bch.wallet.BtcWalletService;
 import bisq.core.trade.Trade;
 import bisq.core.trade.protocol.tasks.TradeTask;
 
 import bisq.common.taskrunner.TaskRunner;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.crypto.DeterministicKey;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.crypto.DeterministicKey;
 
 import com.google.common.base.Preconditions;
 

@@ -17,16 +17,16 @@
 
 package bisq.core.trade.protocol.tasks.buyer_as_taker;
 
-import bisq.core.btc.model.AddressEntry;
-import bisq.core.btc.model.InputsAndChangeOutput;
-import bisq.core.btc.wallet.BtcWalletService;
+import bisq.core.bch.model.AddressEntry;
+import bisq.core.bch.model.InputsAndChangeOutput;
+import bisq.core.bch.wallet.BtcWalletService;
 import bisq.core.trade.Trade;
 import bisq.core.trade.protocol.tasks.TradeTask;
 
 import bisq.common.taskrunner.TaskRunner;
 
-import org.bitcoinj.core.Address;
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Address;
+import org.bitcoincashj.core.Coin;
 
 import lombok.extern.slf4j.Slf4j;
 
