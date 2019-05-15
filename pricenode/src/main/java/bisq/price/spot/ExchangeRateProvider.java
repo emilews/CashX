@@ -57,7 +57,7 @@ public abstract class ExchangeRateProvider extends PriceProvider<Set<ExchangeRat
     @Override
     protected void onRefresh() {
         get().stream()
-            .filter(e -> "USD".equals(e.getCurrency()) || "LTC".equals(e.getCurrency()))
-            .forEach(e -> log.info("BTC/{}: {}", e.getCurrency(), e.getPrice()));
+            .filter(e -> "USD".equals(e.getCurrency()) || "BCH".equals(e.getCurrency()))
+            .forEach(e -> log.info("BCH/{}: {}", e.getCurrency(), e.getPrice()));
     }
 }

@@ -38,12 +38,12 @@ public class SeedNodeMain extends ExecutableForAppWithP2p {
     private SeedNode seedNode;
 
     public SeedNodeMain() {
-        super("Bisq Seednode", "bisq-seednode", VERSION);
+        super("CashX Seednode", "cashx-seednode", VERSION);
     }
 
     public static void main(String[] args) throws Exception {
         log.info("SeedNode.VERSION: " + VERSION);
-        BisqEnvironment.setDefaultAppName("bisq_seednode");
+        BisqEnvironment.setDefaultAppName("cashx_seednode");
 
         if (BisqExecutable.setupInitialOptionParser(args))
             new SeedNodeMain().execute(args);
