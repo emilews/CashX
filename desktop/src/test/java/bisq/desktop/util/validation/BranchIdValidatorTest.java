@@ -15,8 +15,8 @@ public class BranchIdValidatorTest {
     @Before
     public void setup() {
         Locale.setDefault(new Locale("en", "US"));
-        Res.setBaseCurrencyCode("BTC");
-        Res.setBaseCurrencyName("Bitcoin");
+        Res.setBaseCurrencyCode("BCH");
+        Res.setBaseCurrencyName("Bitcoin Cash");
     }
 
     @Test

@@ -141,7 +141,7 @@ var
   hiddenServiceDir: String;
   hiddenServiceBackupDir : String;
 begin
-  mainnetDir := ExpandConstant('{userappdata}') + '\Bisq\btc_mainnet';
+  mainnetDir := ExpandConstant('{userappdata}') + '\Bisq\bch_mainnet';
   torDir := mainnetDir + '\tor\*';
   hiddenServiceDir := mainnetDir + '\tor\hiddenservice';
   hiddenServiceBackupDir := mainnetDir + '\hiddenservice_backup';

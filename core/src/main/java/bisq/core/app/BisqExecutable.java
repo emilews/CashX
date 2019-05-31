@@ -494,7 +494,7 @@ public abstract class BisqExecutable implements GracefulShutDownHandler, BisqSet
                 format("Base currency network (default: %s)", BisqEnvironment.getDefaultBaseCurrencyNetwork().name()))
                 .withRequiredArg()
                 .ofType(String.class)
-                .describedAs(format("%s|%s|%s", BTC_MAINNET, BCH_TESTNET, BCH_REGTEST));
+                .describedAs(format("%s|%s|%s", BCH_MAINNET, BCH_TESTNET, BCH_REGTEST));
 
         parser.accepts(BtcOptionKeys.REG_TEST_HOST,
                 format("Bitcoin regtest host when using BTC_REGTEST network (default: %s)", RegTestHost.DEFAULT_HOST))

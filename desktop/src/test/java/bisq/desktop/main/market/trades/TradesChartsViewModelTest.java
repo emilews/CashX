@@ -92,7 +92,7 @@ public class TradesChartsViewModelTest {
             false,
             0,
             0,
-            "BTC",
+            "BCH",
             "EUR",
             null,
             null,

@@ -654,7 +654,7 @@ public final class Preferences implements PersistedDataHost, BridgeAddressProvid
     public BlockChainExplorer getBlockChainExplorer() {
         BaseCurrencyNetwork baseCurrencyNetwork = BisqEnvironment.getBaseCurrencyNetwork();
         switch (baseCurrencyNetwork) {
-            case BTC_MAINNET:
+            case BCH_MAINNET:
                 return prefPayload.getBlockChainExplorerMainNet();
             case BCH_TESTNET:
             case BCH_REGTEST:
@@ -667,7 +667,7 @@ public final class Preferences implements PersistedDataHost, BridgeAddressProvid
     public ArrayList<BlockChainExplorer> getBlockChainExplorers() {
         BaseCurrencyNetwork baseCurrencyNetwork = BisqEnvironment.getBaseCurrencyNetwork();
         switch (baseCurrencyNetwork) {
-            case BTC_MAINNET:
+            case BCH_MAINNET:
                 return BTC_MAIN_NET_EXPLORERS;
             case BCH_TESTNET:
             case BCH_REGTEST:

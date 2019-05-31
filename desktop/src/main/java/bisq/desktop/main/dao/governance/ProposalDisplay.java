@@ -558,7 +558,7 @@ public class ProposalDisplay {
         } else if (proposal instanceof RemoveAssetProposal) {
             RemoveAssetProposal removeAssetProposal = (RemoveAssetProposal) proposal;
             checkNotNull(assetComboBox, "assetComboBox must not be null");
-            CurrencyUtil.findAsset(removeAssetProposal.getTickerSymbol(), BaseCurrencyNetwork.BTC_MAINNET)
+            CurrencyUtil.findAsset(removeAssetProposal.getTickerSymbol(), BaseCurrencyNetwork.BCH_MAINNET)
                     .ifPresent(asset -> {
                         assetComboBox.getSelectionModel().select(asset);
                         comboBoxValueTextField.setText(assetComboBox.getConverter().toString(asset));

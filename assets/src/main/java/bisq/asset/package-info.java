@@ -19,7 +19,7 @@
  * Bisq's family of abstractions representing different ("crypto")
  * {@link bisq.asset.Asset} types such as {@link bisq.asset.Coin},
  * {@link bisq.asset.Token} and {@link bisq.asset.Erc20Token}, as well as concrete
- * implementations of each, such as {@link bisq.asset.coins.Bitcoin} itself, altcoins like
+ * implementations of each, such as {@link bisq.asset.coins.BitcoinCash} itself, altcoins like
  * {@link bisq.asset.coins.Litecoin} and {@link bisq.asset.coins.Ether} and tokens like
  * {@link bisq.asset.tokens.DaiStablecoin}.
  * <p>

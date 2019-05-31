@@ -25,9 +25,9 @@ import org.bitcoincashj.params.TestNet3Params;
 import lombok.Getter;
 
 public enum BaseCurrencyNetwork {
-    BTC_MAINNET(MainNetParams.get(), "BTC", "MAINNET", "Bitcoin"),
-    BCH_TESTNET(TestNet3Params.get(), "BCH", "TESTNET", "Bitcoin"),
-    BCH_REGTEST(RegTestParams.get(), "BCH", "REGTEST", "Bitcoin");
+    BCH_MAINNET(MainNetParams.get(), "BTC", "MAINNET", "Bitcoin Cash"),
+    BCH_TESTNET(TestNet3Params.get(), "BCH", "TESTNET", "Bitcoin Cash"),
+    BCH_REGTEST(RegTestParams.get(), "BCH", "REGTEST", "Bitcoin Cash");
     @Getter
     private final NetworkParameters parameters;
     @Getter

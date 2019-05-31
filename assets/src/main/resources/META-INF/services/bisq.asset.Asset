@@ -10,11 +10,10 @@ bisq.asset.coins.Arqma
 bisq.asset.coins.Askcoin
 bisq.asset.coins.Australiacash
 bisq.asset.coins.Beam
-bisq.asset.coins.Bitcoin$Mainnet
-bisq.asset.coins.Bitcoin$Regtest
+bisq.asset.coins.BitcoinCash$Mainnet
+bisq.asset.coins.BitcoinCash$Testnet
+bisq.asset.coins.BitcoinCash$Regtest
 bisq.asset.coins.BitcoinRhodium
-bisq.asset.coins.Bitcoin$Testnet
-bisq.asset.coins.BitcoinCash
 bisq.asset.coins.BitDaric
 bisq.asset.coins.Bitmark
 bisq.asset.coins.Bitzec

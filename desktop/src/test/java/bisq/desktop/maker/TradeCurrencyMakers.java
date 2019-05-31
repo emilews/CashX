@@ -34,7 +34,7 @@ public class TradeCurrencyMakers {
     public static final Property<TradeCurrency, String> currencyName = new Property<>();
 
     public static final Instantiator<bisq.core.locale.CryptoCurrency> CryptoCurrency = lookup ->
-            new CryptoCurrency(lookup.valueOf(currencyCode, "BTC"), lookup.valueOf(currencyName, "Bitcoin"));
+            new CryptoCurrency(lookup.valueOf(currencyCode, "BCH"), lookup.valueOf(currencyName, "Bitcoin Cash"));
 
     public static final Instantiator<bisq.core.locale.FiatCurrency> FiatCurrency = lookup ->
             new FiatCurrency(lookup.valueOf(currencyCode, "EUR"));

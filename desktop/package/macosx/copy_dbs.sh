@@ -4,7 +4,7 @@ cd $(dirname $0)/../../../
 
 # Mainnet
 
-dbDir=~/Library/Application\ Support/Bisq/btc_mainnet/db
+dbDir=~/Library/Application\ Support/Bisq/bch_mainnet/db
 resDir=p2p/src/main/resources
 
 cp "$dbDir/TradeStatistics2Store" "$resDir/TradeStatistics2Store_BTC_MAINNET"

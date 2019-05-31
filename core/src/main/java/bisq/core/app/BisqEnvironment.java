@@ -105,7 +105,7 @@ public class BisqEnvironment extends StandardEnvironment {
 
     @SuppressWarnings("SameReturnValue")
     public static BaseCurrencyNetwork getDefaultBaseCurrencyNetwork() {
-        return BaseCurrencyNetwork.BTC_MAINNET;
+        return BaseCurrencyNetwork.BCH_MAINNET;
     }
 
     protected static BaseCurrencyNetwork baseCurrencyNetwork = getDefaultBaseCurrencyNetwork();

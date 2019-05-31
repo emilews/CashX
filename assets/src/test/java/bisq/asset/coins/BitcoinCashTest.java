@@ -24,7 +24,7 @@ import org.junit.Test;
 public class BitcoinCashTest extends AbstractAssetTest {
 
     public BitcoinCashTest() {
-        super(new BitcoinCash());
+        super(new BitcoinCash.Mainnet());
     }
 
     @Test

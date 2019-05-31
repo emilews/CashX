@@ -28,7 +28,7 @@ public class PrintTool {
         new AssetRegistry().stream()
                 .sorted(Comparator.comparing(o -> o.getName().toLowerCase()))
                 .filter(e -> !e.getTickerSymbol().equals("BSQ")) // BSQ is not out yet...
-                .filter(e -> !e.getTickerSymbol().equals("BTC"))
+                .filter(e -> !e.getTickerSymbol().equals("BCH"))
                 .map(e -> new Pair(e.getName(), e.getTickerSymbol())) // We want to get rid of duplicated entries for regtest/testnet...
                 .distinct()
                 .forEach(e -> sb.append("<li>&#8220;")

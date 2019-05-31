@@ -63,8 +63,8 @@ public class BSFormatterTest {
     public void setUp() {
         Locale.setDefault(new Locale("en", "US"));
         formatter = new BSFormatter();
-        Res.setBaseCurrencyCode("BTC");
-        Res.setBaseCurrencyName("Bitcoin");
+        Res.setBaseCurrencyCode("BCH");
+        Res.setBaseCurrencyName("Bitcoin Cash");
     }
 
     @Test
@@ -122,7 +122,7 @@ public class BSFormatterTest {
     @Test
     public void testFormatSameVolume() {
         Offer offer = mock(Offer.class);
-        Volume btc = Volume.parse("0.10", "BTC");
+        Volume btc = Volume.parse("0.10", "BVH");
         when(offer.getMinVolume()).thenReturn(btc);
         when(offer.getVolume()).thenReturn(btc);
 
@@ -132,8 +132,8 @@ public class BSFormatterTest {
     @Test
     public void testFormatDifferentVolume() {
         Offer offer = mock(Offer.class);
-        Volume btcMin = Volume.parse("0.10", "BTC");
-        Volume btcMax = Volume.parse("0.25", "BTC");
+        Volume btcMin = Volume.parse("0.10", "BCH");
+        Volume btcMax = Volume.parse("0.25", "BCH");
         when(offer.isRange()).thenReturn(true);
         when(offer.getMinVolume()).thenReturn(btcMin);
         when(offer.getVolume()).thenReturn(btcMax);

@@ -49,7 +49,7 @@ public class CurrencyListTest {
 
     private static final TradeCurrency USD = new FiatCurrency(Currency.getInstance("USD"), locale);
     private static final TradeCurrency RUR = new FiatCurrency(Currency.getInstance("RUR"), locale);
-    private static final TradeCurrency BTC = new CryptoCurrency("BTC", "Bitcoin");
+    private static final TradeCurrency BTC = new CryptoCurrency("BCH", "Bitcoin Cash");
     private static final TradeCurrency ETH = new CryptoCurrency("ETH", "Ether");
     private static final TradeCurrency BSQ = new CryptoCurrency("BSQ", "Bisq Token");
 

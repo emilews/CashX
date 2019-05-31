@@ -142,7 +142,7 @@ public class FeeOptionWindow extends Overlay<FeeOptionWindow> {
                 ++rowIndex,
                 toggleGroup,
                 Res.get("feeOptionWindow.optionsLabel"),
-                "BTC",
+                "BCH",
                 "BSQ", 0);
         RadioButton radioButtonBTC = tuple.second;
         RadioButton radioButtonBSQ = tuple.third;

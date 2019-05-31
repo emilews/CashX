@@ -45,8 +45,8 @@ public class CurrencyUtilTest {
     public void setup() {
 
         Locale.setDefault(new Locale("en", "US"));
-        Res.setBaseCurrencyCode("BTC");
-        Res.setBaseCurrencyName("Bitcoin");
+        Res.setBaseCurrencyCode("BCH");
+        Res.setBaseCurrencyName("Bitcoin Cash");
     }
 
     @Test
@@ -68,7 +68,7 @@ public class CurrencyUtilTest {
         boolean daoTradingActivated = false;
         // Test if BSQ on mainnet is failing
         Assert.assertFalse(CurrencyUtil.findAsset(assetRegistry, "BSQ",
-                BaseCurrencyNetwork.BTC_MAINNET, daoTradingActivated).isPresent());
+                BaseCurrencyNetwork.BCH_MAINNET, daoTradingActivated).isPresent());
 
         // on testnet/regtest it is allowed
         assertEquals(CurrencyUtil.findAsset(assetRegistry, "BSQ",
@@ -78,18 +78,18 @@ public class CurrencyUtilTest {
         daoTradingActivated = true;
         // With daoTradingActivated we can request BSQ
         assertEquals(CurrencyUtil.findAsset(assetRegistry, "BSQ",
-                BaseCurrencyNetwork.BTC_MAINNET, daoTradingActivated).get().getTickerSymbol(), "BSQ");
+                BaseCurrencyNetwork.BCH_MAINNET, daoTradingActivated).get().getTickerSymbol(), "BSQ");
 
         // Test if not matching ticker is failing
         Assert.assertFalse(CurrencyUtil.findAsset(assetRegistry, "BSQ1",
-                BaseCurrencyNetwork.BTC_MAINNET, daoTradingActivated).isPresent());
+                BaseCurrencyNetwork.BCH_MAINNET, daoTradingActivated).isPresent());
 
         // Add a mock coin which has no mainnet version, needs to fail if we are on mainnet
         MockTestnetCoin.Testnet mockTestnetCoin = new MockTestnetCoin.Testnet();
         try {
             assetRegistry.addAsset(mockTestnetCoin);
             CurrencyUtil.findAsset(assetRegistry, "MOCK_COIN",
-                    BaseCurrencyNetwork.BTC_MAINNET, daoTradingActivated);
+                    BaseCurrencyNetwork.BCH_MAINNET, daoTradingActivated);
             Assert.fail("Expected an IllegalArgumentException");
         } catch (IllegalArgumentException e) {
             String wantMessage = "We are on mainnet and we could not find an asset with network type mainnet";
@@ -116,7 +116,7 @@ public class CurrencyUtilTest {
         assertEquals(Coin.Network.MAINNET, ether.getNetwork());
 
         // We test if network matches exactly if there are distinct network types defined like with BSQ
-        Coin bsq = (Coin) CurrencyUtil.findAsset(assetRegistry, "BSQ", BaseCurrencyNetwork.BTC_MAINNET, daoTradingActivated).get();
+        Coin bsq = (Coin) CurrencyUtil.findAsset(assetRegistry, "BSQ", BaseCurrencyNetwork.BCH_MAINNET, daoTradingActivated).get();
         assertEquals("BSQ", bsq.getTickerSymbol());
         assertEquals(Coin.Network.MAINNET, bsq.getNetwork());
 
