@@ -319,12 +319,13 @@ public class OfferBookViewModelTest {
                 null, null, null, null, new BSFormatter());
         model.activate();
 
-        assertEquals(15, model.maxPlacesForVolume.intValue());
+        assertEquals(27, model.maxPlacesForVolume.intValue());
         offerBookListItems.addAll(make(btcItemWithRange.but(with(amount, 2000000000L))));
-        assertEquals(17, model.maxPlacesForVolume.intValue());
+        assertEquals(31, model.maxPlacesForVolume.intValue());
         offerBookListItems.addAll(make(btcItemWithRange.but(with(minAmount, 30000000000L),
                 with(amount, 30000000000L))));
-        assertEquals(25, model.maxPlacesForVolume.intValue());
+        log.info("" + model.maxPlacesForVolume.intValue());
+        assertEquals(41, model.maxPlacesForVolume.intValue());
     }
 
     @Test
@@ -564,7 +565,7 @@ public class OfferBookViewModelTest {
                 false,
                 0,
                 0,
-                "BTC",
+                "BCH",
                 tradeCurrencyCode,
                 null,
                 null,
