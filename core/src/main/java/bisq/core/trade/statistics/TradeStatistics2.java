@@ -244,7 +244,7 @@ public final class TradeStatistics2 implements LazyProcessedPayload, Persistable
     }
 
     public String getCurrencyCode() {
-        return baseCurrency.equals("BTC") ? counterCurrency : baseCurrency;
+        return baseCurrency.equals("BCH") ? counterCurrency : baseCurrency;
     }
 
     public Coin getTradeAmount() {

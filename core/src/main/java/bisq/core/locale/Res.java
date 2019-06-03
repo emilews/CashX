@@ -79,7 +79,7 @@ public class Res {
     private static String baseCurrencyNameLowerCase;
 
     public static void setBaseCurrencyCode(String baseCurrencyCode) {
-        Res.baseCurrencyCode = baseCurrencyCode;
+        Res.baseCurrencyCode = baseCurrencyCode.equals("BTC") ? "BCH" : baseCurrencyCode;
     }
 
     public static void setBaseCurrencyName(String baseCurrencyName) {
@@ -88,7 +88,7 @@ public class Res {
     }
 
     public static String getBaseCurrencyCode() {
-        return baseCurrencyCode;
+        return baseCurrencyCode.equals("BCH") ? "BTC" : baseCurrencyCode;
     }
 
     public static String getBaseCurrencyName() {

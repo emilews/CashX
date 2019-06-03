@@ -15,9 +15,9 @@
  * along with Bisq. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package bisq.core.btc.nodes;
+package bisq.core.bch.nodes;
 
-import bisq.core.btc.nodes.BtcNodes.BtcNode;
+import bisq.core.bch.nodes.BtcNodes.BtcNode;
 
 import org.bitcoincashj.core.PeerAddress;
 
