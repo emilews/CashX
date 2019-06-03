@@ -209,6 +209,7 @@ public abstract class BisqExecutable implements GracefulShutDownHandler, BisqSet
     // Headless versions can call inside launchApplication the onApplicationLaunched() manually
     protected void onApplicationLaunched() {
         setupGuice();
+        System.out.println("Setup Guice done!");
         startApplication();
     }
 
@@ -269,6 +270,7 @@ public abstract class BisqExecutable implements GracefulShutDownHandler, BisqSet
     }
 
     protected void startAppSetup() {
+        System.out.println("Start app setup!");
         BisqSetup bisqSetup = injector.getInstance(BisqSetup.class);
         bisqSetup.addBisqSetupCompleteListener(this);
         bisqSetup.start();

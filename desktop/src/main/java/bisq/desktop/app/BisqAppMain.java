@@ -126,7 +126,7 @@ public class BisqAppMain extends BisqExecutable {
     @Override
     protected void startApplication() {
         // We need to be in user thread! We mapped at launchApplication already...
-
+        System.out.println("Start Application");
         // Once the UI is ready we get onApplicationStarted called and start the setup there
         application.startApplication(this::onApplicationStarted);
     }
