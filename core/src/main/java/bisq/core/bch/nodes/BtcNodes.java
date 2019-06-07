@@ -47,27 +47,9 @@ public class BtcNodes {
     public List<BtcNode> getProvidedBtcNodes() {
         return useProvidedBtcNodes() ?
                 Arrays.asList(
-                        new BtcNode("Default", null, "103.80.134.105", 8333, "ABC"),
-                        new BtcNode("Second",null,"18.179.40.172", 8333, "ABC"),
-                        new BtcNode("Third",null,"18.208.61.185", 8333, "ABC"),
-                        new BtcNode("Fourth",null,"31.220.56.195", 8333, "ABC"),
-                        new BtcNode("Fifth",null,"35.220.226.25", 8333, "ABC"),
-                        new BtcNode("Sixth",null,"18.179.40.172", 8333, "ABC"),
-                        new BtcNode("Seventh",null,"35.227.56.27", 8333, "ABC"),
-                        new BtcNode("Eight",null,"37.48.83.207", 8333, "ABC"),
-                        new BtcNode("Ninth",null,"38.87.54.163", 8334, "ABC"),
-                        new BtcNode("Tenth",null,"38.143.66.14", 8333, "ABC"),
-                        new BtcNode("Eleventh",null,"47.89.180.57", 8333, "ABC"),                        new BtcNode("Default", null, "103.80.134.105", 8333, "ABC"),
-                        new BtcNode("",null,"162.242.168.36", 8333, "ABC"),
-                        new BtcNode("",null,"162.242.168.55", 8333, "ABC"),
-                        new BtcNode("",null,"163.172.142.149", 10020, "ABC"),
-                        new BtcNode("",null,"172.96.161.245", 8333, "ABC"),
-                        new BtcNode("",null,"172.249.77.148", 8333, "ABC"),
-                        new BtcNode("",null,"173.82.103.250", 8333, "ABC"),
-                        new BtcNode("",null,"37.48.83.207", 8333, "ABC"),
-                        new BtcNode("",null,"38.87.54.163", 8334, "ABC"),
-                        new BtcNode("",null,"38.143.66.14", 8333, "ABC"),
-                        new BtcNode("",null,"47.89.180.57", 8333, "ABC")
+                        new BtcNode("Default", null, "138.68.2.105", 8333, "BUnlimited"),
+                        new BtcNode("Second",null,"138.197.133.102", 8333, "BCHD"),
+                        new BtcNode("Third",null,"138.197.133.106", 8333, "BUnlimited")
 
                 ) :
                 new ArrayList<>();
@@ -75,7 +57,7 @@ public class BtcNodes {
 
     public boolean useProvidedBtcNodes() {
         System.out.println(BisqEnvironment.getBaseCurrencyNetwork().isMainnet());
-        return BisqEnvironment.getBaseCurrencyNetwork().isMainnet();
+        return true;
     }
 
     public static List<BtcNodes.BtcNode> toBtcNodesList(Collection<String> nodes) {

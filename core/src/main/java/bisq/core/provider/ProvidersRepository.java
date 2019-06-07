@@ -41,7 +41,7 @@ import javax.annotation.Nullable;
 @Slf4j
 public class ProvidersRepository {
     private static final List<String> DEFAULT_NODES = Arrays.asList(
-            "http://127.0.0.1:8080/"
+            "http://localhost:8080/"
     );
 
     private final String providersFromProgramArgs;

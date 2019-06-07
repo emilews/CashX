@@ -891,7 +891,7 @@ public class OfferBookView extends ActivatableViewAndModel<GridPane, OfferBookVi
                                         button.setStyle("-fx-text-fill: white;"); // does not take the font colors sometimes from the style
                                         if (isSellOffer) {
                                             title = CurrencyUtil.isFiatCurrency(offer.getCurrencyCode()) ?
-                                                    Res.get("offerbook.takeOfferToBuy", offer.getOfferPayload().getBaseCurrencyCode()) :
+                                                    Res.get("offerbook.takeOfferToBuy", offer.getOfferPayload().getBaseCurrencyCode().equals("BTC") ? "BCH" : offer.getOfferPayload().getBaseCurrencyCode()) :
                                                     Res.get("offerbook.takeOfferToSell", offer.getCurrencyCode());
                                         } else {
                                             title = CurrencyUtil.isFiatCurrency(offer.getCurrencyCode()) ?
