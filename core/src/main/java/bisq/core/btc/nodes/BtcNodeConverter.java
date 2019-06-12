@@ -32,6 +32,7 @@ import java.net.UnknownHostException;
 
 import java.util.Objects;
 
+import org.bitcoinj.net.OnionCatConverter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -126,7 +127,13 @@ class BtcNodeConverter {
 
     static class Facade {
         InetAddress onionHostToInetAddress(String onionAddress) throws UnknownHostException {
-            return InetAddress.getByAddress(onionAddress.getBytes());
+            InetAddress conv;
+            try{
+                conv = OnionCatConverter.onionHostToInetAddress(onionAddress);
+            }catch(UnknownHostException ex){
+                return null;
+            }
+            return conv;
         }
 
         InetAddress torLookup(Socks5Proxy proxy, String host) throws DnsLookupException {

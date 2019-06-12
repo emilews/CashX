@@ -27,7 +27,7 @@ import org.bitcoincashj.params.MainNetParams;
  *
  * @author Chris Beams
  * @since 0.7.0
- * @see org.bitcoinj.core.Address#fromBase58(NetworkParameters, String)
+ * @see org.bitcoincashj.core.Address#fromCashAddr(NetworkParameters, String)
  */
 public class Base58BitcoinAddressValidator implements AddressValidator {
 
