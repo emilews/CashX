@@ -47,14 +47,17 @@ public class BtcNodesRepository {
         // We connect to onion nodes only in case we use Tor for BitcoinJ (default) to avoid privacy leaks at
         // exit nodes with bloom filters.
         if (proxy != null) {
-            List<PeerAddress> onionHosts = getOnionHosts();
-            result = new ArrayList<>(onionHosts);
+            //List<PeerAddress> onionHosts = getOnionHosts();
+            //result = new ArrayList<>(onionHosts);
 
-            if (isUseClearNodesWithProxies) {
+            //Since we don't have onion hosts, we use the clear ones
+            result = getClearNodes();
+
+            //if (isUseClearNodesWithProxies) {
                 // We also use the clear net nodes (used for monitor)
-                List<PeerAddress> torAddresses = getClearNodesBehindProxy(proxy);
-                result.addAll(torAddresses);
-            }
+                //List<PeerAddress> torAddresses = getClearNodesBehindProxy(proxy);
+                //result.addAll(torAddresses);
+            //}
         } else {
             result = getClearNodes();
         }

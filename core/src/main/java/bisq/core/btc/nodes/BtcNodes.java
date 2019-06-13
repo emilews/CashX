@@ -49,7 +49,8 @@ public class BtcNodes {
                 Arrays.asList(
                         //EmilioWong
                         new BtcNode("Test #1", null, "96.61.84.171", BtcNode.DEFAULT_PORT, "@BUnlimited"),
-                        new BtcNode("Test #2", null, "96.70.42.232", BtcNode.DEFAULT_PORT, "@ABC")
+                        new BtcNode("Test #2", null, "96.70.42.232", BtcNode.DEFAULT_PORT, "@ABC"),
+                        new BtcNode("Test #3", null,"138.197.133.102", BtcNode.DEFAULT_PORT, "@BCHD")
 
                         /*// emzy
                         new BtcNode("kirsche.emzy.de", "fz6nsij6jiyuwlsc.onion", "78.47.61.83", BtcNode.DEFAULT_PORT, "@emzy"),

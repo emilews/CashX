@@ -41,6 +41,7 @@ import javax.annotation.Nullable;
 @Slf4j
 public class ProvidersRepository {
     private static final List<String> DEFAULT_NODES = Arrays.asList(
+            "https://cxpi.herokuapp.com/"
     );
 
     private final String providersFromProgramArgs;
@@ -108,7 +109,7 @@ public class ProvidersRepository {
                 // If we run in localhost mode we don't have the tor node running, so we need a clearnet host
                 // Use localhost for using a locally running provider
                 // providerAsString = Collections.singletonList("http://localhost:8080/");
-                providers = Collections.singletonList("http://174.138.104.137:8080/"); // @miker
+                providers = Collections.singletonList("https://cxpi.herokuapp.com/"); // @miker
             } else {
                 providers = DEFAULT_NODES;
             }
