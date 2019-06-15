@@ -53,11 +53,11 @@ public class BtcNodesRepository {
             //Since we don't have onion hosts, we use the clear ones
             result = getClearNodes();
 
-            //if (isUseClearNodesWithProxies) {
+            if (isUseClearNodesWithProxies) {
                 // We also use the clear net nodes (used for monitor)
-                //List<PeerAddress> torAddresses = getClearNodesBehindProxy(proxy);
-                //result.addAll(torAddresses);
-            //}
+                List<PeerAddress> torAddresses = getClearNodesBehindProxy(proxy);
+                result.addAll(torAddresses);
+            }
         } else {
             result = getClearNodes();
         }

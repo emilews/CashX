@@ -85,7 +85,7 @@ public class BtcNodesRepositoryTest {
 
         List<PeerAddress> peers = repository.getPeerAddresses(mock(Socks5Proxy.class), true);
 
-        assertEquals(1, peers.size());
+        assertEquals(2, peers.size());
     }
 
     @Test
