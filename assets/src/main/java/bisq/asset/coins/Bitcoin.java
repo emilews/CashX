@@ -29,7 +29,7 @@ import org.bitcoincashj.params.TestNet3Params;
 public abstract class Bitcoin extends Coin {
 
     public Bitcoin(Network network, NetworkParameters networkParameters) {
-        super("Bitcoin Cash", "BCH", new Base58BitcoinCashAddressValidator(networkParameters), network);
+        super("bitcoin cash", "BCH", new Base58BitcoinCashAddressValidator(networkParameters), network);
     }
 
 

@@ -54,7 +54,7 @@ public class CurrencyUtil {
 
     private static final AssetRegistry assetRegistry = new AssetRegistry();
 
-    private static String baseCurrencyCode = "BTC";
+    private static String baseCurrencyCode = "BCH";
     private static List<FiatCurrency> allSortedFiatCurrencies;
     private static List<CryptoCurrency> allSortedCryptoCurrencies;
 
@@ -145,7 +145,6 @@ public class CurrencyUtil {
 
     public static List<CryptoCurrency> getRemovedCryptoCurrencies() {
         final List<CryptoCurrency> currencies = new ArrayList<>();
-        currencies.add(new CryptoCurrency("BCH", "Bitcoin Cash"));
         currencies.add(new CryptoCurrency("BCHC", "Bitcoin Clashic"));
         currencies.add(new CryptoCurrency("ACH", "AchieveCoin"));
         currencies.add(new CryptoCurrency("SC", "Siacoin"));
@@ -327,7 +326,7 @@ public class CurrencyUtil {
 
         // BTC is not part of our assetRegistry so treat it extra here. Other old base currencies (LTC, DOGE, DASH)
         // are not supported anymore so we can ignore that case.
-        if (currencyCode.equals("BTC"))
+        if (currencyCode.equals("BCH"))
             return true;
 
         // If we find the code in our assetRegistry we return true.
@@ -378,7 +377,7 @@ public class CurrencyUtil {
                     .filter(cryptoCurrency -> cryptoCurrency.getCode().equals(currencyCode))
                     .findAny();
 
-            String btcOrRemovedAsset = "BTC".equals(currencyCode) ? "Bitcoin" :
+            String btcOrRemovedAsset = "BCH".equals(currencyCode) ? "bitcoin cash" :
                     removedCryptoCurrency.isPresent() ? removedCryptoCurrency.get().getName() : Res.get("shared.na");
             return getCryptoCurrency(currencyCode).map(TradeCurrency::getName).orElse(btcOrRemovedAsset);
         }

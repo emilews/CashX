@@ -119,7 +119,7 @@ public class EmptyWalletWindow extends Overlay<EmptyWalletWindow> {
     }
 
     private String getCurrency() {
-        return isBtc ? "BTC" : "BSQ";
+        return isBtc ? "BCH" : "BSQ";
     }
 
 

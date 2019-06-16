@@ -244,7 +244,7 @@ public class MainView extends InitializableView<StackPane, MainViewModel> {
                 String tooltipText = Res.get("mainView.balance.available");
                 try {
                     double availableBalance = Double.parseDouble(
-                            model.getAvailableBalance().getValue().replace("BTC", ""));
+                            model.getAvailableBalance().getValue().replace("BCH", ""));
                     double marketPrice = Double.parseDouble(model.getMarketPrice().getValue());
                     tooltipText += "\n" + currencyFormat.format(availableBalance * marketPrice) +
                             " " + model.getPreferences().getPreferredTradeCurrency().getCode();
@@ -268,7 +268,7 @@ public class MainView extends InitializableView<StackPane, MainViewModel> {
                 String tooltipText = Res.get("mainView.balance.reserved");
                 try {
                     double reservedBalance = Double.parseDouble(
-                            model.getReservedBalance().getValue().replace("BTC", ""));
+                            model.getReservedBalance().getValue().replace("BCH", ""));
                     double marketPrice = Double.parseDouble(model.getMarketPrice().getValue());
                     tooltipText += "\n" + currencyFormat.format(reservedBalance * marketPrice) +
                             " " + model.getPreferences().getPreferredTradeCurrency().getCode();
@@ -292,7 +292,7 @@ public class MainView extends InitializableView<StackPane, MainViewModel> {
                 String tooltipText = Res.get("mainView.balance.locked");
                 try {
                     double lockedBalance = Double.parseDouble(
-                            model.getLockedBalance().getValue().replace("BTC", ""));
+                            model.getLockedBalance().getValue().replace("BCH", ""));
                     double marketPrice = Double.parseDouble(model.getMarketPrice().getValue());
                     tooltipText += "\n" + currencyFormat.format(lockedBalance * marketPrice) +
                             " " + model.getPreferences().getPreferredTradeCurrency().getCode();

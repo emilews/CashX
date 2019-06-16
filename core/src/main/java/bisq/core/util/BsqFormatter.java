@@ -63,7 +63,7 @@ public class BsqFormatter extends BSFormatter {
 
         final String baseCurrencyCode = BisqEnvironment.getBaseCurrencyNetwork().getCurrencyCode();
         switch (baseCurrencyCode) {
-            case "BTC":
+            case "BCH":
                 coinFormat = new MonetaryFormat().shift(6).code(6, "BSQ").minDecimals(2);
                 break;
             default:

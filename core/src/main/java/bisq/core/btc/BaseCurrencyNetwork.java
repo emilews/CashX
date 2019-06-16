@@ -25,12 +25,12 @@ import org.bitcoincashj.params.TestNet3Params;
 import lombok.Getter;
 
 public enum BaseCurrencyNetwork {
-    BTC_MAINNET(MainNetParams.get(), "BTC", "MAINNET", "Bitcoin"),
-    BTC_TESTNET(TestNet3Params.get(), "BTC", "TESTNET", "Bitcoin"),
-    BTC_REGTEST(RegTestParams.get(), "BTC", "REGTEST", "Bitcoin"),
-    BTC_DAO_TESTNET(RegTestParams.get(), "BTC", "REGTEST", "Bitcoin"), // server side regtest until v0.9.5
-    BTC_DAO_BETANET(MainNetParams.get(), "BTC", "MAINNET", "Bitcoin"), // mainnet test genesis
-    BTC_DAO_REGTEST(RegTestParams.get(), "BTC", "REGTEST", "Bitcoin"); // server side regtest after v0.9.5, had breaking code changes so we started over again
+    BTC_MAINNET(MainNetParams.get(), "BCH", "MAINNET", "Bitcoin Cash"),
+    BTC_TESTNET(TestNet3Params.get(), "BCH", "TESTNET", "Bitcoin Cash"),
+    BTC_REGTEST(RegTestParams.get(), "BCH", "REGTEST", "Bitcoin Cash"),
+    BTC_DAO_TESTNET(RegTestParams.get(), "BCH", "REGTEST", "Bitcoin Cash"), // server side regtest until v0.9.5
+    BTC_DAO_BETANET(MainNetParams.get(), "BCH", "MAINNET", "Bitcoin Cash"), // mainnet test genesis
+    BTC_DAO_REGTEST(RegTestParams.get(), "BCH", "REGTEST", "Bitcoin Cash"); // server side regtest after v0.9.5, had breaking code changes so we started over again
 
     @Getter
     private final NetworkParameters parameters;

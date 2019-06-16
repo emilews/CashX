@@ -61,14 +61,14 @@ public class GUIUtilTest {
     public void setup() {
         Locale.setDefault(new Locale("en", "US"));
         GlobalSettings.setLocale(new Locale("en", "US"));
-        Res.setBaseCurrencyCode("BTC");
-        Res.setBaseCurrencyName("Bitcoin");
+        Res.setBaseCurrencyCode("BCH");
+        Res.setBaseCurrencyName("bitcoin cash");
     }
 
     @Test
     public void testTradeCurrencyConverter() {
         Map<String, Integer> offerCounts = new HashMap<String, Integer>() {{
-            put("BTC", 11);
+            put("BCH", 11);
             put("EUR", 10);
         }};
         StringConverter<TradeCurrency> tradeCurrencyConverter = GUIUtil.getTradeCurrencyConverter(
@@ -77,7 +77,7 @@ public class GUIUtilTest {
                 offerCounts
         );
 
-        assertEquals("✦ Bitcoin (BTC) - 11 offers", tradeCurrencyConverter.toString(bitcoin));
+        assertEquals("✦ bitcoin cash (BCH) - 11 offers", tradeCurrencyConverter.toString(bitcoin));
         assertEquals("★ Euro (EUR) - 10 offers", tradeCurrencyConverter.toString(euro));
     }
 

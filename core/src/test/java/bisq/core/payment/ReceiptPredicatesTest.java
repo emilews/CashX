@@ -48,7 +48,7 @@ public class ReceiptPredicatesTest {
 
         PaymentAccount account = mock(PaymentAccount.class);
         when(account.getTradeCurrencies()).thenReturn(Lists.newArrayList(
-                new CryptoCurrency("BTC", "Bitcoin"),
+                new CryptoCurrency("BCH", "bitcoin cash"),
                 new CryptoCurrency("ETH", "Ether")));
 
         assertFalse(predicates.isMatchingCurrency(offer, account));

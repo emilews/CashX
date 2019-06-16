@@ -40,13 +40,13 @@ public class MarketsPrintTool {
         final List<FiatCurrency> allSortedFiatCurrencies = CurrencyUtil.getAllSortedFiatCurrencies();
         final Stream<MarketCurrency> fiatStream = allSortedFiatCurrencies.stream()
                 .filter(e -> !e.getCurrency().getCurrencyCode().equals("BSQ"))
-                .filter(e -> !e.getCurrency().getCurrencyCode().equals("BTC"))
+                .filter(e -> !e.getCurrency().getCurrencyCode().equals("BCH"))
                 .map(e -> new MarketCurrency("btc_" + e.getCode().toLowerCase(), e.getName(), e.getCode()))
                 .distinct();
 
         final List<CryptoCurrency> allSortedCryptoCurrencies = CurrencyUtil.getAllSortedCryptoCurrencies();
         final Stream<MarketCurrency> cryptoStream = allSortedCryptoCurrencies.stream()
-                .filter(e -> !e.getCode().equals("BTC"))
+                .filter(e -> !e.getCode().equals("BCH"))
                 .map(e -> new MarketCurrency(e.getCode().toLowerCase() + "_btc", e.getName(), e.getCode()))
                 .distinct();
 

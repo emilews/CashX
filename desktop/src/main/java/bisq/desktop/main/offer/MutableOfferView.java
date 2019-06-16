@@ -1433,7 +1433,7 @@ public abstract class MutableOfferView<M extends MutableOfferViewModel> extends 
         vBox.getChildren().addAll(tradeFeeInBtcLabel, tradeFeeInBsqLabel);
 
         tradeFeeInBtcToggle = new AutoTooltipSlideToggleButton();
-        tradeFeeInBtcToggle.setText("BTC");
+        tradeFeeInBtcToggle.setText("BCH");
         tradeFeeInBtcToggle.setVisible(false);
         tradeFeeInBtcToggle.setPadding(new Insets(-8, 5, -10, 5));
 

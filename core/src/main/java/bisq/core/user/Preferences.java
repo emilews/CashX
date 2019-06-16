@@ -216,7 +216,7 @@ public final class Preferences implements PersistedDataHost, BridgeAddressProvid
             setCryptoCurrencies(CurrencyUtil.getMainCryptoCurrencies());
 
             switch (baseCurrencyNetwork.getCurrencyCode()) {
-                case "BTC":
+                case "BCH":
                     setBlockChainExplorerMainNet(BTC_MAIN_NET_EXPLORERS.get(0));
                     setBlockChainExplorerTestNet(BTC_TEST_NET_EXPLORERS.get(0));
                     break;

@@ -51,7 +51,7 @@ public class ComponentsDemo extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        final CryptoCurrency btc = new CryptoCurrency("BTC", "bitcoin");
+        final CryptoCurrency btc = new CryptoCurrency("BCH", "bitcoin cash");
         GlobalSettings.setDefaultTradeCurrency(btc);
         GlobalSettings.setLocale(Locale.US);
         Res.setup();
@@ -87,7 +87,7 @@ public class ComponentsDemo extends Application {
         buttonEnabled.setOnMouseClicked((click) -> {
             //bar.enqueue(new JFXSnackbar.SnackbarEvent(Res.get("notification.walletUpdate.msg", "0.345 BTC"), "CLOSE", 3000, true, b -> bar.close()));
 //                new Popup<>().headLine(Res.get("popup.roundedFiatValues.headline"))
-//                    .message(Res.get("popup.roundedFiatValues.msg", "BTC"))
+//                    .message(Res.get("popup.roundedFiatValues.msg", "BCH"))
 //                    .show();
 //            new Notification().headLine(Res.get("notification.tradeCompleted.headline"))
 //                    .notification(Res.get("notification.tradeCompleted.msg"))
@@ -106,7 +106,7 @@ public class ComponentsDemo extends Application {
         final HBox box = editableValueBox.first;
 //        box.setMaxWidth(243);
         //box.setMaxWidth(200);
-        editableValueBox.third.setText("BTC");
+        editableValueBox.third.setText("BCH");
         editableValueBox.second.setContentForInfoPopOver(new Label("Hello World!"));
         GridPane.setRowIndex(box, rowIndex++);
         GridPane.setColumnIndex(box, 1);

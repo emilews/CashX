@@ -564,7 +564,7 @@ public class OfferBookViewModelTest {
                 false,
                 0,
                 0,
-                "BTC",
+                "BCH",
                 tradeCurrencyCode,
                 null,
                 null,

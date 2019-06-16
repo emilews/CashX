@@ -149,7 +149,7 @@ public class FeeService {
                         timeStampMap = result.first;
                         epochInSecondAtLastRequest = timeStampMap.get("bitcoinFeesTs");
                         final Map<String, Long> map = result.second;
-                        txFeePerByte = map.get("BTC");
+                        txFeePerByte = map.get("BCH");
 
                         if (txFeePerByte < minFeePerByte) {
                             log.warn("The delivered fee per byte is smaller than the min. default fee of 5 sat/byte");
