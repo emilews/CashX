@@ -1,6 +1,9 @@
 buildscript {
     repositories {
         jcenter()
+        maven{
+            url "https://jitpack.io"
+        }
     }
     dependencies {
         classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.5'
@@ -8,7 +11,10 @@ buildscript {
         classpath 'com.github.jengelman.gradle.plugins:shadow:4.0.2'
         classpath files('gradle/witness/gradle-witness.jar')
         classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.5.10.RELEASE'
+
+        classpath (group: 'com.github.softwareverde', name: 'bitcoin-verde', version: 'development-SNAPSHOT')
         classpath files('C:/Users/csipro/Desktop/Workspace/CashX/libs/bitcoinj-core-0.14-SNAPSHOT.jar')
+
     }
 }
 
@@ -139,6 +145,11 @@ configure(project(':assets')) {
             exclude(module: 'guava')
             exclude(module: 'protobuf-java')
         }
+        //This is for testing lol
+        compile (group: 'com.github.softwareverde', name: 'bitcoin-verde', version: 'development-SNAPSHOT') {
+            exclude(module: 'slf4j-api')
+            exclude(module: 'bcprov-jdk15on')
+        }
         compile 'com.google.guava:guava:20.0'
         compile "org.slf4j:slf4j-api:$slf4jVersion"
         compile "commons-codec:commons-codec:$codecVersion"
@@ -192,6 +203,11 @@ configure(project(':common')) {
         annotationProcessor "org.projectlombok:lombok:$lombokVersion"
     
         compile files('C:/Users/csipro/Desktop/Workspace/CashX/libs/bitcoinj-core-0.14-SNAPSHOT.jar')
+        //This is for testing lol
+        compile (group: 'com.github.softwareverde', name: 'bitcoin-verde', version: 'development-SNAPSHOT') {
+            exclude(module: 'slf4j-api')
+            exclude(module: 'bcprov-jdk15on')
+        }
     }
 }
 
@@ -216,7 +232,6 @@ configure(project(':p2p')) {
         testCompileOnly "org.projectlombok:lombok:$lombokVersion"
         testAnnotationProcessor "org.projectlombok:lombok:$lombokVersion"
 
-        compile files('C:/Users/csipro/Desktop/Workspace/CashX/libs/bitcoinj-core-0.14-SNAPSHOT.jar')
     }
 }
 
@@ -252,6 +267,12 @@ configure(project(':core')) {
         annotationProcessor "org.projectlombok:lombok:$lombokVersion"
 
         compile files('C:/Users/csipro/Desktop/Workspace/CashX/libs/bitcoinj-core-0.14-SNAPSHOT.jar')
+
+        //This is for testing lol
+        compile (group: 'com.github.softwareverde', name: 'bitcoin-verde', version: 'development-SNAPSHOT') {
+            exclude(module: 'slf4j-api')
+            exclude(module: 'bcprov-jdk15on')
+        }
 
         testCompile "org.jmockit:jmockit:$jmockitVersion"
         testCompile("org.mockito:mockito-core:$mockitoVersion") {
@@ -313,6 +334,12 @@ configure(project(':desktop')) {
 
         compile files('C:/Users/csipro/Desktop/Workspace/CashX/libs/bitcoinj-core-0.14-SNAPSHOT.jar')
 
+        //This is for testing lol
+        compile (group: 'com.github.softwareverde', name: 'bitcoin-verde', version: 'development-SNAPSHOT') {
+            exclude(module: 'slf4j-api')
+            exclude(module: 'bcprov-jdk15on')
+        }
+        
         testCompile "org.jmockit:jmockit:$jmockitVersion"
         testCompile("org.mockito:mockito-core:$mockitoVersion") {
             exclude(module: 'objenesis')
@@ -354,7 +381,6 @@ configure(project(':monitor')) {
         compileOnly "org.projectlombok:lombok:$lombokVersion"
         annotationProcessor "org.projectlombok:lombok:$lombokVersion"
 
-        compile files('C:/Users/csipro/Desktop/Workspace/CashX/libs/bitcoinj-core-0.14-SNAPSHOT.jar')
 
         testCompile 'org.junit.jupiter:junit-jupiter-api:5.3.2'
         testCompile 'org.junit.jupiter:junit-jupiter-params:5.3.2'
@@ -383,8 +409,6 @@ configure(project(':pricenode')) {
         compile("org.knowm.xchange:xchange-poloniex:4.3.3")
         compile("org.springframework.boot:spring-boot-starter-web:1.5.10.RELEASE")
         compile("org.springframework.boot:spring-boot-starter-actuator")
-
-        compile files('C:/Users/csipro/Desktop/Workspace/CashX/libs/bitcoinj-core-0.14-SNAPSHOT.jar')
     }
 
     task stage {
@@ -403,7 +427,6 @@ configure(project(':relay')) {
         compile 'com.google.firebase:firebase-admin:6.2.0'
         compile "commons-codec:commons-codec:$codecVersion"
 
-        compile files('C:/Users/csipro/Desktop/Workspace/CashX/libs/bitcoinj-core-0.14-SNAPSHOT.jar')
     }
 }
 
@@ -419,7 +442,6 @@ configure(project(':seednode')) {
         compileOnly "org.projectlombok:lombok:$lombokVersion"
         annotationProcessor "org.projectlombok:lombok:$lombokVersion"
 
-        compile files('C:/Users/csipro/Desktop/Workspace/CashX/libs/bitcoinj-core-0.14-SNAPSHOT.jar')
     }
 }
 
@@ -432,6 +454,5 @@ configure(project(':statsnode')) {
         compileOnly "org.projectlombok:lombok:$lombokVersion"
         annotationProcessor "org.projectlombok:lombok:$lombokVersion"
 
-        compile files('C:/Users/csipro/Desktop/Workspace/CashX/libs/bitcoinj-core-0.14-SNAPSHOT.jar')
     }
 }

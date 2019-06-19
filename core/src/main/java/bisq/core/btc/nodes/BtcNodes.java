@@ -48,7 +48,7 @@ public class BtcNodes {
         return useProvidedBtcNodes() ?
                 Arrays.asList(
                         //EmilioWong
-                        new BtcNode("Test #1", null, "54.90.7.240", BtcNode.DEFAULT_PORT, "@ABC:0.14.6"),
+                        new BtcNode("Test #1", null, "51.158.66.252", BtcNode.DEFAULT_PORT, "@Flowee:1"),
                         new BtcNode("Test #2", null, "104.199.220.66", BtcNode.DEFAULT_PORT, "@ABC:0.19.7"),
                         new BtcNode("Test #3", null,"138.197.133.102", BtcNode.DEFAULT_PORT, "@BCHD:0.14.3"),
                         new BtcNode("Test #4", null, "173.249.16.82",BtcNode.DEFAULT_PORT,"@BCHD:0.14.4"),
