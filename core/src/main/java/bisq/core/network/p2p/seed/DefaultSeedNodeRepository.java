@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
 @Slf4j
 public class DefaultSeedNodeRepository implements SeedNodeRepository {
     //TODO add support for localhost addresses
-    private static final Pattern pattern = Pattern.compile("^(\\d+\\.\\d+\\.\\d+\\.\\d+:\\d+)");
+    private static final Pattern pattern = Pattern.compile("^([a-z0-9]+\\.onion:\\d+)");
     private static final String ENDING = ".seednodes";
     private static final Collection<NodeAddress> cache = new HashSet<>();
     private final BisqEnvironment bisqEnvironment;
