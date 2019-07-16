@@ -174,7 +174,7 @@ public class P2PNetworkLoad extends Metric implements MessageListener, SetupList
                 NetworkProtoResolver networkProtoResolver = new CoreNetworkProtoResolver();
                 CorePersistenceProtoResolver persistenceProtoResolver = new CorePersistenceProtoResolver(null,
                         networkProtoResolver, storageDir);
-                DefaultSeedNodeRepository seedNodeRepository = new DefaultSeedNodeRepository(environment, null);
+                DefaultSeedNodeRepository seedNodeRepository = new DefaultSeedNodeRepository(environment, "167.71.40.163:9999");
                 PeerManager peerManager = new PeerManager(networkNode, seedNodeRepository, new Clock(),
                         persistenceProtoResolver, maxConnections, storageDir);
 
