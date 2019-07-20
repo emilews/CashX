@@ -1,7 +1,5 @@
 # CashX
-
-[![Build Status](https://travis-ci.org/bisq-network/bisq.svg?branch=master)](https://travis-ci.org/bisq-network/bisq)
-
+![CashX_Logo](https://github.com/emilews/CashX/blob/no-dao/desktop/src/main/resources/images/cashX_logo_V3_big.png)
 
 ## Notice
 
@@ -13,10 +11,12 @@ CashX is a safe, private and decentralized way to exchange bitcoin for national 
 
 To learn more, see the doc and video at https://bisq.network/intro.
 
-This project is a fork of Bisq.
+This project is a fork of Bisq, so almost everything can be learnt from their documentation.
+
 ## Get started using CashX
 
-Follow the step-by-step instructions at https://bisq.network/get-started.
+There's no release of CashX yet, if you want to compile it yourself, please refer to the
+[developer docs](docs#readme).
 
 
 ## Contribute to CashX
