@@ -9,4 +9,4 @@ include 'relay'
 include 'seednode'
 include 'statsnode'
 
-rootProject.name = 'bisq'
+rootProject.name = 'cashx'
