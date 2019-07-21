@@ -34,7 +34,7 @@ import bisq.core.util.BSFormatter;
 
 import bisq.common.UserThread;
 
-import org.bitcoinj.core.Utils;
+import org.bitcoincashj.core.Utils;
 
 import javax.inject.Inject;
 

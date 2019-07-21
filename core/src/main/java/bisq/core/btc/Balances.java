@@ -29,8 +29,8 @@ import bisq.core.trade.failed.FailedTradesManager;
 
 import bisq.common.UserThread;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.Transaction;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.Transaction;
 
 import javax.inject.Inject;
 

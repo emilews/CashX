@@ -17,9 +17,11 @@
 
 package bisq.core.btc.setup;
 
-import org.bitcoinj.core.NetworkParameters;
-import org.bitcoinj.wallet.DeterministicKeyChain;
-import org.bitcoinj.wallet.KeyChainGroup;
+import org.bitcoincashj.core.NetworkParameters;
+import org.bitcoincashj.crypto.DeterministicKey;
+import org.bitcoincashj.wallet.DeterministicKeyChain;
+import org.bitcoincashj.wallet.KeyChain;
+import org.bitcoincashj.wallet.KeyChainGroup;
 
 import java.security.SecureRandom;
 

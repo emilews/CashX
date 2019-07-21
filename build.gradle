@@ -1,6 +1,9 @@
 buildscript {
     repositories {
         jcenter()
+        maven{
+            url "https://jitpack.io"
+        }
     }
     dependencies {
         classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.5'
@@ -8,6 +11,10 @@ buildscript {
         classpath 'com.github.jengelman.gradle.plugins:shadow:4.0.2'
         classpath files('gradle/witness/gradle-witness.jar')
         classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.5.10.RELEASE'
+
+        classpath (group: 'com.github.softwareverde', name: 'bitcoin-verde', version: 'development-SNAPSHOT')
+        classpath files('C:/Users/csipro/Desktop/Workspace/CashX/libs/bitcoinj-core-0.14-SNAPSHOT.jar')
+
     }
 }
 
@@ -138,11 +145,17 @@ configure(project(':assets')) {
             exclude(module: 'guava')
             exclude(module: 'protobuf-java')
         }
+        //This is for testing lol
+        compile (group: 'com.github.softwareverde', name: 'bitcoin-verde', version: 'development-SNAPSHOT') {
+            exclude(module: 'slf4j-api')
+            exclude(module: 'bcprov-jdk15on')
+        }
         compile 'com.google.guava:guava:20.0'
         compile "org.slf4j:slf4j-api:$slf4jVersion"
         compile "commons-codec:commons-codec:$codecVersion"
         compile "org.apache.commons:commons-lang3:$langVersion"
         compile "org.bouncycastle:bcpg-jdk15on:$bcVersion"
+        compile files('C:/Users/csipro/Desktop/Workspace/CashX/libs/bitcoinj-core-0.14-SNAPSHOT.jar')
     }
 }
 
@@ -188,6 +201,13 @@ configure(project(':common')) {
         compile "org.apache.commons:commons-lang3:$langVersion"
         compileOnly "org.projectlombok:lombok:$lombokVersion"
         annotationProcessor "org.projectlombok:lombok:$lombokVersion"
+    
+        compile files('C:/Users/csipro/Desktop/Workspace/CashX/libs/bitcoinj-core-0.14-SNAPSHOT.jar')
+        //This is for testing lol
+        compile (group: 'com.github.softwareverde', name: 'bitcoin-verde', version: 'development-SNAPSHOT') {
+            exclude(module: 'slf4j-api')
+            exclude(module: 'bcprov-jdk15on')
+        }
     }
 }
 
@@ -211,6 +231,7 @@ configure(project(':p2p')) {
         testCompile 'org.jmockit:jmockit:1.30' // must not use current $jmockitVersion
         testCompileOnly "org.projectlombok:lombok:$lombokVersion"
         testAnnotationProcessor "org.projectlombok:lombok:$lombokVersion"
+
     }
 }
 
@@ -244,6 +265,14 @@ configure(project(':core')) {
 
         compileOnly "org.projectlombok:lombok:$lombokVersion"
         annotationProcessor "org.projectlombok:lombok:$lombokVersion"
+
+        compile files('C:/Users/csipro/Desktop/Workspace/CashX/libs/bitcoinj-core-0.14-SNAPSHOT.jar')
+
+        //This is for testing lol
+        compile (group: 'com.github.softwareverde', name: 'bitcoin-verde', version: 'development-SNAPSHOT') {
+            exclude(module: 'slf4j-api')
+            exclude(module: 'bcprov-jdk15on')
+        }
 
         testCompile "org.jmockit:jmockit:$jmockitVersion"
         testCompile("org.mockito:mockito-core:$mockitoVersion") {
@@ -303,6 +332,14 @@ configure(project(':desktop')) {
         compileOnly "org.projectlombok:lombok:$lombokVersion"
         annotationProcessor "org.projectlombok:lombok:$lombokVersion"
 
+        compile files('C:/Users/csipro/Desktop/Workspace/CashX/libs/bitcoinj-core-0.14-SNAPSHOT.jar')
+
+        //This is for testing lol
+        compile (group: 'com.github.softwareverde', name: 'bitcoin-verde', version: 'development-SNAPSHOT') {
+            exclude(module: 'slf4j-api')
+            exclude(module: 'bcprov-jdk15on')
+        }
+        
         testCompile "org.jmockit:jmockit:$jmockitVersion"
         testCompile("org.mockito:mockito-core:$mockitoVersion") {
             exclude(module: 'objenesis')
@@ -344,11 +381,14 @@ configure(project(':monitor')) {
         compileOnly "org.projectlombok:lombok:$lombokVersion"
         annotationProcessor "org.projectlombok:lombok:$lombokVersion"
 
+
         testCompile 'org.junit.jupiter:junit-jupiter-api:5.3.2'
         testCompile 'org.junit.jupiter:junit-jupiter-params:5.3.2'
         testCompileOnly "org.projectlombok:lombok:$lombokVersion"
         testAnnotationProcessor "org.projectlombok:lombok:$lombokVersion"
         testRuntime('org.junit.jupiter:junit-jupiter-engine:5.3.2')
+        
+        
     }
 }
 
@@ -386,6 +426,7 @@ configure(project(':relay')) {
         compile 'com.turo:pushy:0.13.2'
         compile 'com.google.firebase:firebase-admin:6.2.0'
         compile "commons-codec:commons-codec:$codecVersion"
+
     }
 }
 
@@ -400,6 +441,7 @@ configure(project(':seednode')) {
         runtime "org.bouncycastle:bcprov-jdk15on:$bcVersion"
         compileOnly "org.projectlombok:lombok:$lombokVersion"
         annotationProcessor "org.projectlombok:lombok:$lombokVersion"
+
     }
 }
 
@@ -411,5 +453,6 @@ configure(project(':statsnode')) {
         compile project(':core')
         compileOnly "org.projectlombok:lombok:$lombokVersion"
         annotationProcessor "org.projectlombok:lombok:$lombokVersion"
+
     }
 }

@@ -22,7 +22,7 @@ import bisq.core.btc.nodes.BtcNodes.BtcNode;
 
 import bisq.network.DnsLookupException;
 
-import org.bitcoinj.core.PeerAddress;
+import org.bitcoincashj.core.PeerAddress;
 
 import com.runjva.sourceforge.jsocks.protocol.Socks5Proxy;
 
@@ -40,33 +40,6 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 public class BtcNodeConverterTest {
-    @Test
-    public void testConvertOnionHost() throws UnknownHostException {
-        BtcNode node = mock(BtcNode.class);
-        when(node.getOnionAddress()).thenReturn("aaa.onion");
-
-        InetAddress inetAddress = mock(InetAddress.class);
-
-        Facade facade = mock(Facade.class);
-        when(facade.onionHostToInetAddress(any())).thenReturn(inetAddress);
-
-        PeerAddress peerAddress = new BtcNodeConverter(facade).convertOnionHost(node);
-        // noinspection ConstantConditions
-        assertEquals(inetAddress, peerAddress.getAddr());
-    }
-
-    @Test
-    public void testConvertOnionHostOnFailure() throws UnknownHostException {
-        BtcNode node = mock(BtcNode.class);
-        when(node.getOnionAddress()).thenReturn("aaa.onion");
-
-        Facade facade = mock(Facade.class);
-        when(facade.onionHostToInetAddress(any())).thenThrow(UnknownHostException.class);
-
-        PeerAddress peerAddress = new BtcNodeConverter(facade).convertOnionHost(node);
-        assertNull(peerAddress);
-    }
-
     @Ignore
     @Test
     public void testConvertClearNode() {

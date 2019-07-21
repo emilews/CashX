@@ -45,8 +45,8 @@ public class CurrencyUtilTest {
     public void setup() {
 
         Locale.setDefault(new Locale("en", "US"));
-        Res.setBaseCurrencyCode("BTC");
-        Res.setBaseCurrencyName("Bitcoin");
+        Res.setBaseCurrencyCode("BCH");
+        Res.setBaseCurrencyName("bitcoin cash");
     }
 
     @Test
@@ -131,7 +131,7 @@ public class CurrencyUtilTest {
 
     @Test
     public void testGetNameAndCodeOfRemovedAsset() {
-        assertEquals("Bitcoin Cash (BCH)", CurrencyUtil.getNameAndCode("BCH"));
+        assertEquals("Bitcoin Clashic (BCHC)", CurrencyUtil.getNameAndCode("BCHC"));
         assertEquals("N/A (XYZ)", CurrencyUtil.getNameAndCode("XYZ"));
     }
 

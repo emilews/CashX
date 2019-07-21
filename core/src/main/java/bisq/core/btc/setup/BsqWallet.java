@@ -17,9 +17,9 @@
 
 package bisq.core.btc.setup;
 
-import org.bitcoinj.core.NetworkParameters;
-import org.bitcoinj.wallet.KeyChainGroup;
-import org.bitcoinj.wallet.Wallet;
+import org.bitcoincashj.core.NetworkParameters;
+import org.bitcoincashj.wallet.KeyChainGroup;
+import org.bitcoincashj.wallet.Wallet;
 
 public class BsqWallet extends Wallet {
 

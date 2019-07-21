@@ -2,7 +2,7 @@ package bisq.core.dao.governance.proposal;
 
 import bisq.core.dao.state.model.blockchain.Tx;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import lombok.Getter;
 

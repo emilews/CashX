@@ -17,7 +17,7 @@
 
 package bisq.common.crypto;
 
-import org.bitcoinj.core.Utils;
+import org.bitcoincashj.core.Utils;
 
 import com.google.common.base.Charsets;
 

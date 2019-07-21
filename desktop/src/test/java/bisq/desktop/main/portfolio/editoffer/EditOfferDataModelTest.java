@@ -23,7 +23,7 @@ import bisq.core.util.BSFormatter;
 import bisq.core.util.BsqFormatter;
 import bisq.core.util.validation.InputValidator;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import javafx.beans.property.SimpleIntegerProperty;
 
@@ -68,7 +68,7 @@ public class EditOfferDataModelTest {
     @Before
     public void setUp() {
 
-        final CryptoCurrency btc = new CryptoCurrency("BTC", "bitcoin");
+        final CryptoCurrency btc = new CryptoCurrency("BCH", "bitcoin cash");
         GlobalSettings.setDefaultTradeCurrency(btc);
         Res.setup();
 

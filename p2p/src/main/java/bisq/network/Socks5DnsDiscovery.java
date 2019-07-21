@@ -19,13 +19,13 @@ package bisq.network;
 
 import bisq.common.util.Utilities;
 
-import org.bitcoinj.core.NetworkParameters;
-import org.bitcoinj.net.discovery.DnsDiscovery;
-import org.bitcoinj.net.discovery.MultiplexingDiscovery;
-import org.bitcoinj.net.discovery.PeerDiscovery;
-import org.bitcoinj.net.discovery.PeerDiscoveryException;
-import org.bitcoinj.utils.ContextPropagatingThreadFactory;
-import org.bitcoinj.utils.DaemonThreadFactory;
+import org.bitcoincashj.core.NetworkParameters;
+import org.bitcoincashj.net.discovery.DnsDiscovery;
+import org.bitcoincashj.net.discovery.MultiplexingDiscovery;
+import org.bitcoincashj.net.discovery.PeerDiscovery;
+import org.bitcoincashj.net.discovery.PeerDiscoveryException;
+import org.bitcoincashj.utils.ContextPropagatingThreadFactory;
+import org.bitcoincashj.utils.DaemonThreadFactory;
 
 import com.runjva.sourceforge.jsocks.protocol.Socks5Proxy;
 

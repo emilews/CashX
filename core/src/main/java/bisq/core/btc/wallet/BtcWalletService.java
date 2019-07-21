@@ -29,20 +29,20 @@ import bisq.core.user.Preferences;
 
 import bisq.common.handlers.ErrorMessageHandler;
 
-import org.bitcoinj.core.Address;
-import org.bitcoinj.core.AddressFormatException;
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.InsufficientMoneyException;
-import org.bitcoinj.core.Transaction;
-import org.bitcoinj.core.TransactionConfidence;
-import org.bitcoinj.core.TransactionInput;
-import org.bitcoinj.core.TransactionOutPoint;
-import org.bitcoinj.core.TransactionOutput;
-import org.bitcoinj.crypto.DeterministicKey;
-import org.bitcoinj.crypto.KeyCrypterScrypt;
-import org.bitcoinj.script.ScriptBuilder;
-import org.bitcoinj.wallet.SendRequest;
-import org.bitcoinj.wallet.Wallet;
+import org.bitcoincashj.core.Address;
+import org.bitcoincashj.core.AddressFormatException;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.InsufficientMoneyException;
+import org.bitcoincashj.core.Transaction;
+import org.bitcoincashj.core.TransactionConfidence;
+import org.bitcoincashj.core.TransactionInput;
+import org.bitcoincashj.core.TransactionOutPoint;
+import org.bitcoincashj.core.TransactionOutput;
+import org.bitcoincashj.crypto.DeterministicKey;
+import org.bitcoincashj.crypto.KeyCrypterScrypt;
+import org.bitcoincashj.script.ScriptBuilder;
+import org.bitcoincashj.wallet.SendRequest;
+import org.bitcoincashj.wallet.Wallet;
 
 import javax.inject.Inject;
 
@@ -134,9 +134,7 @@ public class BtcWalletService extends WalletService {
         return "Address entry list:\n" +
                 sb.toString() +
                 "\n\n" +
-                wallet.toString(includePrivKeys, true, true, walletsSetup.getChain()) + "\n\n" +
-                "All pubKeys as hex:\n" +
-                wallet.printAllPubKeysAsHex();
+                wallet.toString(includePrivKeys, true, true, walletsSetup.getChain());
     }
 
 
@@ -235,7 +233,6 @@ public class BtcWalletService extends WalletService {
             // signInputs needs to be false as it would try to sign all inputs (BSQ inputs are not in this wallet)
             sendRequest.signInputs = false;
 
-            sendRequest.fee = txFeePerByte.multiply(txSizeWithUnsignedInputs + sigSizePerInput * numInputs);
             sendRequest.feePerKb = Coin.ZERO;
             sendRequest.ensureMinRequiredFee = false;
 
@@ -343,7 +340,6 @@ public class BtcWalletService extends WalletService {
             // signInputs needs to be false as it would try to sign all inputs (BSQ inputs are not in this wallet)
             sendRequest.signInputs = false;
 
-            sendRequest.fee = txFeePerByte.multiply(txSizeWithUnsignedInputs + sigSizePerInput * numInputs);
             sendRequest.feePerKb = Coin.ZERO;
             sendRequest.ensureMinRequiredFee = false;
 
@@ -490,7 +486,6 @@ public class BtcWalletService extends WalletService {
             // signInputs needs to be false as it would try to sign all inputs (BSQ inputs are not in this wallet)
             sendRequest.signInputs = false;
 
-            sendRequest.fee = txFeePerByte.multiply(txSizeWithUnsignedInputs + sigSizePerInput * numInputs);
             sendRequest.feePerKb = Coin.ZERO;
             sendRequest.ensureMinRequiredFee = false;
 
@@ -775,12 +770,10 @@ public class BtcWalletService extends WalletService {
                         Coin txFeeForWithdrawalPerByte = getTxFeeForWithdrawalPerByte();
                         do {
                             counter++;
-                            fee = txFeeForWithdrawalPerByte.multiply(txSize);
                             newTransaction.clearOutputs();
-                            newTransaction.addOutput(amount.subtract(fee), toAddress);
+                            newTransaction.addOutput(amount, toAddress);
 
                             sendRequest = SendRequest.forTx(newTransaction);
-                            sendRequest.fee = fee;
                             sendRequest.feePerKb = Coin.ZERO;
                             sendRequest.ensureMinRequiredFee = false;
                             sendRequest.aesKey = aesKey;
@@ -801,7 +794,6 @@ public class BtcWalletService extends WalletService {
                         Wallet.SendResult sendResult = null;
                         try {
                             sendRequest = SendRequest.forTx(newTransaction);
-                            sendRequest.fee = fee;
                             sendRequest.feePerKb = Coin.ZERO;
                             sendRequest.ensureMinRequiredFee = false;
                             sendRequest.aesKey = aesKey;
@@ -817,7 +809,6 @@ public class BtcWalletService extends WalletService {
                             newTransaction.addOutput(amount, toAddress);
 
                             sendRequest = SendRequest.forTx(newTransaction);
-                            sendRequest.fee = fee;
                             sendRequest.feePerKb = Coin.ZERO;
                             sendRequest.ensureMinRequiredFee = false;
                             sendRequest.aesKey = aesKey;
@@ -978,7 +969,6 @@ public class BtcWalletService extends WalletService {
         sendRequest.aesKey = aesKey;
         sendRequest.coinSelector = new BtcCoinSelector(walletsSetup.getAddressesByContext(AddressEntry.Context.AVAILABLE),
                 preferences.getIgnoreDustThreshold());
-        sendRequest.fee = txFee;
         sendRequest.feePerKb = Coin.ZERO;
         sendRequest.ensureMinRequiredFee = false;
         sendRequest.changeAddress = dummyAddress;
@@ -1038,7 +1028,6 @@ public class BtcWalletService extends WalletService {
         tx.addOutput(receiverAmount, Address.fromBase58(params, toAddress));
 
         SendRequest sendRequest = SendRequest.forTx(tx);
-        sendRequest.fee = fee;
         sendRequest.feePerKb = Coin.ZERO;
         sendRequest.ensureMinRequiredFee = false;
         sendRequest.aesKey = aesKey;
@@ -1072,7 +1061,6 @@ public class BtcWalletService extends WalletService {
         tx.addOutput(netValue, Address.fromBase58(params, toAddress));
 
         SendRequest sendRequest = SendRequest.forTx(tx);
-        sendRequest.fee = fee;
         sendRequest.feePerKb = Coin.ZERO;
         sendRequest.ensureMinRequiredFee = false;
         sendRequest.aesKey = aesKey;

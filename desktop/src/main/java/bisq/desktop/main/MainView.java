@@ -28,7 +28,6 @@ import bisq.desktop.components.AutoTooltipLabel;
 import bisq.desktop.components.AutoTooltipToggleButton;
 import bisq.desktop.components.BusyAnimation;
 import bisq.desktop.main.account.AccountView;
-import bisq.desktop.main.dao.DaoView;
 import bisq.desktop.main.disputes.DisputesView;
 import bisq.desktop.main.funds.FundsView;
 import bisq.desktop.main.market.MarketView;
@@ -177,12 +176,9 @@ public class MainView extends InitializableView<StackPane, MainViewModel> {
         ToggleButton disputesButton = new NavButton(DisputesView.class, Res.get("mainView.menu.support"));
         ToggleButton settingsButton = new NavButton(SettingsView.class, Res.get("mainView.menu.settings"));
         ToggleButton accountButton = new NavButton(AccountView.class, Res.get("mainView.menu.account"));
-        ToggleButton daoButton = new NavButton(DaoView.class, Res.get("mainView.menu.dao"));
 
         JFXBadge portfolioButtonWithBadge = new JFXBadge(portfolioButton);
         JFXBadge disputesButtonWithBadge = new JFXBadge(disputesButton);
-        JFXBadge daoButtonWithBadge = new JFXBadge(daoButton);
-        daoButtonWithBadge.getStyleClass().add("new");
 
         Locale locale = GlobalSettings.getLocale();
         DecimalFormat currencyFormat = (DecimalFormat) NumberFormat.getNumberInstance(locale);
@@ -209,8 +205,7 @@ public class MainView extends InitializableView<StackPane, MainViewModel> {
                     } else if (Utilities.isAltOrCtrlPressed(KeyCode.DIGIT8, keyEvent)) {
                         accountButton.fire();
                     } else if (Utilities.isAltOrCtrlPressed(KeyCode.DIGIT9, keyEvent)) {
-                        if (daoButton.isVisible())
-                            daoButton.fire();
+
                     }
                 });
             }
@@ -244,7 +239,7 @@ public class MainView extends InitializableView<StackPane, MainViewModel> {
                 String tooltipText = Res.get("mainView.balance.available");
                 try {
                     double availableBalance = Double.parseDouble(
-                            model.getAvailableBalance().getValue().replace("BTC", ""));
+                            model.getAvailableBalance().getValue().replace("BCH", ""));
                     double marketPrice = Double.parseDouble(model.getMarketPrice().getValue());
                     tooltipText += "\n" + currencyFormat.format(availableBalance * marketPrice) +
                             " " + model.getPreferences().getPreferredTradeCurrency().getCode();
@@ -268,7 +263,7 @@ public class MainView extends InitializableView<StackPane, MainViewModel> {
                 String tooltipText = Res.get("mainView.balance.reserved");
                 try {
                     double reservedBalance = Double.parseDouble(
-                            model.getReservedBalance().getValue().replace("BTC", ""));
+                            model.getReservedBalance().getValue().replace("BCH", ""));
                     double marketPrice = Double.parseDouble(model.getMarketPrice().getValue());
                     tooltipText += "\n" + currencyFormat.format(reservedBalance * marketPrice) +
                             " " + model.getPreferences().getPreferredTradeCurrency().getCode();
@@ -292,7 +287,7 @@ public class MainView extends InitializableView<StackPane, MainViewModel> {
                 String tooltipText = Res.get("mainView.balance.locked");
                 try {
                     double lockedBalance = Double.parseDouble(
-                            model.getLockedBalance().getValue().replace("BTC", ""));
+                            model.getLockedBalance().getValue().replace("BCH", ""));
                     double marketPrice = Double.parseDouble(model.getMarketPrice().getValue());
                     tooltipText += "\n" + currencyFormat.format(lockedBalance * marketPrice) +
                             " " + model.getPreferences().getPreferredTradeCurrency().getCode();
@@ -311,7 +306,7 @@ public class MainView extends InitializableView<StackPane, MainViewModel> {
         HBox.setHgrow(primaryNav, Priority.SOMETIMES);
 
         HBox secondaryNav = new HBox(disputesButtonWithBadge, getNavigationSpacer(), settingsButton,
-                getNavigationSpacer(), accountButton, getNavigationSpacer(), daoButtonWithBadge);
+                getNavigationSpacer(), accountButton, getNavigationSpacer());
         secondaryNav.getStyleClass().add("nav-secondary");
         HBox.setHgrow(secondaryNav, Priority.SOMETIMES);
 
@@ -354,7 +349,6 @@ public class MainView extends InitializableView<StackPane, MainViewModel> {
 
         setupBadge(portfolioButtonWithBadge, model.getNumPendingTrades(), model.getShowPendingTradesNotification());
         setupBadge(disputesButtonWithBadge, model.getNumOpenDisputes(), model.getShowOpenDisputesNotification());
-        setupBadge(daoButtonWithBadge, new SimpleStringProperty(Res.get("shared.new")), model.getShowDaoUpdatesNotification());
 
         navigation.addListener(viewPath -> {
             if (viewPath.size() != 2 || viewPath.indexOf(MainView.class) != 0)

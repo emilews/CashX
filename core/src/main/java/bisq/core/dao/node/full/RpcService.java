@@ -27,7 +27,7 @@ import bisq.common.UserThread;
 import bisq.common.handlers.ResultHandler;
 import bisq.common.util.Utilities;
 
-import org.bitcoinj.core.Utils;
+import org.bitcoincashj.core.Utils;
 
 import com.neemre.btcdcli4j.core.BitcoindException;
 import com.neemre.btcdcli4j.core.BtcdCli4jVersion;

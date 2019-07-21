@@ -17,7 +17,7 @@ import bisq.core.provider.price.PriceFeedService;
 import bisq.core.user.Preferences;
 import bisq.core.user.User;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import java.util.HashSet;
 
@@ -52,7 +52,7 @@ public class CreateOfferDataModelTest {
 
     @Before
     public void setUp() {
-        final CryptoCurrency btc = new CryptoCurrency("BTC", "bitcoin");
+        final CryptoCurrency btc = new CryptoCurrency("BCH", "bitcoin cash");
         GlobalSettings.setDefaultTradeCurrency(btc);
         Res.setup();
 

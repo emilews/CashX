@@ -27,9 +27,9 @@ import bisq.core.dao.state.model.governance.Proposal;
 
 import bisq.common.app.Version;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.InsufficientMoneyException;
-import org.bitcoinj.core.Transaction;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.InsufficientMoneyException;
+import org.bitcoincashj.core.Transaction;
 
 import lombok.extern.slf4j.Slf4j;
 

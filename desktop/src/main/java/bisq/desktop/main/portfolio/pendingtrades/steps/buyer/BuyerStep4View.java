@@ -47,9 +47,9 @@ import bisq.common.app.DevEnv;
 import bisq.common.handlers.FaultHandler;
 import bisq.common.handlers.ResultHandler;
 
-import org.bitcoinj.core.AddressFormatException;
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.Transaction;
+import org.bitcoincashj.core.AddressFormatException;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.Transaction;
 
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;

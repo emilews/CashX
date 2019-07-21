@@ -23,9 +23,9 @@ import bisq.core.locale.Res;
 import bisq.core.user.Preferences;
 import bisq.core.util.BSFormatter;
 
-import org.bitcoinj.core.VersionMessage;
-import org.bitcoinj.store.BlockStoreException;
-import org.bitcoinj.store.ChainFileLockedException;
+import org.bitcoincashj.core.VersionMessage;
+import org.bitcoincashj.store.BlockStoreException;
+import org.bitcoincashj.store.ChainFileLockedException;
 
 import javax.inject.Inject;
 

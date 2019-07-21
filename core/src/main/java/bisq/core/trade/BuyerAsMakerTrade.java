@@ -31,7 +31,7 @@ import bisq.common.storage.Storage;
 
 import io.bisq.generated.protobuffer.PB;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import lombok.extern.slf4j.Slf4j;
 

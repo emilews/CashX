@@ -28,9 +28,9 @@ import bisq.common.app.Version;
 
 import io.bisq.generated.protobuffer.PB;
 
-import org.bitcoinj.core.Address;
-import org.bitcoinj.core.AddressFormatException;
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Address;
+import org.bitcoincashj.core.AddressFormatException;
+import org.bitcoincashj.core.Coin;
 
 import org.springframework.util.CollectionUtils;
 

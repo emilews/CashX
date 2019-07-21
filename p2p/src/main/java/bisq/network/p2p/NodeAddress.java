@@ -53,6 +53,7 @@ public final class NodeAddress implements PersistablePayload, NetworkPayload, Us
         checkArgument(split.length == 2, "fullAddress must contain ':'");
         this.hostName = split[0];
         this.port = Integer.parseInt(split[1]);
+        log.warn(hostName);
     }
 
 

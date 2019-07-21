@@ -19,9 +19,6 @@ package bisq.desktop.main.overlays.windows;
 
 import bisq.desktop.Navigation;
 import bisq.desktop.main.MainView;
-import bisq.desktop.main.dao.DaoView;
-import bisq.desktop.main.dao.wallet.BsqWalletView;
-import bisq.desktop.main.dao.wallet.receive.BsqReceiveView;
 import bisq.desktop.main.overlays.Overlay;
 import bisq.desktop.main.overlays.popups.Popup;
 import bisq.desktop.util.FormBuilder;
@@ -142,7 +139,7 @@ public class FeeOptionWindow extends Overlay<FeeOptionWindow> {
                 ++rowIndex,
                 toggleGroup,
                 Res.get("feeOptionWindow.optionsLabel"),
-                "BTC",
+                "BCH",
                 "BSQ", 0);
         RadioButton radioButtonBTC = tuple.second;
         RadioButton radioButtonBSQ = tuple.third;
@@ -170,7 +167,7 @@ public class FeeOptionWindow extends Overlay<FeeOptionWindow> {
                             .onAction(() -> {
                                 UserThread.runAfter(() -> {
                                     hide();
-                                    navigation.navigateTo(MainView.class, DaoView.class, BsqWalletView.class, BsqReceiveView.class);
+                                    navigation.navigateTo(MainView.class);
                                 }, 100, TimeUnit.MILLISECONDS);
                             })
                             .closeButtonText(Res.get("feeOptionWindow.useBTC"))

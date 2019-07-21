@@ -24,7 +24,7 @@ import bisq.core.trade.messages.TradeMessage;
 import bisq.common.taskrunner.Task;
 import bisq.common.taskrunner.TaskRunner;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

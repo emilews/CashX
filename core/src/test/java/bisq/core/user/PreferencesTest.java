@@ -63,8 +63,8 @@ public class PreferencesTest {
         final Locale en_US = new Locale("en", "US");
         Locale.setDefault(en_US);
         GlobalSettings.setLocale(en_US);
-        Res.setBaseCurrencyCode("BTC");
-        Res.setBaseCurrencyName("Bitcoin");
+        Res.setBaseCurrencyCode("BCH");
+        Res.setBaseCurrencyName("bitcoin cash");
 
         storage = mock(Storage.class);
         bisqEnvironment = mock(BisqEnvironment.class);

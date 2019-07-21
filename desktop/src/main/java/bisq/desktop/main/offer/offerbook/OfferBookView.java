@@ -59,7 +59,7 @@ import bisq.network.p2p.NodeAddress;
 
 import bisq.common.util.Tuple3;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import com.google.inject.name.Named;
 

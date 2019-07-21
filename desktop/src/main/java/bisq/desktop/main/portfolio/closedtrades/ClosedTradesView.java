@@ -41,7 +41,7 @@ import bisq.core.util.BSFormatter;
 
 import bisq.network.p2p.NodeAddress;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import com.googlecode.jcsv.writer.CSVEntryConverter;
 

@@ -36,8 +36,8 @@ import bisq.common.handlers.ErrorMessageHandler;
 import bisq.common.handlers.ResultHandler;
 import bisq.common.util.Utilities;
 
-import org.bitcoinj.core.ECKey;
-import org.bitcoinj.core.Utils;
+import org.bitcoincashj.core.ECKey;
+import org.bitcoincashj.core.Utils;
 
 import com.google.inject.Inject;
 import com.google.inject.name.Named;
@@ -67,7 +67,7 @@ import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
 
-import static org.bitcoinj.core.Utils.HEX;
+import static org.bitcoincashj.core.Utils.HEX;
 
 public class ArbitratorManager {
     private static final Logger log = LoggerFactory.getLogger(ArbitratorManager.class);

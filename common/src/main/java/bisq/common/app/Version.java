@@ -74,7 +74,7 @@ public class Version {
     // If objects are used for both network and database the network version is applied.
     // VERSION = 0.5.0 -> P2P_NETWORK_VERSION = 1
     @SuppressWarnings("ConstantConditions")
-    public static final int P2P_NETWORK_VERSION = 1;
+    public static final int P2P_NETWORK_VERSION = 54724 ;
 
     // The version no. of the serialized data stored to disc. A change will break the serialization of old objects.
     // VERSION = 0.5.0 -> LOCAL_DB_VERSION = 1

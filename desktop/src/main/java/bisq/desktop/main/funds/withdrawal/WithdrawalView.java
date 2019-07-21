@@ -49,11 +49,11 @@ import bisq.common.UserThread;
 import bisq.common.util.Tuple3;
 import bisq.common.util.Tuple4;
 
-import org.bitcoinj.core.AddressFormatException;
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.InsufficientMoneyException;
-import org.bitcoinj.core.Transaction;
-import org.bitcoinj.wallet.Wallet;
+import org.bitcoincashj.core.AddressFormatException;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.InsufficientMoneyException;
+import org.bitcoincashj.core.Transaction;
+import org.bitcoincashj.wallet.Wallet;
 
 import javax.inject.Inject;
 

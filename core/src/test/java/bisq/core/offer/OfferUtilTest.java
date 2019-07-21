@@ -19,7 +19,7 @@ package bisq.core.offer;
 
 import bisq.core.monetary.Price;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -35,7 +35,7 @@ public class OfferUtilTest {
                 1);
         Assert.assertEquals(
                 "Minimum trade amount allowed should be adjusted to the smallest trade allowed.",
-                "0.001 BTC",
+                "0.001 BCH",
                 result.toFriendlyString()
         );
 
@@ -61,7 +61,7 @@ public class OfferUtilTest {
                 1);
         Assert.assertEquals(
                 "Minimum allowed trade amount should not be adjusted.",
-                "0.01 BTC",
+                "0.01 BCH",
                 result.toFriendlyString()
         );
 
@@ -72,7 +72,7 @@ public class OfferUtilTest {
                 1);
         Assert.assertEquals(
                 "Minimum trade amount allowed should respect maxTradeLimit and factor, if possible.",
-                "0.001 BTC",
+                "0.001 BCH",
                 result.toFriendlyString()
         );
 
@@ -88,7 +88,7 @@ public class OfferUtilTest {
                 1);
         Assert.assertEquals(
                 "Minimum trade amount allowed with low maxTradeLimit should still respect that limit, even if result does not respect the factor specified.",
-                "0.00005 BTC",
+                "0.00005 BCH",
                 result.toFriendlyString()
         );
     }

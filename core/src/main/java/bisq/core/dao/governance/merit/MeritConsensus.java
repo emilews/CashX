@@ -27,8 +27,8 @@ import bisq.core.dao.state.model.governance.MeritList;
 import bisq.common.crypto.Encryption;
 import bisq.common.util.Utilities;
 
-import org.bitcoinj.core.ECKey;
-import org.bitcoinj.core.Sha256Hash;
+import org.bitcoincashj.core.ECKey;
+import org.bitcoincashj.core.Sha256Hash;
 
 import com.google.common.annotations.VisibleForTesting;
 

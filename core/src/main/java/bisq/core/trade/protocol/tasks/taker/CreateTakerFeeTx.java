@@ -29,8 +29,8 @@ import bisq.core.trade.protocol.tasks.TradeTask;
 
 import bisq.common.taskrunner.TaskRunner;
 
-import org.bitcoinj.core.Address;
-import org.bitcoinj.core.Transaction;
+import org.bitcoincashj.core.Address;
+import org.bitcoincashj.core.Transaction;
 
 import lombok.extern.slf4j.Slf4j;
 

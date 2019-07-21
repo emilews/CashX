@@ -35,8 +35,8 @@ import bisq.common.UserThread;
 import bisq.common.taskrunner.Task;
 import bisq.common.taskrunner.TaskRunner;
 
-import org.bitcoinj.core.Address;
-import org.bitcoinj.core.Transaction;
+import org.bitcoincashj.core.Address;
+import org.bitcoincashj.core.Transaction;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

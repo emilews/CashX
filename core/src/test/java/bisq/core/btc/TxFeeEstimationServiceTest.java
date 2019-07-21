@@ -19,8 +19,8 @@ package bisq.core.btc;
 
 import bisq.core.btc.wallet.BtcWalletService;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.InsufficientMoneyException;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.InsufficientMoneyException;
 
 import java.util.List;
 

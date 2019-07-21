@@ -29,8 +29,8 @@ import bisq.common.crypto.KeyRing;
 import bisq.common.crypto.PubKeyRing;
 import bisq.common.proto.network.NetworkEnvelope;
 
-import org.bitcoinj.core.ECKey;
-import org.bitcoinj.core.Utils;
+import org.bitcoincashj.core.ECKey;
+import org.bitcoincashj.core.Utils;
 
 import com.google.inject.Inject;
 import com.google.inject.name.Named;
@@ -48,7 +48,7 @@ import java.util.UUID;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static org.bitcoinj.core.Utils.HEX;
+import static org.bitcoincashj.core.Utils.HEX;
 
 public class PrivateNotificationManager {
     private static final Logger log = LoggerFactory.getLogger(PrivateNotificationManager.class);

@@ -38,9 +38,9 @@ import bisq.network.p2p.P2PService;
 
 import bisq.common.UserThread;
 
-import org.bitcoinj.core.AddressFormatException;
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.InsufficientMoneyException;
+import org.bitcoincashj.core.AddressFormatException;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.InsufficientMoneyException;
 
 import javax.inject.Inject;
 
@@ -119,7 +119,7 @@ public class EmptyWalletWindow extends Overlay<EmptyWalletWindow> {
     }
 
     private String getCurrency() {
-        return isBtc ? "BTC" : "BSQ";
+        return isBtc ? "BCH" : "BSQ";
     }
 
 

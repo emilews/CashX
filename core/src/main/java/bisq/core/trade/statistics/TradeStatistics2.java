@@ -40,9 +40,9 @@ import io.bisq.generated.protobuffer.PB;
 
 import com.google.protobuf.ByteString;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.utils.ExchangeRate;
-import org.bitcoinj.utils.Fiat;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.utils.ExchangeRate;
+import org.bitcoincashj.utils.Fiat;
 
 import org.springframework.util.CollectionUtils;
 
@@ -244,7 +244,7 @@ public final class TradeStatistics2 implements LazyProcessedPayload, Persistable
     }
 
     public String getCurrencyCode() {
-        return baseCurrency.equals("BTC") ? counterCurrency : baseCurrency;
+        return baseCurrency.equals("BCH") ? counterCurrency : baseCurrency;
     }
 
     public Coin getTradeAmount() {

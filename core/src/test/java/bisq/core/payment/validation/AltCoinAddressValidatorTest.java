@@ -43,7 +43,7 @@ public class AltCoinAddressValidatorTest {
         Res.setBaseCurrencyName(baseCurrencyNetwork.getCurrencyName());
         CurrencyUtil.setBaseCurrencyCode(currencyCode);
 
-        validator.setCurrencyCode("BTC");
+        validator.setCurrencyCode("BCH");
         assertTrue(validator.validate("17VZNX1SN5NtKa8UQFxwQbFeFc3iqRYhem").isValid);
 
         validator.setCurrencyCode("LTC");

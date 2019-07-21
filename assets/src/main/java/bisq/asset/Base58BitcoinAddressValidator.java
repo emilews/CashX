@@ -17,17 +17,17 @@
 
 package bisq.asset;
 
-import org.bitcoinj.core.Address;
-import org.bitcoinj.core.AddressFormatException;
-import org.bitcoinj.core.NetworkParameters;
-import org.bitcoinj.params.MainNetParams;
+import org.bitcoincashj.core.Address;
+import org.bitcoincashj.core.AddressFormatException;
+import org.bitcoincashj.core.NetworkParameters;
+import org.bitcoincashj.params.MainNetParams;
 
 /**
  * {@link AddressValidator} for Base58-encoded Bitcoin addresses.
  *
  * @author Chris Beams
  * @since 0.7.0
- * @see org.bitcoinj.core.Address#fromBase58(NetworkParameters, String)
+ * @see org.bitcoincashj.core.Address#fromCashAddr(NetworkParameters, String)
  */
 public class Base58BitcoinAddressValidator implements AddressValidator {
 

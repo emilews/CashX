@@ -21,7 +21,7 @@ import bisq.core.offer.Offer;
 import bisq.core.offer.OpenOffer;
 import bisq.core.trade.Tradable;
 
-import org.bitcoinj.core.Transaction;
+import org.bitcoincashj.core.Transaction;
 
 class TransactionAwareOpenOffer implements TransactionAwareTradable {
     private final OpenOffer delegate;

@@ -17,7 +17,7 @@
 
 package bisq.core.btc.nodes;
 
-import org.bitcoinj.core.PeerAddress;
+import org.bitcoincashj.core.PeerAddress;
 
 import com.runjva.sourceforge.jsocks.protocol.Socks5Proxy;
 
@@ -47,8 +47,11 @@ public class BtcNodesRepository {
         // We connect to onion nodes only in case we use Tor for BitcoinJ (default) to avoid privacy leaks at
         // exit nodes with bloom filters.
         if (proxy != null) {
-            List<PeerAddress> onionHosts = getOnionHosts();
-            result = new ArrayList<>(onionHosts);
+            //List<PeerAddress> onionHosts = getOnionHosts();
+            //result = new ArrayList<>(onionHosts);
+
+            //Since we don't have onion hosts, we use the clear ones
+            result = getClearNodes();
 
             if (isUseClearNodesWithProxies) {
                 // We also use the clear net nodes (used for monitor)

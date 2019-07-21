@@ -56,7 +56,7 @@ class Poloniex extends ExchangeRateProvider {
         Date timestamp = new Date(); // Poloniex tickers don't include their own timestamp
 
         return getTickers()
-            .filter(t -> t.getCurrencyPair().base.equals(Currency.BTC))
+            .filter(t -> t.getCurrencyPair().base.equals(Currency.BCH))
             .filter(t -> Altcoins.ALL_SUPPORTED.contains(t.getCurrencyPair().counter.getCurrencyCode()))
             .map(t ->
                 new ExchangeRate(

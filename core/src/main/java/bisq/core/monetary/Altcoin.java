@@ -19,8 +19,8 @@ package bisq.core.monetary;
 
 import bisq.core.util.BSFormatter;
 
-import org.bitcoinj.core.Monetary;
-import org.bitcoinj.utils.MonetaryFormat;
+import org.bitcoincashj.core.Monetary;
+import org.bitcoincashj.utils.MonetaryFormat;
 
 import com.google.common.math.LongMath;
 

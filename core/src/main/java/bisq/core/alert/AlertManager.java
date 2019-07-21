@@ -28,8 +28,8 @@ import bisq.network.p2p.storage.payload.ProtectedStoragePayload;
 import bisq.common.app.DevEnv;
 import bisq.common.crypto.KeyRing;
 
-import org.bitcoinj.core.ECKey;
-import org.bitcoinj.core.Utils;
+import org.bitcoincashj.core.ECKey;
+import org.bitcoincashj.core.Utils;
 
 import com.google.inject.Inject;
 import com.google.inject.name.Named;
@@ -45,7 +45,7 @@ import java.math.BigInteger;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static org.bitcoinj.core.Utils.HEX;
+import static org.bitcoincashj.core.Utils.HEX;
 
 public class AlertManager {
     private static final Logger log = LoggerFactory.getLogger(AlertManager.class);

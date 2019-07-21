@@ -44,7 +44,7 @@ import bisq.network.p2p.network.Statistic;
 import bisq.common.Clock;
 import bisq.common.UserThread;
 
-import org.bitcoinj.core.Peer;
+import org.bitcoincashj.core.Peer;
 
 import javax.inject.Inject;
 

@@ -24,7 +24,6 @@ import bisq.desktop.components.TxIdTextField;
 import bisq.desktop.main.overlays.Overlay;
 import bisq.desktop.main.overlays.notifications.NotificationCenter;
 import bisq.desktop.main.overlays.popups.Popup;
-import bisq.desktop.main.overlays.windows.DaoLaunchWindow;
 import bisq.desktop.main.overlays.windows.DisplayAlertMessageWindow;
 import bisq.desktop.main.overlays.windows.TacWindow;
 import bisq.desktop.main.overlays.windows.TorNetworkSettingsWindow;
@@ -264,7 +263,6 @@ public class MainViewModel implements ViewModel, BisqSetup.BisqSetupCompleteList
         // in MainView showAppScreen handler
         notificationCenter.onAllServicesAndViewsInitialized();
 
-        maybeAddDaoLaunchWindowToQueue();
         maybeShowPopupsFromQueue();
     }
 
@@ -616,23 +614,6 @@ public class MainViewModel implements ViewModel, BisqSetup.BisqSetupCompleteList
         return daoPresentation.getShowDaoUpdatesNotification();
     }
 
-    private void maybeAddDaoLaunchWindowToQueue() {
-        if (DevEnv.isDaoActivated()) {
-            String daoLaunchPopupKey = "daoLaunchPopup";
-            if (DontShowAgainLookup.showAgain(daoLaunchPopupKey)) {
-                DaoLaunchWindow daoLaunchWindow = new DaoLaunchWindow()
-                        .headLine(Res.get("popup.dao.launch.headline"))
-                        .closeButtonText(Res.get("shared.dismiss"))
-                        .actionButtonText(Res.get("shared.learnMore"))
-                        .onAction(() -> GUIUtil.openWebPage("https://docs.bisq.network/dao.html"))
-                        .buttonAlignment(HPos.CENTER);
-                daoLaunchWindow.setDisplayOrderPriority(1);
-                popupQueue.add(daoLaunchWindow);
-
-                DontShowAgainLookup.dontShowAgain(daoLaunchPopupKey, true);
-            }
-        }
-    }
 
     private void maybeShowPopupsFromQueue() {
         if (!popupQueue.isEmpty()) {

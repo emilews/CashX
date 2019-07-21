@@ -17,8 +17,8 @@
 
 package bisq.core.btc.exceptions;
 
-import org.bitcoinj.core.Transaction;
-import org.bitcoinj.wallet.Wallet;
+import org.bitcoincashj.core.Transaction;
+import org.bitcoincashj.wallet.Wallet;
 
 import lombok.Getter;
 

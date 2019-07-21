@@ -28,7 +28,7 @@ import bisq.core.user.Preferences;
 
 import bisq.common.util.Utilities;
 
-import org.bitcoinj.core.TransactionConfidence;
+import org.bitcoincashj.core.TransactionConfidence;
 
 import de.jensd.fx.fontawesome.AwesomeDude;
 import de.jensd.fx.fontawesome.AwesomeIcon;

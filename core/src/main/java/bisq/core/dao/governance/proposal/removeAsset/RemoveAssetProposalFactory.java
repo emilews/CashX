@@ -28,7 +28,7 @@ import bisq.core.dao.state.model.governance.RemoveAssetProposal;
 
 import bisq.asset.Asset;
 
-import org.bitcoinj.core.InsufficientMoneyException;
+import org.bitcoincashj.core.InsufficientMoneyException;
 
 import javax.inject.Inject;
 

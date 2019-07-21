@@ -19,7 +19,7 @@ package bisq.desktop.components;
 
 import bisq.core.util.BSFormatter;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import com.jfoenix.controls.JFXTextField;
 

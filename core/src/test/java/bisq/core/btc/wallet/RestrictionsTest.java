@@ -17,7 +17,7 @@
 
 package bisq.core.btc.wallet;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import org.junit.Test;
 

@@ -107,7 +107,7 @@ public abstract class BitcoinAverage extends ExchangeRateProvider {
         return restTemplate.exchange(
             RequestEntity
                 .get(UriComponentsBuilder
-                    .fromUriString("https://apiv2.bitcoinaverage.com/indices/{symbol-set}/ticker/all?crypto=BTC")
+                    .fromUriString("https://apiv2.bitcoinaverage.com/indices/{symbol-set}/ticker/all?crypto=BCH")
                     .buildAndExpand(symbolSet)
                     .toUri())
                 .header("X-signature", getAuthSignature())

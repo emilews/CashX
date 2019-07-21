@@ -21,7 +21,7 @@ import bisq.core.app.BisqEnvironment;
 import bisq.core.btc.BaseCurrencyNetwork;
 import bisq.core.dao.DaoOptionKeys;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -44,7 +44,7 @@ public class GenesisTxInfo {
     // Static
     ///////////////////////////////////////////////////////////////////////////////////////////
 
-    private static final String MAINNET_GENESIS_TX_ID = "4b5417ec5ab6112bedf539c3b4f5a806ed539542d8b717e1c4470aa3180edce5";
+    private static final String MAINNET_GENESIS_TX_ID = "fd8739084d5f206ebf05bbd8efe956fdd1daae7e48cf16c9d3b324c70f814255";
     private static final int MAINNET_GENESIS_BLOCK_HEIGHT = 571747; // 2019-04-15
     private static final Coin MAINNET_GENESIS_TOTAL_SUPPLY = Coin.parseCoin("3.65748");
 

@@ -26,7 +26,7 @@ import bisq.core.dao.state.model.blockchain.Tx;
 
 import bisq.common.app.DevEnv;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import javax.inject.Inject;
 

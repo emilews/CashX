@@ -371,7 +371,7 @@ public final class OfferPayload implements ProtectedStoragePayload, ExpirablePay
     // The rest of the app does not support yet that concept of base currency and counter currencies
     // so we map here for convenience
     public String getCurrencyCode() {
-        return getBaseCurrencyCode().equals("BTC") ? getCounterCurrencyCode() : getBaseCurrencyCode();
+        return getBaseCurrencyCode().equals("BCH") ? getCounterCurrencyCode() : getBaseCurrencyCode();
     }
 
     @Override

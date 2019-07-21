@@ -69,7 +69,7 @@ import bisq.common.crypto.SealedAndSigned;
 import bisq.common.proto.ProtobufferException;
 import bisq.common.util.Utilities;
 
-import org.bitcoinj.core.Coin;
+import org.bitcoincashj.core.Coin;
 
 import javax.inject.Inject;
 
@@ -393,7 +393,7 @@ public class BisqSetup {
     ///////////////////////////////////////////////////////////////////////////////////////////
 
     private void maybeReSyncSPVChain() {
-        // We do the delete of the spv file at startup before BitcoinJ is initialized to avoid issues with locked files under Windows.
+        // We do the delete of the spv file at startup before bitcoincashj is initialized to avoid issues with locked files under Windows.
         if (preferences.isResyncSpvRequested()) {
             try {
                 walletsSetup.reSyncSPVChain();
@@ -514,7 +514,7 @@ public class BisqSetup {
 
         p2pNetworkReady = p2PNetworkSetup.init(this::initWallet, displayTorNetworkSettingsHandler);
 
-        // We only init wallet service here if not using Tor for bitcoinj.
+        // We only init wallet service here if not using Tor for bitcoincashj.
         // When using Tor, wallet init must be deferred until Tor is ready.
         if (!preferences.getUseTorForBitcoinJ() || bisqEnvironment.isBitcoinLocalhostNodeRunning()) {
             initWallet();

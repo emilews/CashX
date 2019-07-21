@@ -50,9 +50,9 @@ import bisq.core.util.CoinUtil;
 
 import bisq.common.util.Tuple2;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.Transaction;
-import org.bitcoinj.wallet.Wallet;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.Transaction;
+import org.bitcoincashj.wallet.Wallet;
 
 import com.google.inject.Inject;
 
@@ -195,7 +195,7 @@ class TakeOfferDataModel extends OfferDataModel {
         // Taker pays 3 times the tx fee (taker fee, deposit, payout) because the mining fee might be different when maker created the offer
         // and reserved his funds. Taker creates at least taker fee and deposit tx at nearly the same moment. Just the payout will
         // be later and still could lead to issues if the required fee changed a lot in the meantime. using RBF and/or
-        // multiple batch-signed payout tx with different fees might be an option but RBF is not supported yet in BitcoinJ
+        // multiple batch-signed payout tx with different fees might be an option but RBF is not supported yet in bitcoincashj
         // and batched txs would add more complexity to the trade protocol.
 
         // A typical trade fee tx has about 260 bytes (if one input). The trade txs has about 336-414 bytes.

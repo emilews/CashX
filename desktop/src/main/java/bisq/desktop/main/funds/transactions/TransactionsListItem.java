@@ -33,10 +33,10 @@ import bisq.core.trade.Tradable;
 import bisq.core.trade.Trade;
 import bisq.core.util.BSFormatter;
 
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.Transaction;
-import org.bitcoinj.core.TransactionConfidence;
-import org.bitcoinj.core.TransactionOutput;
+import org.bitcoincashj.core.Coin;
+import org.bitcoincashj.core.Transaction;
+import org.bitcoincashj.core.TransactionConfidence;
+import org.bitcoincashj.core.TransactionOutput;
 
 import javafx.scene.control.Tooltip;
 
@@ -238,7 +238,7 @@ class TransactionsListItem {
                 details = Res.get("funds.tx.txFeePaymentForBsqTx");
         }
         // Use tx.getIncludedInBestChainAt() when available, otherwise use tx.getUpdateTime()
-        date = transaction.getIncludedInBestChainAt() != null ? transaction.getIncludedInBestChainAt() : transaction.getUpdateTime();
+        date = transaction.getUpdateTime();
         dateString = formatter.formatDateTime(date);
 
         isDustAttackTx = received && valueSentToMe.value < ignoreDustThreshold;

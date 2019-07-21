@@ -33,9 +33,9 @@
 
 package bisq.core.btc.nodes;
 
-import org.bitcoinj.core.NetworkParameters;
-import org.bitcoinj.net.discovery.PeerDiscovery;
-import org.bitcoinj.net.discovery.PeerDiscoveryException;
+import org.bitcoincashj.core.NetworkParameters;
+import org.bitcoincashj.net.discovery.PeerDiscovery;
+import org.bitcoincashj.net.discovery.PeerDiscoveryException;
 
 import com.runjva.sourceforge.jsocks.protocol.Socks5Proxy;
 import com.runjva.sourceforge.jsocks.protocol.SocksSocket;
