@@ -91,11 +91,11 @@ public class BisqEnvironment extends StandardEnvironment {
 
     public static final String LOG_LEVEL_DEFAULT = Level.INFO.levelStr;
 
-    public static final String BISQ_COMMANDLINE_PROPERTY_SOURCE_NAME = "bisqCommandLineProperties";
-    public static final String BISQ_APP_DIR_PROPERTY_SOURCE_NAME = "bisqAppDirProperties";
-    public static final String BISQ_DEFAULT_PROPERTY_SOURCE_NAME = "bisqDefaultProperties";
-    private static final String BISQ_HOME_DIR_PROPERTY_SOURCE_NAME = "bisqHomeDirProperties";
-    private static final String BISQ_CLASSPATH_PROPERTY_SOURCE_NAME = "bisqClasspathProperties";
+    public static final String BISQ_COMMANDLINE_PROPERTY_SOURCE_NAME = "cashxCommandLineProperties";
+    public static final String BISQ_APP_DIR_PROPERTY_SOURCE_NAME = "cashxAppDirProperties";
+    public static final String BISQ_DEFAULT_PROPERTY_SOURCE_NAME = "cashxDefaultProperties";
+    private static final String BISQ_HOME_DIR_PROPERTY_SOURCE_NAME = "cashxHomeDirProperties";
+    private static final String BISQ_CLASSPATH_PROPERTY_SOURCE_NAME = "cashxClasspathProperties";
 
     private static String staticAppDataDir;
 
