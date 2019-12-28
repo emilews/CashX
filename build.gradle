@@ -13,7 +13,7 @@ buildscript {
         classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.5.10.RELEASE'
 
         classpath (group: 'com.github.softwareverde', name: 'bitcoin-verde', version: 'development-SNAPSHOT')
-        classpath files('C:/Users/csipro/Desktop/Workspace/CashX/libs/bitcoinj-core-0.14-SNAPSHOT.jar')
+        classpath files('C:\\Users\\emili\\Documents\\workspace\\CashX\\libs\\bitcoinj-core-0.15.5.jar')
 
     }
 }
@@ -155,7 +155,7 @@ configure(project(':assets')) {
         compile "commons-codec:commons-codec:$codecVersion"
         compile "org.apache.commons:commons-lang3:$langVersion"
         compile "org.bouncycastle:bcpg-jdk15on:$bcVersion"
-        compile files('C:/Users/csipro/Desktop/Workspace/CashX/libs/bitcoinj-core-0.14-SNAPSHOT.jar')
+        compile files('C:\\Users\\emili\\Documents\\workspace\\CashX\\libs\\bitcoinj-core-0.15.5.jar')
     }
 }
 
@@ -201,8 +201,8 @@ configure(project(':common')) {
         compile "org.apache.commons:commons-lang3:$langVersion"
         compileOnly "org.projectlombok:lombok:$lombokVersion"
         annotationProcessor "org.projectlombok:lombok:$lombokVersion"
-    
-        compile files('C:/Users/csipro/Desktop/Workspace/CashX/libs/bitcoinj-core-0.14-SNAPSHOT.jar')
+
+        compile files('C:\\Users\\emili\\Documents\\workspace\\CashX\\libs\\bitcoinj-core-0.15.5.jar')
         //This is for testing lol
         compile (group: 'com.github.softwareverde', name: 'bitcoin-verde', version: 'development-SNAPSHOT') {
             exclude(module: 'slf4j-api')
@@ -266,7 +266,7 @@ configure(project(':core')) {
         compileOnly "org.projectlombok:lombok:$lombokVersion"
         annotationProcessor "org.projectlombok:lombok:$lombokVersion"
 
-        compile files('C:/Users/csipro/Desktop/Workspace/CashX/libs/bitcoinj-core-0.14-SNAPSHOT.jar')
+        compile files('C:\\Users\\emili\\Documents\\workspace\\CashX\\libs\\bitcoinj-core-0.15.5.jar')
 
         //This is for testing lol
         compile (group: 'com.github.softwareverde', name: 'bitcoin-verde', version: 'development-SNAPSHOT') {
@@ -332,14 +332,14 @@ configure(project(':desktop')) {
         compileOnly "org.projectlombok:lombok:$lombokVersion"
         annotationProcessor "org.projectlombok:lombok:$lombokVersion"
 
-        compile files('C:/Users/csipro/Desktop/Workspace/CashX/libs/bitcoinj-core-0.14-SNAPSHOT.jar')
+        compile files('C:\\Users\\emili\\Documents\\workspace\\CashX\\libs\\bitcoinj-core-0.15.5.jar')
 
         //This is for testing lol
         compile (group: 'com.github.softwareverde', name: 'bitcoin-verde', version: 'development-SNAPSHOT') {
             exclude(module: 'slf4j-api')
             exclude(module: 'bcprov-jdk15on')
         }
-        
+
         testCompile "org.jmockit:jmockit:$jmockitVersion"
         testCompile("org.mockito:mockito-core:$mockitoVersion") {
             exclude(module: 'objenesis')
@@ -387,8 +387,8 @@ configure(project(':monitor')) {
         testCompileOnly "org.projectlombok:lombok:$lombokVersion"
         testAnnotationProcessor "org.projectlombok:lombok:$lombokVersion"
         testRuntime('org.junit.jupiter:junit-jupiter-engine:5.3.2')
-        
-        
+
+
     }
 }
 
